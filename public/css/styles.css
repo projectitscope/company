@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: url('../img/futuristic-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+/*
+.container {
+  /*background: rgba(255, 255, 255, 0.404);*/
+  /*padding: 40px;*/
+  /*border-radius: 20px;*/
+  /*box-shadow: 0 0 20px #00f2ff;
+}*/
+.logo {
+  width: 150px;                   /* Ajuste o tamanho que preferir */
+  margin-bottom: 20px;
+  border-radius: 50%;             /* Isso cria o círculo */
+  box-shadow: 0 0 15px #00f2ff; /* Brilho/neon para um toque tecnológico */
+  object-fit: cover;              /* Garante que a imagem preencha o círculo sem distorcer */
+  display: block;                 /* Remove pequenos espaços em volta */
+  margin: 0 auto 30px auto;       /* Centraliza horizontalmente e dá margem inferior */
+}
+
+h1 {
+  margin: 0 0 30px;
+  font-size: 32px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  background-color: #005577;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn i {
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: #00bfff;
+  transform: scale(1.05);
+}
+
+.whatsapp {
+  background-color: #25D366;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.email {
+  background-color: #ff6600;
+}
