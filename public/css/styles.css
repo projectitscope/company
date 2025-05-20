@@ -1,74 +1,436 @@
-body {
+body, html {
   margin: 0;
+  margin-top: -120px;
   padding: 0;
+  height: 100%;
   font-family: 'Orbitron', sans-serif;
-  background: url('../img/futuristic-bg.jpg') no-repeat center center fixed;
+  color: white;
+  /*background: url('../img/futuristic-bg.jpg') no-repeat center center fixed;*/
   background-size: cover;
-  color: #ffffff;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 100vh;
-}
-/*
-.container {
-  /*background: rgba(255, 255, 255, 0.404);*/
-  /*padding: 40px;*/
-  /*border-radius: 20px;*/
-  /*box-shadow: 0 0 20px #00f2ff;
-}*/
-.logo {
-  width: 150px;                   /* Ajuste o tamanho que preferir */
-  margin-bottom: 20px;
-  border-radius: 50%;             /* Isso cria o círculo */
-  box-shadow: 0 0 15px #00f2ff; /* Brilho/neon para um toque tecnológico */
-  object-fit: cover;              /* Garante que a imagem preencha o círculo sem distorcer */
-  display: block;                 /* Remove pequenos espaços em volta */
-  margin: 0 auto 30px auto;       /* Centraliza horizontalmente e dá margem inferior */
+  width: 100%;
+  z-index: -1; /* fica atrás do conteúdo */
+  overflow: hidden;
 }
 
-h1 {
-  margin: 0 0 30px;
-  font-size: 32px;
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.links {
+
+/* Cabeçalho fixo */
+#main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  background-color: #000000;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar organizada */
+.navbar2 {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: space-between;
+  height: 100%;
+  padding: 285 0px;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* Logo com altura controlada */
+.logo-header {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.navbar-left {
+  color: #ffffff;
+  margin-left: -20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Verdana;
+  transition: transform 0.2s, color 0.2s;
+}
+
+/* Centraliza nome da empresa */
+.navbar-center h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #f8c200;
+  margin: 0;
+}
+
+/* Ícones sociais à direita */
+.navbar-right a {
+  color: #ffffff;
+  margin-left: 20px;
+  font-size: 20px;
+  transition: transform 0.2s, color 0.2s;
+}
+
+
+.navbar-right a:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+}
+
+.wrapper {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
-.btn {
-  text-decoration: none;
-  color: white;
-  background-color: #005577;
-  padding: 12px 20px;
-  border-radius: 10px;
-  font-size: 18px;
-  transition: all 0.3s ease;
-  display: inline-flex;
+
+.tarja-logo {
+  background-color: rgb(255, 255, 255); /* ou outra cor se quiser */
+  height: 300px; /* altura da tarja */
+  width: 100%;
+  display: block;
+  justify-content: flex-end; /* logo à direita */
   align-items: center;
-  justify-content: center;
+  padding-right: 0px;
+  margin-bottom: 30%;
+  margin-top: 45px; /* compensa o cabeçalho fixo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
-.btn i {
-  margin-right: 10px;
+.about-section {
+  height: 300px;
 }
 
-.btn:hover {
-  background-color: #00bfff;
-  transform: scale(1.05);
+.about-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
-.whatsapp {
-  background-color: #25D366;
+.about-right img {
+  height: 215px;
+  width: auto;
+  /*object-fit: contain;*/
+  border-radius: 50%;             /* Isso cria o círculo */
+  box-shadow: 0 0 15px #a6cbcf; /* Brilho/neon para um toque tecnológico */
+  animation: neonPulse 7.5s ease-in-out infinite;
+  object-fit: contain;              /* Garante que a imagem preencha o círculo sem distorcer */
+  display: block;                 /* Remove pequenos espaços em volta */
+  margin-right: 220px;
+  margin-top: -301px;
 }
 
-.linkedin {
-  background-color: #0077b5;
+
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 3px #0066ff, 0 0 7px #0066ff, 0 0 10px #0066ff; /* Azul forte */
+  }
+  15% {
+    box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff; /* Ciano claro */
+  }
+  35% {
+    box-shadow: 0 0 12px #00ff99, 0 0 18px #00ff99; /* Verde neon */
+  }
+  50% {
+    box-shadow: none; /* Pisca (apagado) */
+  }
+  65% {
+    box-shadow: 0 0 6px #ffffff, 0 0 9px #ffffff; /* Branco brilhante */
+  }
+  85% {
+    box-shadow: 0 0 6px #00ffcc, 0 0 11px #00ffcc; /* Ciano esverdeado */
+  }
+  100% {
+    box-shadow: 0 0 2px #0066ff, 0 0 6px #0066ff, 0 0 8px #0066ff; /* Volta ao azul */
+  }
 }
 
-.email {
-  background-color: #ff6600;
+
+.about-left {
+    flex: 1;
+    width: 81%; /* ou uma largura maior se estiver limitada */
+    max-width: 700px;
+    line-height: 1.6;
+    padding: 84px;
+    padding-right: 731px;
+    padding-top: 34px;
+    margin: -45px;
+    margin-block-start: -50px;
+    margin-right: 232px;
+    margin-left: 385px;
+    font-family: Verdana;
+    justify-content: flex-start;
+    max-width: 1181px;
+    /*font-weight: bold;*/
+    color: #000000;
+   margin-left: -40px;
+}
+
+.about-left h2 {
+  margin-top: -9px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Espaço para o conteúdo não ficar atrás do cabeçalho */
+.container {
+  flex: 1; /* Faz o conteúdo ocupar o espaço disponível e empurra o footer pra baixo */
+  padding-top: 100px;
+  text-align: center;
+}
+
+.move-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+  url('../img/futuristic-bg.jpg') center center no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  font-family: Verdana;
+  padding: 80px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.move-content {
+  max-width: 600px;
+}
+
+.move-content h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff; /* amarelo destaque */
+}
+
+.move-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.follow-section {
+  background-color: #f7f7f7;  
+}
+
+.follow-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.follow-right img {
+  height: 431px;
+  width: auto;
+  /*object-fit: contain;*/
+  border-radius: 50%;             /* Isso cria o círculo */
+  box-shadow: 0 0 15px #f7f7f7; /* Brilho/neon para um toque tecnológico */
+  object-fit: contain;              /* Garante que a imagem preencha o círculo sem distorcer */
+  display: block;                 /* Remove pequenos espaços em volta */
+  margin-right: 214px;
+  margin-top: -500px;
+}
+
+.follow-left {
+    flex: 1;
+    width: -1%; /* ou uma largura maior se estiver limitada */
+    max-width: 700px;
+    line-height: 1.6;
+    padding: 84px;
+    padding-right: 731px;
+    padding-top: 85px;
+    margin: -45px;
+    margin-block-start: -50px;
+    margin-right: 232px;
+    margin-left: 385px;
+    font-family: Verdana;
+    justify-content: flex-start;
+    max-width: 1181px;
+    /*font-weight: bold;*/
+    color: #000000;
+   margin-left: -40px;
+}
+
+.follow-left h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.btn-saiba-mais {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn-saiba-mais:hover {
+  background-color: #e0ad00;
+}
+
+
+.itscope-footer {
+  background-color: #000;
+  color: #ffffff;
+  font-family: Verdana;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.logo-symbol {
+  color: #ffffff;
+}
+
+.logo-text {
+  color: #ffffff;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  color: #ffffff;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ffffff;
+}
+
+.footer-links {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+  
+/* RESPONSIVIDADE PARA TELAS MENORES QUE 768px */
+@media screen and (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+.navbar-left {
+  color: #ffffff;
+  margin-left: -6px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Verdana;
+  transition: transform 0.2s, color 0.2s;
+}
+
+  .navbar-right {
+    margin-top: -1px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-section,
+  .move-section,
+  .follow-section {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+    padding: 10px !important;
+  }
+
+  .about-left,
+  .follow-left,
+  .move-content {
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-right img,
+  .follow-right img {
+    height: auto;
+    width: 11%;
+    margin: -51px;
+    margin-right: 5px;
+  }
+
+  .tarja-logo {
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  .logo-header {
+    height: 40px;
+  }
+
+  .move-section {
+    background-position: center center;
+    padding: 40px 20px;
+  }
+
+  .itscope-footer {
+    padding: 20px 10px;
+  }
+
+  .footer-social {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-links,
+  .footer-copy {
+    text-align: center;
+  }
+
 }
