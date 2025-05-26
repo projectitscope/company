@@ -143,25 +143,25 @@ body, html {
 
 @keyframes neonPulse {
   0% {
-    box-shadow: 0 0 3px #0066ff, 0 0 7px #0066ff, 0 0 10px #0066ff; /* Azul forte */
+    box-shadow: 0 0 2px #0066ff, 0 0 5px #0066ff, 0 0 8px #0066ff; /* Azul forte */
   }
   15% {
-    box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff; /* Ciano claro */
+    box-shadow: 0 0 5px #00ffff, 0 0 8px #00ffff; /* Ciano claro */
   }
   35% {
-    box-shadow: 0 0 12px #00ff99, 0 0 18px #00ff99; /* Verde neon */
+    box-shadow: 0 0 10px #00ff99, 0 0 15px #00ff99; /* Verde neon */
   }
   50% {
     box-shadow: none; /* Pisca (apagado) */
   }
   65% {
-    box-shadow: 0 0 6px #ffffff, 0 0 9px #ffffff; /* Branco brilhante */
+    box-shadow: 0 0 8px #ffffff, 0 0 11px #ffffff; /* Branco brilhante */
   }
   85% {
-    box-shadow: 0 0 6px #00ffcc, 0 0 11px #00ffcc; /* Ciano esverdeado */
+    box-shadow: 0 0 9px #00ffcc, 0 0 13px #00ffcc; /* Ciano esverdeado */
   }
   100% {
-    box-shadow: 0 0 2px #0066ff, 0 0 6px #0066ff, 0 0 8px #0066ff; /* Volta ao azul */
+    box-shadow: 0 0 7px #0066ff, 0 0 4px #0066ff, 0 0 1px #0066ff; /* Volta ao azul */
   }
 }
 
