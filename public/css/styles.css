@@ -105,7 +105,7 @@ body, html {
 
 
 .tarja-logo {
-  background-color: rgb(255, 255, 255); /* ou outra cor se quiser */
+  background-color: #f9f8f8; /* ou outra cor se quiser */
   height: 300px; /* altura da tarja */
   width: 100%;
   display: block;
