@@ -4,7 +4,7 @@ body, html {
   padding: 0;
   height: 100%;
   font-family: 'Orbitron', sans-serif;
-  color: white;
+  color: #f9f8f8;
   /*background: url('../img/futuristic-bg.jpg') no-repeat center center fixed;*/
   background-size: cover;
 }
@@ -229,7 +229,21 @@ body, html {
 }
 
 .follow-section {
-  background-color: #f7f7f7;  
+  background-color: #f5f5f5
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  0;  
 }
 
 .follow-right {
@@ -243,7 +257,7 @@ body, html {
   width: auto;
   /*object-fit: contain;*/
   border-radius: 50%;             /* Isso cria o círculo */
-  box-shadow: 0 0 15px #f7f7f7; /* Brilho/neon para um toque tecnológico */
+  box-shadow: 0 0 15px #f5f5f5; /* Brilho/neon para um toque tecnológico */
   object-fit: contain;              /* Garante que a imagem preencha o círculo sem distorcer */
   display: block;                 /* Remove pequenos espaços em volta */
   margin-right: 214px;
