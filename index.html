@@ -9,8 +9,20 @@
   <link rel="stylesheet" href="public/css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'pt',
+        includedLanguages: 'pt,en,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
   <body>
+       <div id="google_translate_element" style="display: none;"></div>
         <div class="video-background">
             <video autoplay muted loop playsinline>
               <source src="public/video/seu_video.mp4" type="video/mp4">
@@ -25,6 +37,13 @@
             </div>
             <div class="navbar-center"></div>
             <div class="navbar-right">
+                  <div id="language-switcher">
+                    <img src="public/img/flag-en.png" alt="English" onclick="translateLanguage('en')">
+                    <img src="public/img/flag-pt.png" alt="Português" onclick="translateLanguage('pt')">
+                    <img src="public/img/flag-es.png" alt="Español" onclick="translateLanguage('es')">
+                  </div>
+
+
               <a href="https://wa.me/5521971722582" target="_blank"><i class="fab fa-whatsapp"></i></a>
               <a href="https://www.instagram.com/itscope.io/" target="_blank"><i class="fab fa-instagram"></i></a>
               <a href="https://www.linkedin.com/company/itscope/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
@@ -91,5 +110,17 @@
                 </div>
               </div>
         </footer>
+  <script>
+    function translateLanguage(lang) {
+      const select = document.querySelector(".goog-te-combo");
+      if (select) {
+        select.value = lang;
+        select.dispatchEvent(new Event("change"));
+      } else {
+        alert("O Google Translate ainda não carregou. Tente novamente em alguns segundos.");
+      }
+    }
+  </script>
+
   </body>
 </html>

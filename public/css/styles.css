@@ -32,7 +32,7 @@ body, html {
   top: 0;
   left: 0;
   right: 0;
-  height: 45px;
+  height: 70px;
   background-color: #000000;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -68,7 +68,7 @@ body, html {
 .navbar-left {
   color: #ffffff;
   margin-left: -20px;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   font-family: Verdana;
   transition: transform 0.2s, color 0.2s;
@@ -84,10 +84,20 @@ body, html {
 }
 
 /* Ícones sociais à direita */
+
+#language-switcher img {
+  width: 28px;
+  height: 28px;  
+  margin-left: 16px;
+  margin-right: -14px;
+}
+
+
+
 .navbar-right a {
   color: #ffffff;
-  margin-left: 20px;
-  font-size: 20px;
+  margin-left: 17px;
+  font-size: 25px;
   transition: transform 0.2s, color 0.2s;
 }
 
@@ -143,13 +153,13 @@ body, html {
 
 @keyframes neonPulse {
   0% {
-    box-shadow: 0 0 2px #0066ff, 0 0 5px #0066ff, 0 0 8px #0066ff; /* Azul forte */
+    box-shadow: 0 0 2px #0066ff, 0 0 5px #163768, 0 0 8px #021430; /* Azul forte */
   }
   15% {
-    box-shadow: 0 0 5px #00ffff, 0 0 8px #00ffff; /* Ciano claro */
+    box-shadow: 0 0 5px #00ffff, 0 0 8px #275555; /* Ciano claro */
   }
   35% {
-    box-shadow: 0 0 10px #00ff99, 0 0 15px #00ff99; /* Verde neon */
+    box-shadow: 0 0 10px #00ff99, 0 0 15px #172922; /* Verde neon */
   }
   50% {
     box-shadow: none; /* Pisca (apagado) */
@@ -158,10 +168,10 @@ body, html {
     box-shadow: 0 0 8px #ffffff, 0 0 11px #ffffff; /* Branco brilhante */
   }
   85% {
-    box-shadow: 0 0 9px #00ffcc, 0 0 13px #00ffcc; /* Ciano esverdeado */
+    box-shadow: 0 0 9px #00ffcc, 0 0 13px #265148; /* Ciano esverdeado */
   }
   100% {
-    box-shadow: 0 0 7px #0066ff, 0 0 4px #0066ff, 0 0 1px #0066ff; /* Volta ao azul */
+    box-shadow: 0 0 7px #0066ff, 0 0 4px #152439, 0 0 1px #002357; /* Volta ao azul */
   }
 }
 
