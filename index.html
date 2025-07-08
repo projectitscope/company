@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="public/css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <!-- Google Translate -->  
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
@@ -18,11 +20,20 @@
       }, 'google_translate_element');
     }
   </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFBFE9NTX1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JFBFE9NTX1');
+  </script>
+
 </head>
   <body>
-       <div id="google_translate_element" style="display: none;"></div>
+       <div id="google_translate_element"></div>
         <div class="video-background">
             <video autoplay muted loop playsinline>
               <source src="public/video/seu_video.mp4" type="video/mp4">
@@ -33,7 +44,7 @@
         <header id="main-header">
           <nav class="navbar">
             <div class="navbar-left">
-             IT SCOPE LTDA
+             IT SCOPE 
             </div>
             <div class="navbar-center"></div>
             <div class="navbar-right">
@@ -62,9 +73,31 @@
               A <strong>IT SCOPE</strong> é uma empresa de tecnologia que acredita na transformação estratégica por meio da inovação. Atuamos com foco em <strong>multicloud</strong>, <strong>segurança da informação</strong>, <strong>automação</strong>, <strong>infraestrutura de TI</strong> e <strong>atendimento técnico de excelência</strong>. Com presença no Rio e em São Paulo, entregamos soluções robustas, inteligentes e adaptadas à realidade do seu negócio.
             </p>
           </div>
-          <div class="about-right">
-            <img src="public/img/itscope_ltda.jpg" alt="Logo IT SCOPE">
-          </div>
+
+            <div class="rotating-wheel">
+              <div class="circle">
+                <img class="item" src="public/img/aws.png" alt="AWS" />
+                <img class="item" src="public/img/az.png" alt="Azure" />
+                <img class="item" src="public/img/gcp.png" alt="Google" />
+                <img class="item" src="public/img/oracle.png" alt="Oracle" />
+                <img class="item" src="public/img/kube.png" alt="Kubernetes" />
+                <img class="item" src="public/img/ter.png" alt="Terraform" />
+                <img class="item" src="public/img/github.png" alt="GitHub" />                
+                <img class="item" src="public/img/ans2.png" alt="Ansible" />
+                <img class="item" src="public/img/devops.png" alt="DevOps" />                 
+                <img class="item" src="public/img/win.png" alt="Windows" />
+                <img class="item" src="public/img/linux2.png" alt="Linux" />
+                <img class="item" src="public/img/vm.png" alt="VmWare" />
+                <img class="item" src="public/img/fort.png" alt="Fortinet" />                 
+                <img class="item" src="public/img/cis.png" alt="Cisco" /> 
+                <img class="item" src="public/img/docker.png" alt="Docker" />                
+                <img class="item" src="public/img/js2.png" alt="JavaScript" />
+                <img class="item" src="public/img/py.png" alt="Python" />
+                <img class="item" src="public/img/shell.png" alt="Shell" />
+                
+              </div>
+            </div>
+
         </section>
         <section class="move-section">
           <div class="move-content">
