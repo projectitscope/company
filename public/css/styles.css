@@ -128,7 +128,12 @@ body, html {
 }
 
 .about-section {
-  height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px;
 }
 
 .about-right {
@@ -389,18 +394,13 @@ body, html {
     justify-content: center;
   }
 
-  .about-section,
-  .move-section,
-  .follow-section {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center;
-    padding: 10px !important;
+  .about-section {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
   }
 
-  .about-left,
-  .follow-left,
-  .move-content {
+  .about-left {
     padding: 10px;
     margin: 0;
     width: 100%;
@@ -451,27 +451,27 @@ body, html {
   overflow: hidden;
 }
 
-
-.rotating-wheel {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin-top: -525px;
-  margin-left: 577px;
-  padding: 195px;
-  justify-items: center;
-  align-items: center;
- /* background-color: #fff;  Ou o fundo do seu site */
+.tech-section {
+  background-color: rgba(0, 0, 0, 0.7); /* Opcional para contraste */
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.rotating-wheel img {
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tech-icons img {
   width: 80px;
   height: auto;
-  object-fit: contain;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0.9);
 }
 
-.rotating-wheel img:hover {
-  transform: scale(1.1);
+.tech-icons img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
 }
