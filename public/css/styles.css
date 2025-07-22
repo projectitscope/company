@@ -394,13 +394,18 @@ body, html {
     justify-content: center;
   }
 
-  .about-section {
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+  .about-section,
+  .move-section,
+  .follow-section {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+    padding: 10px !important;
   }
 
-  .about-left {
+  .about-left,
+  .follow-left,
+  .move-content {
     padding: 10px;
     margin: 0;
     width: 100%;
@@ -451,27 +456,27 @@ body, html {
   overflow: hidden;
 }
 
-.tech-section {
-  background-color: rgba(0, 0, 0, 0.7); /* Opcional para contraste */
-  padding: 40px 20px;
-  text-align: center;
+
+.rotating-wheel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin-top: -525px;
+  margin-left: 577px;
+  padding: 195px;
+  justify-items: center;
+  align-items: center;
+ /* background-color: #fff;  Ou o fundo do seu site */
 }
 
-.tech-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.tech-icons img {
+.rotating-wheel img {
   width: 80px;
   height: auto;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  filter: brightness(0.9);
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-.tech-icons img:hover {
-  transform: scale(1.2);
-  filter: brightness(1.2);
+.rotating-wheel img:hover {
+  transform: scale(1.1);
 }
