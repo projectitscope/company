@@ -452,7 +452,7 @@ body, html {
 }
 
 
-.rotating-wheel {
+.tech-icons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 20px;
@@ -465,13 +465,13 @@ body, html {
  /* background-color: #fff;  Ou o fundo do seu site */
 }
 
-.rotating-wheel img {
+.tech-icons img {
   width: 80px;
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
 
-.rotating-wheel img:hover {
+.tech-icons img:hover {
   transform: scale(1.1);
 }
