@@ -456,8 +456,8 @@ body, html {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 20px;
-  max-width: 1200px;
-  margin-top: -525px;
+  max-width: 1211px;
+  margin-top: -589px;
   margin-left: 577px;
   padding: 195px;
   justify-items: center;
