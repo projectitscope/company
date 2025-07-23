@@ -86,8 +86,8 @@ body, html {
 /* Ícones sociais à direita */
 
 #language-switcher img {
-  width: 28px;
-  height: 28px;  
+  width: 21px;
+  height: 21px;  
   margin-left: 16px;
   margin-right: -14px;
 }
@@ -128,53 +128,27 @@ body, html {
 }
 
 .about-section {
+  height: 300px;
+}
+
+.about-right {
   display: flex;
-  flex-wrap: wrap; /* Quebra de linha em telas pequenas */
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-start;
-  gap: 40px;
-  padding: 40px;
-  background-color: #f7f7f7;
 }
 
-.about-left {
-  flex: 1;
-  max-width: 50%;
-  min-width: 300px;
-}
-
-.about-right.tech-icons {
-  display: flex;
-  flex-wrap: wrap;  /* MUITO IMPORTANTE */
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 12px;
-  max-width: 45%;
-}
-
-.about-right.tech-icons img {
-  width: 48px;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.about-right.tech-icons img:hover {
-  transform: scale(1.1);
-}
-
-/*{.about-right img {
+.about-right img {
   height: 215px;
   width: auto;
   /*object-fit: contain;*/
-/*  border-radius: 50%;             /* Isso cria o círculo */
- /* box-shadow: 0 0 15px #a6cbcf; /* Brilho/neon para um toque tecnológico */
-  /*animation: neonPulse 7.5s ease-in-out infinite;
+  border-radius: 50%;             /* Isso cria o círculo */
+  box-shadow: 0 0 15px #a6cbcf; /* Brilho/neon para um toque tecnológico */
+  animation: neonPulse 7.5s ease-in-out infinite;
   object-fit: contain;              /* Garante que a imagem preencha o círculo sem distorcer */
-  /*display: block;                 /* Remove pequenos espaços em volta */
-  /*margin-right: 220px;
+  display: block;                 /* Remove pequenos espaços em volta */
+  margin-right: 220px;
   margin-top: -301px;
-}*/
-
+}
 
 
 @keyframes neonPulse {
@@ -202,6 +176,31 @@ body, html {
 }
 
 
+.about-left {
+    flex: 1;
+    width: 81%; /* ou uma largura maior se estiver limitada */
+    max-width: 700px;
+    line-height: 1.6;
+    padding: 84px;
+    padding-right: 731px;
+    padding-top: 34px;
+    margin: -45px;
+    margin-block-start: -50px;
+    margin-right: 232px;
+    margin-left: 385px;
+    font-family: Verdana;
+    justify-content: flex-start;
+    max-width: 1181px;
+    /*font-weight: bold;*/
+    color: #000000;
+   margin-left: -40px;
+}
+
+.about-left h2 {
+  margin-top: -9px;
+  font-size: 24px;
+  font-weight: bold;
+}
 
 /* Espaço para o conteúdo não ficar atrás do cabeçalho */
 .container {
@@ -444,4 +443,35 @@ body, html {
     text-align: center;
   }
 
+}
+
+#google_translate_element {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+}
+
+
+.rotating-wheel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin-top: -525px;
+  margin-left: 577px;
+  padding: 195px;
+  justify-items: center;
+  align-items: center;
+ /* background-color: #fff;  Ou o fundo do seu site */
+}
+
+.rotating-wheel img {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.rotating-wheel img:hover {
+  transform: scale(1.1);
 }
