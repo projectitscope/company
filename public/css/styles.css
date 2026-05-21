@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   margin: 0;
   margin-top: -120px;
   padding: 0;
@@ -15,7 +16,8 @@ body, html {
   left: 0;
   height: 100vh;
   width: 100%;
-  z-index: -1; /* fica atrás do conteúdo */
+  z-index: -1;
+  /* fica atrás do conteúdo */
   overflow: hidden;
 }
 
@@ -41,7 +43,8 @@ body, html {
 /* Navbar organizada */
 .navbar2 {
   display: flex;
-  align-items: center; /* Alinha verticalmente */
+  align-items: center;
+  /* Alinha verticalmente */
   justify-content: space-between;
   height: 100%;
   padding: 285 0px;
@@ -50,7 +53,8 @@ body, html {
 
 .navbar {
   display: flex;
-  align-items: center; /* Alinha verticalmente */
+  align-items: center;
+  /* Alinha verticalmente */
   justify-content: space-between;
   height: 100%;
   padding: 0 40px;
@@ -87,7 +91,7 @@ body, html {
 
 #language-switcher img {
   width: 21px;
-  height: 21px;  
+  height: 21px;
   margin-left: 16px;
   margin-right: -14px;
 }
@@ -115,20 +119,26 @@ body, html {
 
 
 .tarja-logo {
-  background-color: #f9f8f8; /* ou outra cor se quiser */
-  height: 300px; /* altura da tarja */
+  background-color: #f9f8f8;
+  min-height: 300px;
+  height: auto;
   width: 100%;
-  display: block;
-  justify-content: flex-end; /* logo à direita */
-  align-items: center;
-  padding-right: 0px;
-  margin-bottom: 30%;
-  margin-top: 45px; /* compensa o cabeçalho fixo */
+  margin-bottom: 0;
+  margin-top: 45px;
+  /* compensa o cabeçalho fixo */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
 }
 
 .about-section {
-  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  gap: 40px;
 }
 
 .about-right {
@@ -141,11 +151,15 @@ body, html {
   height: 215px;
   width: auto;
   /*object-fit: contain;*/
-  border-radius: 50%;             /* Isso cria o círculo */
-  box-shadow: 0 0 15px #a6cbcf; /* Brilho/neon para um toque tecnológico */
+  border-radius: 50%;
+  /* Isso cria o círculo */
+  box-shadow: 0 0 15px #a6cbcf;
+  /* Brilho/neon para um toque tecnológico */
   animation: neonPulse 7.5s ease-in-out infinite;
-  object-fit: contain;              /* Garante que a imagem preencha o círculo sem distorcer */
-  display: block;                 /* Remove pequenos espaços em volta */
+  object-fit: contain;
+  /* Garante que a imagem preencha o círculo sem distorcer */
+  display: block;
+  /* Remove pequenos espaços em volta */
   margin-right: 220px;
   margin-top: -301px;
 }
@@ -153,65 +167,67 @@ body, html {
 
 @keyframes neonPulse {
   0% {
-    box-shadow: 0 0 2px #0066ff, 0 0 5px #163768, 0 0 8px #021430; /* Azul forte */
+    box-shadow: 0 0 2px #0066ff, 0 0 5px #163768, 0 0 8px #021430;
+    /* Azul forte */
   }
+
   15% {
-    box-shadow: 0 0 5px #00ffff, 0 0 8px #275555; /* Ciano claro */
+    box-shadow: 0 0 5px #00ffff, 0 0 8px #275555;
+    /* Ciano claro */
   }
+
   35% {
-    box-shadow: 0 0 10px #00ff99, 0 0 15px #172922; /* Verde neon */
+    box-shadow: 0 0 10px #00ff99, 0 0 15px #172922;
+    /* Verde neon */
   }
+
   50% {
-    box-shadow: none; /* Pisca (apagado) */
+    box-shadow: none;
+    /* Pisca (apagado) */
   }
+
   65% {
-    box-shadow: 0 0 8px #ffffff, 0 0 11px #ffffff; /* Branco brilhante */
+    box-shadow: 0 0 8px #ffffff, 0 0 11px #ffffff;
+    /* Branco brilhante */
   }
+
   85% {
-    box-shadow: 0 0 9px #00ffcc, 0 0 13px #265148; /* Ciano esverdeado */
+    box-shadow: 0 0 9px #00ffcc, 0 0 13px #265148;
+    /* Ciano esverdeado */
   }
+
   100% {
-    box-shadow: 0 0 7px #0066ff, 0 0 4px #152439, 0 0 1px #002357; /* Volta ao azul */
+    box-shadow: 0 0 7px #0066ff, 0 0 4px #152439, 0 0 1px #002357;
+    /* Volta ao azul */
   }
 }
 
 
 .about-left {
-    flex: 1;
-    width: 81%; /* ou uma largura maior se estiver limitada */
-    max-width: 700px;
-    line-height: 1.6;
-    padding: 84px;
-    padding-right: 731px;
-    padding-top: 34px;
-    margin: -45px;
-    margin-block-start: -50px;
-    margin-right: 232px;
-    margin-left: 385px;
-    font-family: Verdana;
-    justify-content: flex-start;
-    max-width: 1181px;
-    /*font-weight: bold;*/
-    color: #000000;
-   margin-left: -40px;
+  flex: 1;
+  max-width: 600px;
+  line-height: 1.6;
+  font-family: Verdana;
+  color: #000000;
 }
 
 .about-left h2 {
-  margin-top: -9px;
+  margin-top: 0;
   font-size: 24px;
   font-weight: bold;
 }
 
 /* Espaço para o conteúdo não ficar atrás do cabeçalho */
 .container {
-  flex: 1; /* Faz o conteúdo ocupar o espaço disponível e empurra o footer pra baixo */
+  flex: 1;
+  /* Faz o conteúdo ocupar o espaço disponível e empurra o footer pra baixo */
   padding-top: 100px;
   text-align: center;
 }
 
 .move-section {
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-  url('../img/futuristic-bg.jpg') center center no-repeat;
+    url('../img/futuristic-bg.jpg') center center no-repeat;
   background-size: cover;
   color: #ffffff;
   font-family: Verdana;
@@ -229,7 +245,8 @@ body, html {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #ffffff; /* amarelo destaque */
+  color: #ffffff;
+  /* amarelo destaque */
 }
 
 .move-content p {
@@ -239,7 +256,7 @@ body, html {
 }
 
 .follow-section {
-  background-color: #f5f5f5;  
+  background-color: #f5f5f5;
 }
 
 .follow-right {
@@ -252,32 +269,37 @@ body, html {
   height: 431px;
   width: auto;
   /*object-fit: contain;*/
-  border-radius: 50%;             /* Isso cria o círculo */
-  box-shadow: 0 0 15px #f5f5f5; /* Brilho/neon para um toque tecnológico */
-  object-fit: contain;              /* Garante que a imagem preencha o círculo sem distorcer */
-  display: block;                 /* Remove pequenos espaços em volta */
+  border-radius: 50%;
+  /* Isso cria o círculo */
+  box-shadow: 0 0 15px #f5f5f5;
+  /* Brilho/neon para um toque tecnológico */
+  object-fit: contain;
+  /* Garante que a imagem preencha o círculo sem distorcer */
+  display: block;
+  /* Remove pequenos espaços em volta */
   margin-right: 214px;
   margin-top: -500px;
 }
 
 .follow-left {
-    flex: 1;
-    width: -1%; /* ou uma largura maior se estiver limitada */
-    max-width: 700px;
-    line-height: 1.6;
-    padding: 84px;
-    padding-right: 731px;
-    padding-top: 85px;
-    margin: -45px;
-    margin-block-start: -50px;
-    margin-right: 232px;
-    margin-left: 385px;
-    font-family: Verdana;
-    justify-content: flex-start;
-    max-width: 1181px;
-    /*font-weight: bold;*/
-    color: #000000;
-   margin-left: -40px;
+  flex: 1;
+  width: -1%;
+  /* ou uma largura maior se estiver limitada */
+  max-width: 700px;
+  line-height: 1.6;
+  padding: 84px;
+  padding-right: 731px;
+  padding-top: 85px;
+  margin: -45px;
+  margin-block-start: -50px;
+  margin-right: 232px;
+  margin-left: 385px;
+  font-family: Verdana;
+  justify-content: flex-start;
+  max-width: 1181px;
+  /*font-weight: bold;*/
+  color: #000000;
+  margin-left: -40px;
 }
 
 .follow-left h2 {
@@ -362,7 +384,7 @@ body, html {
   color: #ffffff;
   margin-top: 10px;
 }
-  
+
 /* RESPONSIVIDADE PARA TELAS MENORES QUE 768px */
 @media screen and (max-width: 768px) {
 
@@ -372,14 +394,14 @@ body, html {
     padding: 10px;
   }
 
-.navbar-left {
-  color: #ffffff;
-  margin-left: -6px;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: Verdana;
-  transition: transform 0.2s, color 0.2s;
-}
+  .navbar-left {
+    color: #ffffff;
+    margin-left: -6px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Verdana;
+    transition: transform 0.2s, color 0.2s;
+  }
 
   .navbar-right {
     margin-top: -1px;
@@ -394,7 +416,7 @@ body, html {
   .follow-section {
     flex-direction: column !important;
     align-items: center !important;
-    text-align: center;
+    text-align: justify;
     padding: 10px !important;
   }
 
@@ -417,7 +439,7 @@ body, html {
 
   .tarja-logo {
     height: auto;
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
 
   .logo-header {
@@ -443,6 +465,20 @@ body, html {
     text-align: center;
   }
 
+  .tech-icons {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)) !important;
+    gap: 15px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0px 0 0 0 !important;
+    padding: 0 !important;
+    justify-content: center !important;
+  }
+
+  .tech-icons img {
+    width: 60px !important;
+  }
+
 }
 
 #google_translate_element {
@@ -451,18 +487,35 @@ body, html {
   overflow: hidden;
 }
 
+/* Oculta a barra de tradução padrão do Google no topo */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame,
+iframe.goog-te-banner-frame,
+.VIpgJd-yAWZ3b-bZOcub-ODtNSb,
+iframe.VIpgJd-yAWZ3b-bZOcub-ODtNSb,
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+iframe.VIpgJd-ZVi9od-ORHb-OEVmcd,
+iframe[class*="VIpgJd-ZVi9od-ORHb"] {
+  display: none !important;
+}
+
+/* Corrige o recuo de topo (top margin/padding) que o Google adiciona ao body/html */
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+html {
+  padding-top: 0px !important;
+}
+
 
 .tech-icons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 20px;
-  max-width: 1211px;
-  margin-top: -589px;
-  margin-left: 577px;
-  padding: 195px;
-  justify-items: center;
+  grid-template-columns: repeat(7, 80px);
+  gap: 20px 80px;
+  justify-content: center;
   align-items: center;
- /* background-color: #fff;  Ou o fundo do seu site */
 }
 
 .tech-icons img {

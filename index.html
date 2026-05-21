@@ -91,6 +91,7 @@
              <img class="item" src="public/img/redis.png" alt="Redis" />
            </div>         
        </section>
+      </div>
         <section class="move-section">
           <div class="move-content">
             <h2>↳ O que nos move</h2>
@@ -137,13 +138,19 @@
         </footer>
   <script>
     function translateLanguage(lang) {
-      const select = document.querySelector(".goog-te-combo");
-      if (select) {
-        select.value = lang;
-        select.dispatchEvent(new Event("change"));
+      if (lang === 'pt') {
+        // Remove os cookies para restaurar o idioma padrão (português)
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + location.hostname;
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + location.hostname.replace(/^www\./, '');
       } else {
-        alert("O Google Translate ainda não carregou. Tente novamente em alguns segundos.");
+        // Define o cookie para tradução (/pt/en ou /pt/es)
+        document.cookie = "googtrans=/pt/" + lang + "; path=/";
+        document.cookie = "googtrans=/pt/" + lang + "; path=/; domain=" + location.hostname;
+        document.cookie = "googtrans=/pt/" + lang + "; path=/; domain=." + location.hostname.replace(/^www\./, '');
       }
+      // Recarrega a página para aplicar a tradução instantaneamente
+      window.location.reload();
     }
   </script>
 
