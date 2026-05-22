@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Comercial - IT SCOPE</title>
+    <style>
+        :root {
+            --green: #2ea84e;
+            --teal: #08798C;
+            --dark-navy: #0d1b2a;
+            --gray-text: #414a4c;
+            --light-bg: #f8fcfc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        img {
+            border: none !important;
+            outline: none !important;
+        }
+
+        body {
+            font-family: 'Verdana', Geneva, sans-serif;
+            color: var(--gray-text);
+            background-color: #e5e5e5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Estrutura da Página A4 */
+        .page {
+            background-color: #FFFFFF;
+            width: 210mm;
+            min-height: 297mm;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding: 50mm 20mm 25mm 20mm;
+            margin-bottom: 30px;
+            overflow: hidden;
+            page-break-after: always;
+        }
+
+        /* Formatos Orgânicos (estilo Greenfive) */
+        .shape-top-right {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background: rgba(8, 121, 140, 0.08);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .shape-top-right::after {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: 40px;
+            width: 250px;
+            height: 250px;
+            background: rgba(46, 168, 78, 0.08);
+            border-radius: 50%;
+        }
+
+        /* Capa */
+        .cover-page {
+            padding: 35mm 20mm 25mm 20mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background: #ffffff !important;
+            background-color: #ffffff !important;
+        }
+
+        .cover-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        /* Logo no canto superior esquerdo com efeito translúcido */
+        .cover-logo-top-left {
+            position: absolute;
+            top: -38mm;
+            left: -26;
+            width: 200px;
+            height: 200px;
+            z-index: 10;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .cover-logo-top-left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+        }
+
+        /* Container do Círculo de Imagem à Direita */
+        .cover-image-circle-container {
+            position: absolute;
+            top: -45mm;
+            right: -25mm;
+            width: 480px;
+            height: 480px;
+            z-index: 1;
+        }
+
+        .cover-image-circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 18px solid var(--teal);
+            border-left-color: var(--green);
+            box-shadow: -15px 15px 40px rgba(13, 27, 42, 0.15);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .cover-image-circle::after {
+            content: '';
+            position: absolute;
+            top: -18px;
+            left: -18px;
+            right: -18px;
+            bottom: -18px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .cover-image-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.05);
+        }
+
+        /* Seção do Título da Proposta */
+        .cover-title-section {
+            margin-top: 60mm;
+            max-width: 82%;
+            z-index: 2;
+        }
+
+        .cover-main-title {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--teal);
+            margin: 0 0 8px 0;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+
+        .cover-sub-title {
+            font-size: 19px;
+            font-weight: 600;
+            color: var(--dark-navy);
+            margin: 0 0 15px 0;
+            line-height: 1.3;
+        }
+
+        .cover-divider-line {
+            width: 120px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--green) 0%, var(--teal) 100%);
+            margin-bottom: 25px;
+            border-radius: 3px;
+        }
+
+        .cover-description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--gray-text);
+            margin: 0;
+            font-weight: 400;
+        }
+
+        /* Bloco de Informações do Cliente */
+        .cover-client-box {
+            margin-top: 25mm;
+            z-index: 2;
+            max-width: 75%;
+            padding: 15px 0;
+        }
+
+        .client-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--green);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .client-name {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--dark-navy);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .client-contact {
+            font-size: 13.5px;
+            color: var(--gray-text);
+            margin-bottom: 35px;
+        }
+
+        .cover-date {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--teal);
+        }
+
+        /* Barra de Rodapé da Capa */
+        .cover-footer-bar {
+            margin-top: auto;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .cover-footer-line {
+            width: 100%;
+            height: 2px;
+            background: rgba(8, 121, 140, 0.15);
+            margin-bottom: 12px;
+        }
+
+        .cover-footer-text {
+            font-size: 11px;
+            color: #666;
+            text-align: center;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        /* Tipografia de Cabeçalhos */
+        h1,
+        h2,
+        h3 {
+            font-family: 'Verdana', Geneva, sans-serif;
+            color: var(--dark-navy);
+            position: relative;
+            z-index: 2;
+        }
+
+        h2.section-title {
+            font-size: 24px;
+            color: var(--teal);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(8, 121, 140, 0.2);
+            display: inline-block;
+        }
+
+        /* Parágrafos e Listas */
+        p {
+            font-size: 13.5px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 2;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        li {
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        /* Cabeçalho das Páginas Internas */
+        .page-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 40mm;
+            padding: 0 20mm;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            border-bottom: 2px solid rgba(8, 121, 140, 0.15);
+            z-index: 10;
+        }
+
+        /* Rodapé das Páginas Internas */
+        .page-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20mm;
+            padding: 0 20mm 4mm 20mm;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            border-top: 2px solid rgba(46, 168, 78, 0.15);
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--gray-text);
+            z-index: 10;
+        }
+
+        /* Sumário (Table of Contents) */
+        .toc-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .toc-item {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--dark-navy);
+            padding: 10px 15px;
+            border-radius: 8px;
+            background: rgba(248, 252, 252, 0.5);
+            border: 1px solid rgba(8, 121, 140, 0.08);
+            transition: all 0.2s ease;
+        }
+
+        .toc-item:hover {
+            background: rgba(8, 121, 140, 0.08);
+            border-color: rgba(8, 121, 140, 0.2);
+            transform: translateX(5px);
+        }
+
+        .toc-number {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--green);
+            margin-right: 12px;
+            background: rgba(46, 168, 78, 0.1);
+            width: 26px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .toc-title {
+            font-size: 13.5px;
+            font-weight: 600;
+        }
+
+        .toc-dots {
+            flex-grow: 1;
+            border-bottom: 2px dotted rgba(65, 74, 76, 0.2);
+            margin: 0 12px;
+            align-self: flex-end;
+            margin-bottom: 5px;
+        }
+
+        .toc-page {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--teal);
+        }
+
+        .toc-highlight-box {
+            background: rgba(46, 168, 78, 0.04);
+            border-left: 4px solid var(--green);
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 25px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Tabelas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 13px;
+        }
+
+        th {
+            background-color: rgba(8, 121, 140, 0.1);
+            color: var(--dark-navy);
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fafbfc;
+        }
+
+        /* Grid de Serviços */
+        .quadrant-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .quadrant {
+            background: #fff;
+            border: 1px solid #f0f0f0;
+            border-left: 4px solid var(--teal);
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .quadrant h3 {
+            color: var(--dark-navy);
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .quadrant.green {
+            border-left-color: var(--green);
+        }
+
+        /* Assinaturas */
+        .signatures {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .sig-box {
+            width: 45%;
+        }
+
+        .sig-box div {
+            border-top: 1px solid var(--dark-navy);
+            padding-top: 10px;
+            font-weight: 600;
+            font-size: 12px;
+            color: var(--dark-navy);
+        }
+
+        .sig-box span {
+            display: block;
+            font-weight: 400;
+            font-size: 11px;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        /* Para impressão */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PÁGINA 1: CAPA -->
+    <div class="page cover-page">
+        <!-- Círculo gigante com a imagem de tecnologia recortada à direita -->
+        <div class="cover-image-circle-container">
+            <div class="cover-image-circle">
+                <img src="tech_user_cover.png" alt="IT SCOPE Technology">
+            </div>
+        </div>
+
+        <div class="cover-content">
+            <!-- Logo oficial da IT SCOPE com efeito translúcido no canto superior esquerdo -->
+            <div class="cover-logo-top-left">
+                <img src="logo.png" alt="IT SCOPE Logo">
+            </div>
+
+            <!-- Bloco de títulos da Proposta -->
+            <div class="cover-title-section">
+                <h1 class="cover-main-title">Proposta Comercial</h1>
+                <h2 class="cover-sub-title">Parceria Estratégica de Tecnologia</h2>
+                <div class="cover-divider-line"></div>
+                <p class="cover-description">Soluções Avançadas em Multicloud, Cybersecurity, Automação & DevOps e
+                    Observabilidade</p>
+            </div>
+
+            <!-- Informações do Cliente e Identidade Visual -->
+            <div class="cover-client-box">
+                <div class="client-label">PREPARADO EXCLUSIVAMENTE PARA:</div>
+                <div class="client-name">[NOME DO CLIENTE]</div>
+                <div class="client-contact">Aos cuidados de: <strong>Vítor Cypriano</strong></div>
+                <div class="cover-date">Data: _____ de _________________ de __________</div>
+            </div>
+
+            <!-- Rodapé institucional da capa -->
+            <div class="cover-footer-bar">
+                <div class="cover-footer-line"></div>
+                <div class="cover-footer-text">
+                    <strong>IT SCOPE LTDA</strong> — Transformamos TI em Estratégia
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 2: SUMÁRIO -->
+    <div class="page" id="page-sumario">
+        <div class="shape-top-right"></div>
+        <div class="page-header">
+            <div style="display: flex; align-items: center;">
+                <img src="logo.png" alt="IT SCOPE Logo"
+                    style="height: 136px; border-radius: 50%; object-fit: cover; aspect-ratio: 1;">
+            </div>
+            <div
+                style="font-size: 11px; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 1px;">
+                Sumário</div>
+        </div>
+
+        <h2 class="section-title">Sumário</h2>
+        <p style="margin-bottom: 25px; font-size: 14px;">Abaixo estão elencados os principais tópicos e seções que
+            compõem esta proposta de parceria tecnológica comercial:</p>
+
+        <div class="toc-container">
+            <a href="#page-resumo" class="toc-item">
+                <span class="toc-number">01</span>
+                <span class="toc-title">Apresentação & Resumo Executivo</span>
+                <span class="toc-dots"></span>
+                <span class="toc-page">Pág. 03</span>
+            </a>
+            <a href="#page-atuacao" class="toc-item">
+                <span class="toc-number">02</span>
+                <span class="toc-title">Nossa Atuação & Especialidades</span>
+                <span class="toc-dots"></span>
+                <span class="toc-page">Pág. 03</span>
+            </a>
+            <a href="#page-escopo" class="toc-item">
+                <span class="toc-number">03</span>
+                <span class="toc-title">Escopo do Projeto & Entregáveis</span>
+                <span class="toc-dots"></span>
+                <span class="toc-page">Pág. 04</span>
+            </a>
+            <a href="#page-metodologia" class="toc-item">
+                <span class="toc-number">04</span>
+                <span class="toc-title">Metodologia & Prazos de Execução</span>
+                <span class="toc-dots"></span>
+                <span class="toc-page">Pág. 04</span>
+            </a>
+            <a href="#page-investimento" class="toc-item">
+                <span class="toc-number">05</span>
+                <span class="toc-title">Investimento & Faturamento</span>
+                <span class="toc-dots"></span>
+                <span class="toc-page">Pág. 05</span>
+            </a>
+            <a href="#page-termos" class="toc-item">
+                <span class="toc-number">06</span>
+                <span class="toc-title">Condições de Pagamento & Termos de Aceite</span>
+                <span class="toc-dots"></span>
+                <span class="toc-page">Pág. 05</span>
+            </a>
+        </div>
+
+        <div class="toc-highlight-box">
+            <h3 style="font-size: 13.5px; color: var(--dark-navy); margin-bottom: 6px;">💡 Navegação Digital Inteligente
+            </h3>
+            <p style="font-size: 12px; margin-bottom: 0; line-height: 1.5; color: var(--gray-text);">Esta proposta foi
+                otimizada para leitura digital. Se estiver visualizando o documento PDF ou no navegador, clique em
+                qualquer um dos itens do Sumário acima para navegar diretamente para a seção desejada.</p>
+        </div>
+
+        <div class="page-footer">
+            <span>IT SCOPE LTDA | Transformamos TI em Estratégia</span>
+            <span>Página 02</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 3: RESUMO EXECUTIVO E APRESENTAÇÃO -->
+    <div class="page" id="page-resumo">
+        <div class="shape-top-right"></div>
+        <div class="page-header">
+            <div style="display: flex; align-items: center;">
+                <img src="logo.png" alt="IT SCOPE Logo"
+                    style="height: 136px; border-radius: 50%; object-fit: cover; aspect-ratio: 1;">
+            </div>
+            <div
+                style="font-size: 11px; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 1px;">
+                Resumo Executivo</div>
+        </div>
+
+        <h2 class="section-title">Resumo Executivo</h2>
+        <p>Aos cuidados de <strong>[Nome do Contato]</strong>.</p>
+        <p>Prezados,</p>
+        <p>Temos o prazer de apresentar à <strong>[Nome da Empresa]</strong> a nossa proposta de serviços especializados
+            em engenharia de TI e infraestrutura avançada, resumindo todos os alinhamentos que mantivemos até a presente
+            data.</p>
+        <p>Queremos destacar que a presente proposta reúne um conjunto de soluções modernas, robustas e totalmente
+            alinhadas aos objetivos de <strong>segurança, automação e escalabilidade</strong> do seu negócio. Tem,
+            portanto, todas as condições para elevar a sua operação tecnológica ao patamar de excelência exigido pelo
+            mercado.</p>
+        <p>A IT SCOPE agradece a todos os representantes com os quais manteve contato pela confiança e cordialidade.
+            Colocamo-nos à inteira disposição para prestar quaisquer esclarecimentos.</p>
+        <br>
+        <p>Atenciosamente,</p>
+        <p style="font-weight: 600; color: var(--dark-navy); margin-bottom: 0;">Vítor Cypriano</p>
+        <p style="font-size: 12px;">Fundador<br>vitor.cypriano@itscope.com.br</p>
+
+        <h2 class="section-title" id="page-atuacao" style="margin-top: 40px;">Nossa Atuação</h2>
+        <p>A IT SCOPE possui a inteligência de negócios em seu DNA. Posicionamo-nos como especialistas focados na
+            proteção, otimização e automação de infraestruturas corporativas críticas. Nessas principais verticais de
+            entrega são:</p>
+
+        <div class="quadrant-grid">
+            <div class="quadrant">
+                <h3>☁️ Multicloud</h3>
+                <p style="font-size: 12.5px;">Arquitetura, migração e gestão de ambientes em nuvem, garantindo alta
+                    disponibilidade, performance e otimização inteligente de custos de infraestrutura.</p>
+            </div>
+            <div class="quadrant green">
+                <h3>🛡️ Cybersecurity</h3>
+                <p style="font-size: 12.5px;">Mitigação de riscos através de análise de vulnerabilidades, blindagem de
+                    dados, adequação a normativas e implementação de políticas rigorosas de segurança.</p>
+            </div>
+            <div class="quadrant green">
+                <h3>⚙️ Automação e DevOps</h3>
+                <p style="font-size: 12.5px;">Aceleração do ciclo de desenvolvimento de software, infraestrutura como
+                    código (IaC) e padronização contínua de entregas (CI/CD).</p>
+            </div>
+            <div class="quadrant">
+                <h3>👁️ Observabilidade</h3>
+                <p style="font-size: 12.5px;">Monitoramento 360º de todas as camadas do seu ambiente com dashboards em
+                    tempo real, antecipando incidentes e suportando a governança de TI.</p>
+            </div>
+        </div>
+
+        <div class="page-footer">
+            <span>IT SCOPE LTDA | Transformamos TI em Estratégia</span>
+            <span>Página 03</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 4: ESCOPO E METODOLOGIA -->
+    <div class="page" id="page-escopo">
+        <div class="shape-top-right"></div>
+        <div class="page-header">
+            <div style="display: flex; align-items: center;">
+                <img src="logo.png" alt="IT SCOPE Logo"
+                    style="height: 136px; border-radius: 50%; object-fit: cover; aspect-ratio: 1;">
+            </div>
+            <div
+                style="font-size: 11px; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 1px;">
+                Escopo e Prazos</div>
+        </div>
+
+        <h2 class="section-title">Escopo do Projeto</h2>
+        <p>Com base nos alinhamentos técnicos, o projeto tem como <strong>objetivo principal</strong> implementar e
+            reestruturar o ambiente de TI para garantir estabilidade, segurança e preparação para o crescimento de
+            demanda operacional.</p>
+
+        <p><strong>Entendimento da Demanda:</strong></p>
+        <p>O fluxo de execução compreende as seguintes atividades diretas:</p>
+        <ul>
+            <li>Levantamento técnico, assessment de arquitetura atual e mapeamento de riscos;</li>
+            <li>Configuração de instâncias de Servidores Dockerizados para as aplicações de produção;</li>
+            <li>Implementação de rotinas automatizadas de rotatividade e backup de dados;</li>
+            <li>Configuração avançada de firewall, regras de rede e auditoria;</li>
+            <li>Homologação em conjunto com a equipe da <strong>[Empresa do Cliente]</strong>.</li>
+        </ul>
+
+        <h2 class="section-title" id="page-metodologia" style="margin-top: 30px;">Metodologia e Prazos</h2>
+        <p>Para o atendimento do escopo, adotamos uma abordagem ágil baseada em ciclos de entregas contínuas (Sprints).
+        </p>
+        <ul>
+            <li>O prazo estimado para a execução de todos os módulos elencados no escopo é de <strong>[X
+                    semanas]</strong>.</li>
+            <li>O projeto contará com 1 (um) Arquiteto de Soluções e acompanhamento periódico da gerência.</li>
+            <li>Ao longo da execução, prevemos Status Reports semanais para visibilidade total do andamento.</li>
+        </ul>
+
+        <div
+            style="background-color: var(--light-bg); padding: 20px; border-radius: 8px; margin-top: 20px; border-left: 4px solid var(--green);">
+            <h3 style="font-size: 13px; margin-bottom: 5px;">📍 Premissas de Execução</h3>
+            <p style="font-size: 11.5px; margin-bottom: 0; line-height: 1.5;">A execução dos serviços exige o
+                fornecimento, por parte do cliente, de credenciais administrativas aos painéis cloud e acesso a
+                repositórios necessários. Falhas no fornecimento prolongarão cronogramas. Ambientes de terceiros são de
+                responsabilidade do contratante.</p>
+        </div>
+
+        <div class="page-footer">
+            <span>IT SCOPE LTDA | Transformamos TI em Estratégia</span>
+            <span>Página 4</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 5: INVESTIMENTO E CONDIÇÕES GERAIS -->
+    <div class="page" id="page-investimento">
+        <div class="shape-top-right"></div>
+        <div class="page-header">
+            <div style="display: flex; align-items: center;">
+                <img src="logo.png" alt="IT SCOPE Logo"
+                    style="height: 136px; border-radius: 50%; object-fit: cover; aspect-ratio: 1;">
+            </div>
+            <div
+                style="font-size: 11px; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 1px;">
+                Valores e Aceite</div>
+        </div>
+
+        <h2 class="section-title">Proposta Comercial</h2>
+
+        <p><strong>Faturamento:</strong><br>
+            O valor total dos serviços profissionais propostos para contemplar a integralidade do escopo descrito é de
+            <strong>R$ XX.000,00</strong> (Valor por extenso).
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Descrição do Serviço</th>
+                    <th style="width: 25%;">Modalidade</th>
+                    <th style="width: 25%;">Investimento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Projeto de Implementação e Arquitetura</td>
+                    <td>Taxa Única</td>
+                    <td>R$ 00.000,00</td>
+                </tr>
+                <tr>
+                    <td>Governança e Sustentação Contínua (Opcional)</td>
+                    <td>Mensal recorrente</td>
+                    <td>R$ 0.000,00 / mês</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="margin-top: 20px;"><strong>Condições de Pagamento:</strong></p>
+        <ul>
+            <li>50% faturado no aceite comercial e na reunião de Kickoff do projeto.</li>
+            <li>50% faturado no momento da homologação e entrega final do ambiente.</li>
+        </ul>
+        <p>A IT SCOPE emitirá notas fiscais/faturas respeitando o prazo de pagamento acordado. Todos os impostos
+            aplicáveis já estão inclusos nos valores informados.</p>
+
+        <h2 class="section-title" id="page-termos" style="margin-top: 30px;">Termos e Aprovação</h2>
+        <p>Esta proposta possui validade até o dia <strong>[Data de Validade]</strong>.</p>
+        <p>Uma vez de acordo com as condições aqui documentadas, pedimos a gentileza de firmar o aceite através de
+            assinatura digital ou preenchimento a seguir, o qual configurará as diretrizes formais para o início das
+            nossas atividades.</p>
+
+        <div class="signatures">
+            <div class="sig-box">
+                <div>
+                    VÍTOR CYPRIANO
+                    <span>IT SCOPE LTDA</span>
+                    <span>CNPJ: 58.362.984/0001-30</span>
+                </div>
+            </div>
+            <div class="sig-box">
+                <div>
+                    [NOME DO RESPONSÁVEL DO CLIENTE]
+                    <span>[Nome da Empresa do Cliente]</span>
+                    <span>CNPJ: XX.XXX.XXX/XXXX-XX</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-footer">
+            <span>IT SCOPE LTDA | Transformamos TI em Estratégia</span>
+            <span>Página 05</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
