@@ -112,3 +112,50 @@ function translateLanguage(lang) {
   restoreTitle();
   setInterval(restoreTitle, 500);
 })();
+
+// 6. Google Analytics Custom Conversion Event Tracking (WhatsApp, Email, and Social links)
+document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('click', function(e) {
+    var target = e.target.closest('a');
+    if (!target) return;
+    
+    var href = target.getAttribute('href') || '';
+    
+    if (href.indexOf('wa.me') !== -1 || href.indexOf('api.whatsapp.com') !== -1) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'click_whatsapp', {
+          'event_category': 'Contact',
+          'event_label': href
+        });
+      }
+    } else if (href.indexOf('mailto:') !== -1) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'click_email', {
+          'event_category': 'Contact',
+          'event_label': href
+        });
+      }
+    } else if (href.indexOf('linkedin.com') !== -1) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'click_linkedin', {
+          'event_category': 'Social',
+          'event_label': href
+        });
+      }
+    } else if (href.indexOf('instagram.com') !== -1) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'click_instagram', {
+          'event_category': 'Social',
+          'event_label': href
+        });
+      }
+    } else if (href.indexOf('youtube.com') !== -1) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'click_youtube', {
+          'event_category': 'Social',
+          'event_label': href
+        });
+      }
+    }
+  });
+});

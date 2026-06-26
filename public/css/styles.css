@@ -400,6 +400,32 @@ h1.navbar-left, .navbar-left {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 15px;
+  font-family: Verdana, Geneva, sans-serif !important;
+  display: inline-block;
+  
+  /* Efeito de Reflexo Prateado/Cromado com Destaques (Verde, Ciano, Azul Turquesa) */
+  background: linear-gradient(120deg, 
+    #ffffff 0%, 
+    #ffffff 43%, 
+    #00ff87 47%, 
+    #ffffff 49%, 
+    #60efff 51%, 
+    #ffffff 53%, 
+    #00b4d8 57%, 
+    #ffffff 61%, 
+    #ffffff 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #ffffff; /* Fallback */
+  animation: textShimmer 10s ease-in-out infinite;
+}
+
+.footer-logo .logo-text {
+  color: inherit;
+  -webkit-text-fill-color: inherit;
 }
 
 .logo-symbol {
@@ -469,7 +495,7 @@ h1.navbar-left, .navbar-left {
   h1.navbar-left, .navbar-left {
     color: #ffffff;
     margin-left: 0 !important;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     font-family: Verdana;
     white-space: nowrap;
