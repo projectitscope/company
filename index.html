@@ -13,19 +13,10 @@
   <title>IT SCOPE | Consultoria em Tecnologia</title>
   <link rel="icon" href="favicon5.ico" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="public/css/styles.css?v=1.4" />
+  <link rel="stylesheet" href="public/css/styles.css?v=2.0" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'pt',
-        includedLanguages: 'pt,en,es',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-    }
-  </script>
-
+  <script src="public/js/translate.js"></script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
@@ -73,7 +64,8 @@
           adaptadas à realidade do seu negócio.
         </p>
       </div>
-      <div class="tech-icons">
+      <!-- Grid para Desktop -->
+      <div class="tech-icons-grid">
         <img class="item" src="public/img/aws.png" alt="AWS" />
         <img class="item" src="public/img/az.png" alt="Azure" />
         <img class="item" src="public/img/gcp.png" alt="Google" />
@@ -95,6 +87,56 @@
         <img class="item" src="public/img/mysql.png" alt="MySQL" />
         <img class="item" src="public/img/postgre.png" alt="Postgre" />
         <img class="item" src="public/img/redis.png" alt="Redis" />
+      </div>
+
+      <!-- Carrossel Infinito para Mobile -->
+      <div class="tech-icons-marquee">
+        <div class="tech-icons-track">
+          <img class="item" src="public/img/aws.png" alt="AWS" />
+          <img class="item" src="public/img/az.png" alt="Azure" />
+          <img class="item" src="public/img/gcp.png" alt="Google" />
+          <img class="item" src="public/img/oracle.png" alt="Oracle" />
+          <img class="item" src="public/img/kube.png" alt="Kubernetes" />
+          <img class="item" src="public/img/ter.png" alt="Terraform" />
+          <img class="item" src="public/img/github.png" alt="GitHub" />
+          <img class="item" src="public/img/ans2.png" alt="Ansible" />
+          <img class="item" src="public/img/devops.png" alt="DevOps" />
+          <img class="item" src="public/img/win.png" alt="Windows" />
+          <img class="item" src="public/img/linux2.png" alt="Linux" />
+          <img class="item" src="public/img/vm.png" alt="VmWare" />
+          <img class="item" src="public/img/fort.png" alt="Fortinet" />
+          <img class="item" src="public/img/cis.png" alt="Cisco" />
+          <img class="item" src="public/img/docker.png" alt="Docker" />
+          <img class="item" src="public/img/js2.png" alt="JavaScript" />
+          <img class="item" src="public/img/py.png" alt="Python" />
+          <img class="item" src="public/img/shell.png" alt="Shell" />
+          <img class="item" src="public/img/mysql.png" alt="MySQL" />
+          <img class="item" src="public/img/postgre.png" alt="Postgre" />
+          <img class="item" src="public/img/redis.png" alt="Redis" />
+        </div>
+        <div class="tech-icons-track">
+          <img class="item" src="public/img/aws.png" alt="AWS" />
+          <img class="item" src="public/img/az.png" alt="Azure" />
+          <img class="item" src="public/img/gcp.png" alt="Google" />
+          <img class="item" src="public/img/oracle.png" alt="Oracle" />
+          <img class="item" src="public/img/kube.png" alt="Kubernetes" />
+          <img class="item" src="public/img/ter.png" alt="Terraform" />
+          <img class="item" src="public/img/github.png" alt="GitHub" />
+          <img class="item" src="public/img/ans2.png" alt="Ansible" />
+          <img class="item" src="public/img/devops.png" alt="DevOps" />
+          <img class="item" src="public/img/win.png" alt="Windows" />
+          <img class="item" src="public/img/linux2.png" alt="Linux" />
+          <img class="item" src="public/img/vm.png" alt="VmWare" />
+          <img class="item" src="public/img/fort.png" alt="Fortinet" />
+          <img class="item" src="public/img/cis.png" alt="Cisco" />
+          <img class="item" src="public/img/docker.png" alt="Docker" />
+          <img class="item" src="public/img/js2.png" alt="JavaScript" />
+          <img class="item" src="public/img/py.png" alt="Python" />
+          <img class="item" src="public/img/shell.png" alt="Shell" />
+          <img class="item" src="public/img/mysql.png" alt="MySQL" />
+          <img class="item" src="public/img/postgre.png" alt="Postgre" />
+          <img class="item" src="public/img/redis.png" alt="Redis" />
+        </div>
       </div>
     </section>
   </div>
@@ -126,7 +168,9 @@
       </p>
     </div>
     <div class="follow-right">
-      <img src="public/img/futuristic_pathway.png" alt="futuro-tecnologia-itscope">
+      <div class="image-blend-wrapper">
+        <img src="public/img/futuristic_horizon_bg.png?v=1.3" alt="futuro-tecnologia-itscope">
+      </div>
     </div>
   </section>
   <footer class="itscope-footer">
@@ -144,10 +188,10 @@
             class="fab fa-youtube"></i></a>
       </div>
       <div class="footer-links">
-        <!--<a href="#">Política de Privacidade</a>
-                  <a href="#">Consumo Responsável</a>
-                  <a href="#">Termos de Uso</a>
-                  <a href="#">Acessibilidade</a>-->
+        <a href="politica-privacidade.html">Política de Privacidade</a>
+        <a href="consumo-responsavel.html">Consumo Responsável</a>
+        <a href="termos-uso.html">Termos de Uso</a>
+        <a href="acessibilidade.html">Acessibilidade</a>
       </div>
       <div class="footer-copy">
         © 2025 IT SCOPE LTDA. Todos os direitos reservados.
@@ -155,21 +199,16 @@
     </div>
   </footer>
   <script>
-    function translateLanguage(lang) {
-      if (lang === 'pt') {
-        // Remove os cookies para restaurar o idioma padrão (português)
-        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
-        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + location.hostname;
-        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + location.hostname.replace(/^www\./, '');
-      } else {
-        // Define o cookie para tradução (/pt/en ou /pt/es)
-        document.cookie = "googtrans=/pt/" + lang + "; path=/";
-        document.cookie = "googtrans=/pt/" + lang + "; path=/; domain=" + location.hostname;
-        document.cookie = "googtrans=/pt/" + lang + "; path=/; domain=." + location.hostname.replace(/^www\./, '');
+    document.addEventListener("DOMContentLoaded", function() {
+      // Carregar o vídeo de fundo dinamicamente apenas em desktops para economizar dados no mobile
+      var video = document.getElementById("bg-video");
+      if (video && window.innerWidth >= 768) {
+        var source = video.querySelector("source");
+        source.src = source.getAttribute("data-src");
+        video.load();
+        video.play();
       }
-      // Recarrega a página para aplicar a tradução instantaneamente
-      window.location.reload();
-    }
+    });
   </script>
 
 </body>
