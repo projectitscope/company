@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 
 <head>
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFBFE9NTX1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -11,190 +11,587 @@
 
     gtag('config', 'G-JFBFE9NTX1');
   </script>
+
+  <!-- Metadados de SEO Técnico & Indexação -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="IT SCOPE | Consultoria em Tecnologia">
-  <meta property="og:description"
-    content="Transformamos sua infraestrutura tecnológica com visão estratégica e inovação.">
-  <meta property="og:image" content="https://www.itscope.com.br/ogimage.png"> <!-- troque pela URL real da imagem -->
-  <meta property="og:url" content="https://www.itscope.com.br">
+  <title>IT SCOPE | Consultoria em Infraestrutura, MultiCloud &amp; Segurança</title>
+  <meta name="description" content="Consultoria especializada em infraestrutura de TI, MultiCloud (AWS/Azure), segurança da informação (LGPD, ISO/NIST) e automação DevOps liderada por Vítor Cypriano." />
+  <link rel="canonical" href="https://www.itscope.com.br/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://www.itscope.com.br/" />
+
+  <!-- Open Graph & Social Cards -->
+  <meta property="og:title" content="IT SCOPE | Consultoria em Tecnologia &amp; MultiCloud">
+  <meta property="og:description" content="Transformamos sua infraestrutura tecnológica com visão estratégica, automação, segurança e inteligência comercial.">
+  <meta property="og:image" content="https://www.itscope.com.br/public/img/visual_template.png">
+  <meta property="og:url" content="https://www.itscope.com.br/">
   <meta property="og:type" content="website">
-  <title>IT SCOPE | Consultoria em Tecnologia</title>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IT SCOPE | Consultoria em Tecnologia &amp; MultiCloud">
+  <meta name="twitter:description" content="Infraestrutura inteligente. Ambientes seguros. Negócios preparados para o futuro.">
+
+  <!-- Dados Estruturados Schema.org (LocalBusiness & Organization) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "IT SCOPE LTDA",
+    "image": "https://www.itscope.com.br/public/img/logo_itscope.jpg",
+    "telephone": "+5521971722582",
+    "email": "vitor.cypriano@itscope.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rio de Janeiro / São Paulo",
+      "addressCountry": "BR"
+    },
+    "url": "https://www.itscope.com.br",
+    "founder": {
+      "@type": "Person",
+      "name": "Vítor Cypriano",
+      "jobTitle": "Fundador & Especialista em TI",
+      "sameAs": "https://www.linkedin.com/in/vitorcypriano"
+    },
+    "description": "Consultoria especializada em infraestrutura de TI, MultiCloud, segurança da informação e automação DevOps."
+  }
+  </script>
+
+  <!-- Favicon e Estilos -->
   <link rel="icon" href="favicon5.ico" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="public/css/styles.css?v=2.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="public/css/styles.css?v=3.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Scripts -->
   <script src="public/js/translate.js"></script>
+  <script src="public/js/features.js" defer></script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body>
   <div id="google_translate_element" style="display: none;"></div>
-  <div class="video-background">
-    <video autoplay muted loop playsinline>
-      <source src="public/video/seu_video.mp4" type="video/mp4">
-      Seu navegador não suporta vídeos em HTML5.
-    </video>
-  </div>
+
+  <!-- HEADER DE NAVEGAÇÃO -->
   <div class="wrapper">
     <header id="main-header">
       <nav class="navbar">
-        <div class="navbar-left notranslate" translate="no">IT SCOPE</div>
-        <div class="navbar-center"></div>
+        <div class="navbar-left notranslate" translate="no">
+          <a href="/" style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:10px;">
+            <img src="public/img/logo_globe.png" alt="IT SCOPE Logo" style="height:52px; border-radius:0;">
+            <span>IT SCOPE</span>
+          </a>
+        </div>
+        <div class="navbar-center" style="display:flex; gap:20px; font-size:13px; font-weight:600;">
+          <a href="#solucoes" class="nav-link">Soluções</a>
+          <a href="#tecnologias" class="nav-link">Tecnologias</a>
+          <a href="#por-que-itscope" class="nav-link">Sobre</a>
+          <a href="#cases" class="nav-link">Cases</a>
+          <a href="#calculadora" class="nav-link">Calculadora ROI</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+        </div>
         <div class="navbar-right">
           <div id="language-switcher">
             <img src="public/img/flag-en.png" alt="English" onclick="translateLanguage('en')">
             <img src="public/img/flag-pt.png" alt="Português" onclick="translateLanguage('pt')">
             <img src="public/img/flag-es.png" alt="Español" onclick="translateLanguage('es')">
           </div>
-
-
-          <a href="https://wa.me/5521971722582" target="_blank"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.instagram.com/itscopeltda/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/itscope/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="mailto:vitor.cypriano@itscope.com.br"><i class="fas fa-envelope"></i></a>
-          <!--<a href="https://github.com/projectitscope" aria-label="E-mail"><i class="fab fa-github"></i></a>-->
-          <a href="https://www.youtube.com/channel/UC01yxvKXquP1lg05nHO86gA" aria-label="youtube"><i
-              class="fab fa-youtube"></i></a>
         </div>
       </nav>
     </header>
   </div>
-  <div class="tarja-logo">
-    <section class="about-section">
-      <div class="about-left">
-        <h2>QUEM SOMOS</h2>
-        <p>
-          A <strong>IT SCOPE</strong> é uma empresa de tecnologia que acredita na transformação estratégica por meio da
-          inovação. Atuamos com foco em <strong>multicloud</strong>, <strong>segurança da informação</strong>,
-          <strong>automação</strong>, <strong>infraestrutura de TI</strong> e <strong>atendimento técnico de
-            excelência</strong>. Com presença no Rio e em São Paulo, entregamos soluções robustas, inteligentes e
-          adaptadas à realidade do seu negócio.
+
+  <!-- ===== HERO SECTION (AUTORIDADE DO FUNDADOR & PROPOSTA DE VALOR) ===== -->
+  <section class="hero-v2-section">
+    <div class="hero-v2-container">
+      <div class="hero-v2-left">
+        <h1 class="hero-v2-headline">
+          Infraestrutura inteligente.<br>
+          Ambientes seguros.<br>
+          <span class="highlight-green">Negócios preparados para o futuro.</span>
+        </h1>
+        <p class="hero-v2-subheadline">
+          Consultoria especializada em infraestrutura, cloud, segurança e automação para empresas que buscam alta performance, máxima disponibilidade e redução de custos com eficiência.
         </p>
-      </div>
-      <!-- Grid para Desktop -->
-      <div class="tech-icons-grid">
-        <img class="item" src="public/img/aws.png" alt="AWS" />
-        <img class="item" src="public/img/az.png" alt="Azure" />
-        <img class="item" src="public/img/gcp.png" alt="Google" />
-        <img class="item" src="public/img/oracle.png" alt="Oracle" />
-        <img class="item" src="public/img/kube.png" alt="Kubernetes" />
-        <img class="item" src="public/img/ter.png" alt="Terraform" />
-        <img class="item" src="public/img/github.png" alt="GitHub" />
-        <img class="item" src="public/img/ans2.png" alt="Ansible" />
-        <img class="item" src="public/img/devops.png" alt="DevOps" />
-        <img class="item" src="public/img/win.png" alt="Windows" />
-        <img class="item" src="public/img/linux2.png" alt="Linux" />
-        <img class="item" src="public/img/vm.png" alt="VmWare" />
-        <img class="item" src="public/img/fort.png" alt="Fortinet" />
-        <img class="item" src="public/img/cis.png" alt="Cisco" />
-        <img class="item" src="public/img/docker.png" alt="Docker" />
-        <img class="item" src="public/img/js2.png" alt="JavaScript" />
-        <img class="item" src="public/img/py.png" alt="Python" />
-        <img class="item" src="public/img/shell.png" alt="Shell" />
-        <img class="item" src="public/img/mysql.png" alt="MySQL" />
-        <img class="item" src="public/img/postgre.png" alt="Postgre" />
-        <img class="item" src="public/img/redis.png" alt="Redis" />
+
+        <!-- Badges de Destaque -->
+        <div class="hero-v2-badges">
+          <div class="hero-v2-badge-item">
+            <div class="hero-v2-badge-icon"><i class="fas fa-bullseye"></i></div>
+            <div class="hero-v2-badge-text">Mais de 15 anos de experiência no mercado</div>
+          </div>
+          <div class="hero-v2-badge-item">
+            <div class="hero-v2-badge-icon"><i class="fas fa-shield-halved"></i></div>
+            <div class="hero-v2-badge-text">Soluções sob medida para problemas reais do seu negócio</div>
+          </div>
+          <div class="hero-v2-badge-item">
+            <div class="hero-v2-badge-icon"><i class="fas fa-cloud"></i></div>
+            <div class="hero-v2-badge-text">Atuação MultiCloud AWS, Azure e On-premises</div>
+          </div>
+          <div class="hero-v2-badge-item">
+            <div class="hero-v2-badge-icon"><i class="fas fa-award"></i></div>
+            <div class="hero-v2-badge-text">Foco em resultado, segurança e eficiência</div>
+          </div>
+        </div>
+
+        <!-- CTAs Duplos (WhatsApp + Formulário) -->
+        <div class="hero-v2-ctas">
+          <a href="https://wa.me/5521971722582?text=Ol%C3%A1%20V%C3%ADtor%2C%20gostaria%20de%20agendar%20uma%20conversa%20sobre%20os%20servi%C3%A7os%20da%20IT%20SCOPE." target="_blank" class="btn-hero-primary" style="text-decoration:none;">
+            <i class="fab fa-whatsapp"></i> Agendar conversa
+          </a>
+          <button class="btn-hero-secondary" data-open-modal data-interest="Solicitar Diagnóstico">
+            <i class="fas fa-search"></i> Solicitar diagnóstico
+          </button>
+        </div>
       </div>
 
-      <!-- Carrossel Infinito para Mobile -->
-      <div class="tech-icons-marquee">
-        <div class="tech-icons-track">
-          <img class="item" src="public/img/aws.png" alt="AWS" />
-          <img class="item" src="public/img/az.png" alt="Azure" />
-          <img class="item" src="public/img/gcp.png" alt="Google" />
-          <img class="item" src="public/img/oracle.png" alt="Oracle" />
-          <img class="item" src="public/img/kube.png" alt="Kubernetes" />
-          <img class="item" src="public/img/ter.png" alt="Terraform" />
-          <img class="item" src="public/img/github.png" alt="GitHub" />
-          <img class="item" src="public/img/ans2.png" alt="Ansible" />
-          <img class="item" src="public/img/devops.png" alt="DevOps" />
-          <img class="item" src="public/img/win.png" alt="Windows" />
-          <img class="item" src="public/img/linux2.png" alt="Linux" />
-          <img class="item" src="public/img/vm.png" alt="VmWare" />
-          <img class="item" src="public/img/fort.png" alt="Fortinet" />
-          <img class="item" src="public/img/cis.png" alt="Cisco" />
-          <img class="item" src="public/img/docker.png" alt="Docker" />
-          <img class="item" src="public/img/js2.png" alt="JavaScript" />
-          <img class="item" src="public/img/py.png" alt="Python" />
-          <img class="item" src="public/img/shell.png" alt="Shell" />
-          <img class="item" src="public/img/mysql.png" alt="MySQL" />
-          <img class="item" src="public/img/postgre.png" alt="Postgre" />
-          <img class="item" src="public/img/redis.png" alt="Redis" />
-        </div>
-        <div class="tech-icons-track">
-          <img class="item" src="public/img/aws.png" alt="AWS" />
-          <img class="item" src="public/img/az.png" alt="Azure" />
-          <img class="item" src="public/img/gcp.png" alt="Google" />
-          <img class="item" src="public/img/oracle.png" alt="Oracle" />
-          <img class="item" src="public/img/kube.png" alt="Kubernetes" />
-          <img class="item" src="public/img/ter.png" alt="Terraform" />
-          <img class="item" src="public/img/github.png" alt="GitHub" />
-          <img class="item" src="public/img/ans2.png" alt="Ansible" />
-          <img class="item" src="public/img/devops.png" alt="DevOps" />
-          <img class="item" src="public/img/win.png" alt="Windows" />
-          <img class="item" src="public/img/linux2.png" alt="Linux" />
-          <img class="item" src="public/img/vm.png" alt="VmWare" />
-          <img class="item" src="public/img/fort.png" alt="Fortinet" />
-          <img class="item" src="public/img/cis.png" alt="Cisco" />
-          <img class="item" src="public/img/docker.png" alt="Docker" />
-          <img class="item" src="public/img/js2.png" alt="JavaScript" />
-          <img class="item" src="public/img/py.png" alt="Python" />
-          <img class="item" src="public/img/shell.png" alt="Shell" />
-          <img class="item" src="public/img/mysql.png" alt="MySQL" />
-          <img class="item" src="public/img/postgre.png" alt="Postgre" />
-          <img class="item" src="public/img/redis.png" alt="Redis" />
+      <!-- Foto do Fundador -->
+      <div class="hero-v2-right">
+        <div class="founder-photo-wrapper">
+          <img src="public/img/hero_founder_transparent.png" alt="Vítor Cypriano — Fundador da IT SCOPE">
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- ===== BARRA DE ESTATÍSTICAS / PROVA SOCIAL ===== -->
+  <section class="stats-bar-section" id="estatisticas">
+    <div class="stats-bar-container">
+      <div class="stat-item">
+        <div class="stat-icon"><i class="fas fa-shield-halved"></i></div>
+        <div class="stat-content">
+          <div class="stat-number">+15</div>
+          <div class="stat-label">Anos de experiência</div>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><i class="fas fa-clipboard-check"></i></div>
+        <div class="stat-content">
+          <div class="stat-number">+100</div>
+          <div class="stat-label">Projetos entregues</div>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><i class="fas fa-cloud"></i></div>
+        <div class="stat-content">
+          <div class="stat-number">MultiCloud</div>
+          <div class="stat-label">AWS | Azure | On-premises</div>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><i class="fas fa-award"></i></div>
+        <div class="stat-content">
+          <div class="stat-number">Certificado</div>
+          <div class="stat-label">Principais fabricantes</div>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><i class="fas fa-globe-americas"></i></div>
+        <div class="stat-content">
+          <div class="stat-number">Atuação Nacional</div>
+          <div class="stat-label">RJ | SP e todo o Brasil</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO DE SOLUÇÕES ("COMO POSSO AJUDAR SUA EMPRESA") ===== -->
+  <section class="solutions-section-v2" id="solucoes">
+    <div class="section-header">
+      <h2>Soluções que geram <span>confiança e resultados</span></h2>
+      <p class="section-subtitle">Soluções completas para transformar sua infraestrutura em um diferencial competitivo de alta eficiência.</p>
+    </div>
+
+    <div class="solutions-grid-v2">
+      <!-- Card 1 -->
+      <div class="solution-card-v2">
+        <div class="solution-card-icon"><i class="fa-solid fa-server"></i></div>
+        <div class="solution-card-title">Modernização de Infraestrutura</div>
+        <div class="solution-card-desc">Renove seu ambiente, aumente a disponibilidade e garanta performance com arquitetura moderna.</div>
+        <a href="solucoes/modernizacao-infraestrutura.html" class="solution-card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <!-- Card 2 -->
+      <div class="solution-card-v2">
+        <div class="solution-card-icon"><i class="fa-solid fa-cloud"></i></div>
+        <div class="solution-card-title">Cloud &amp; Multicloud</div>
+        <div class="solution-card-desc">Estratégia, migração e gestão de ambientes em AWS, Azure e híbridos com foco em segurança e governança.</div>
+        <a href="solucoes/cloud-multicloud.html" class="solution-card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <!-- Card 3 -->
+      <div class="solution-card-v2">
+        <div class="solution-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="solution-card-title">Segurança da Informação</div>
+        <div class="solution-card-desc">Proteja seus dados, usuários e ativos digitais com soluções aderentes à LGPD, ISO/NIST e melhores práticas.</div>
+        <a href="solucoes/seguranca-informacao.html" class="solution-card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <!-- Card 4 -->
+      <div class="solution-card-v2">
+        <div class="solution-card-icon"><i class="fa-solid fa-code"></i></div>
+        <div class="solution-card-title">DevOps &amp; Automação</div>
+        <div class="solution-card-desc">Automatize processos, entregue mais rápido e com qualidade. IaC, CI/CD, containers e muito mais.</div>
+        <a href="solucoes/devops-automacao.html" class="solution-card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <!-- Card 5 -->
+      <div class="solution-card-v2">
+        <div class="solution-card-icon"><i class="fa-solid fa-desktop"></i></div>
+        <div class="solution-card-title">Observabilidade &amp; Monitoramento</div>
+        <div class="solution-card-desc">Tenha visibilidade completa do seu ambiente com dashboards inteligentes, alertas e métricas em tempo real.</div>
+        <a href="solucoes/observabilidade-monitoramento.html" class="solution-card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <!-- Card 6 -->
+      <div class="solution-card-v2">
+        <div class="solution-card-icon"><i class="fa-solid fa-file-contract"></i></div>
+        <div class="solution-card-title">Governança &amp; Compliance</div>
+        <div class="solution-card-desc">Processos, políticas e adequações para garantir conformidade, auditoria e gestão de riscos.</div>
+        <a href="solucoes/governanca-compliance.html" class="solution-card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BANNER DE TECNOLOGIAS & PLATAFORMAS (GRADE DE 21 ÍCONES) ===== -->
+  <section class="tech-banner-v2" id="tecnologias">
+    <div class="tech-banner-container">
+      <div class="tech-banner-left">
+        <h3>Tecnologias e plataformas</h3>
+        <p>Trabalhamos com as principais tecnologias e provedores do mercado global<br>para entregar soluções robustas, seguras e escaláveis.</p>
+      </div>
+      <div class="tech-banner-logos">
+        <!-- Linha 1 -->
+        <img src="public/img/aws.png" alt="AWS">
+        <img src="public/img/az.png" alt="Microsoft Azure">
+        <img src="public/img/gcp.png" alt="Google Cloud">
+        <img src="public/img/oracle.png" alt="Oracle Cloud">
+        <img src="public/img/kube.png" alt="Kubernetes">
+        <img src="public/img/ter.png" alt="Terraform">
+        <img src="public/img/github.png" alt="GitHub">
+        
+        <!-- Linha 2 -->
+        <img src="public/img/ans2.png" alt="Ansible">
+        <img src="public/img/devops.png" alt="DevOps">
+        <img src="public/img/win.png" alt="Windows Server">
+        <img src="public/img/linux2.png" alt="Linux">
+        <img src="public/img/vm.png" alt="VMware">
+        <img src="public/img/fort.png" alt="Fortinet">
+        <img src="public/img/cis.png" alt="Cisco">
+        
+        <!-- Linha 3 -->
+        <img src="public/img/docker.png" alt="Docker">
+        <img src="public/img/js2.png" alt="JavaScript">
+        <img src="public/img/py.png" alt="Python">
+        <img src="public/img/shell.png" alt="Shell Script">
+        <img src="public/img/mysql.png" alt="MySQL">
+        <img src="public/img/postgre.png" alt="PostgreSQL">
+        <img src="public/img/redis.png" alt="Redis">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO POR QUE ESCOLHER A IT SCOPE ===== -->
+  <section class="why-section-v2" id="por-que-itscope">
+    <div class="why-container-v2">
+      <!-- Coluna 1: Foto -->
+      <div class="why-left-v2">
+        <img src="public/img/why_section_founder.jpg" alt="Vítor Cypriano — Atendimento especializado com café em escritório moderno">
+      </div>
+      <!-- Coluna 2: Texto + Checklist -->
+      <div class="why-right-v2">
+        <h2>Por que escolher a <span>IT SCOPE</span>?</h2>
+        <p class="why-lead-text">
+          Aqui o seu projeto não é só mais um número. Você fala diretamente com quem executa, acompanha cada etapa do projeto e tem um parceiro sênior comprometido com o resultado real do seu negócio.
+        </p>
+
+        <ul class="why-checklist-v2">
+          <li>
+            <i class="fas fa-check-circle"></i>
+            <div>
+              <strong>Atendimento próximo e direto com o especialista</strong>
+              <p>Sem intermediários comerciais ou vendedores sem bagagem técnica.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-check-circle"></i>
+            <div>
+              <strong>Soluções personalizadas</strong>
+              <p>Desenhadas exclusivamente para a realidade e o orçamento do seu negócio.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-check-circle"></i>
+            <div>
+              <strong>Foco em performance, segurança e redução de custos</strong>
+              <p>Práticas alinhadas a frameworks ISO/NIST e FinOps.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-check-circle"></i>
+            <div>
+              <strong>Metodologia comprovada</strong>
+              <p>Entrega orientada a projetos bem definidos e queda imediata no MTTR.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Coluna 3: CTA Card (lado direito) -->
+      <div class="why-cta-card-v2">
+        <p>Vamos conversar sobre o seu projeto?</p>
+        <p style="font-size:13px; font-weight:400; color:#475569; margin:0;">Descubra como posso ajudar sua empresa a alcançar o próximo nível.</p>
+        <a href="https://wa.me/5521971722582?text=Ol%C3%A1%20V%C3%ADtor%2C%20visitei%20o%20site%20da%20IT%20SCOPE%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" class="btn-hero-primary" style="padding:14px 28px; font-size:14px; text-decoration:none; width:100%; text-align:center; box-sizing:border-box;">
+          <i class="fab fa-whatsapp"></i> Agendar conversa
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CALCULADORA DE ROI ===== -->
+  <section class="roi-section" id="calculadora">
+    <h2>↳ Calcule sua Economia com a Nuvem</h2>
+    <p class="roi-subtitle">Descubra quanto sua empresa pode economizar migrando para a nuvem e automatizando processos com a IT SCOPE.</p>
+    <div class="roi-container">
+      <div class="roi-sliders">
+        <div class="roi-slider-group">
+          <label>Servidores Locais <span id="roi-servers-val">10</span></label>
+          <input type="range" id="roi-servers" min="1" max="50" value="10">
+        </div>
+        <div class="roi-slider-group">
+          <label>Custo Mensal por Servidor <span id="roi-cost-val">R$ 2.000</span></label>
+          <input type="range" id="roi-cost" min="500" max="5000" step="100" value="2000">
+        </div>
+        <div class="roi-slider-group">
+          <label>Processos Manuais / Semana <span id="roi-processes-val">20</span></label>
+          <input type="range" id="roi-processes" min="5" max="100" value="20">
+        </div>
+      </div>
+      <div class="roi-results">
+        <div class="roi-result-card">
+          <div class="result-value" id="roi-savings">R$ 7.000</div>
+          <div class="result-label">Economia Estimada Mensal</div>
+        </div>
+        <div class="roi-result-card">
+          <div class="result-value" id="roi-hours">112h</div>
+          <div class="result-label">Horas Economizadas por Mês</div>
+        </div>
+        <div class="roi-cta">
+          <button class="btn-roi-cta" id="btn-roi-cta">Quero uma análise personalizada →</button>
+        </div>
+        <p class="roi-disclaimer">*Os valores apresentados são estimativas baseadas em médias de mercado e não constituem uma proposta comercial vinculante. Cada infraestrutura requer uma análise técnica detalhada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CASOS DE SUCESSO / DEPOIMENTOS ===== -->
+  <section class="testimonials-section" id="cases">
+    <h2>↳ Casos de Sucesso</h2>
+    <p class="testimonials-subtitle">Resultados reais que demonstram o impacto da nossa atuação técnica em diferentes cenários corporativos.</p>
+    <div class="testimonials-carousel">
+      <div class="testimonials-track">
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-card-inner">
+            <div class="testimonial-icon"><i class="fas fa-cubes"></i></div>
+            <div class="testimonial-content">
+              <div class="testimonial-metric">Redução de MTTR e Provisionamento Ágil</div>
+              <div class="testimonial-title">Automação e Orquestração Multicloud</div>
+              <div class="testimonial-desc">Implementação de infraestrutura como código (IaC) com Terraform e orquestração de containers (Docker e Kubernetes) em nuvens AWS e Azure. Microserviços entregues e monitorados em tempo real (Prometheus, Grafana e Zabbix).</div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-card-inner">
+            <div class="testimonial-icon"><i class="fas fa-network-wired"></i></div>
+            <div class="testimonial-content">
+              <div class="testimonial-metric">Alta Disponibilidade e Monitoramento 24/7</div>
+              <div class="testimonial-title">Conectividade e Implantação de NOC</div>
+              <div class="testimonial-desc">Desenho e administração de redes corporativas complexas (VLANs, roteamento BGP/OSPF, Cisco Meraki) e implantação de NOC integrado. Auditoria de redes sem fio com tecnologia de ponta (Ekahau/AirMagnet).</div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-card-inner">
+            <div class="testimonial-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="testimonial-content">
+              <div class="testimonial-metric">Proteção de Credenciais e Adequação Legal</div>
+              <div class="testimonial-title">Segurança Cibernética, PAM e LGPD</div>
+              <div class="testimonial-desc">Adequação à LGPD utilizando a plataforma OneTrust para inventário, automação e privacidade de dados. Fortalecimento da segurança com firewalls Sophos XG, varredura de vulnerabilidades OpenVAS e PAM.</div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="testimonial-card">
+          <div class="testimonial-card-inner">
+            <div class="testimonial-icon"><i class="fas fa-server"></i></div>
+            <div class="testimonial-content">
+              <div class="testimonial-metric">Uptime de Sistemas e DRP Resiliente</div>
+              <div class="testimonial-title">Hiperconvergência, Virtualização e Backups</div>
+              <div class="testimonial-desc">Modernização de infraestrutura com hiperconvergência (Cisco HyperFlex) e virtualização VMware vSphere. Elaboração e teste de planos de recuperação de desastres (DRP) e planos de continuidade de negócios (BCP).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials-nav">
+      <button id="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+      <div class="testimonials-dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+      </div>
+      <button id="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- ===== FAQ — DÚVIDAS FREQUENTES ===== -->
+  <section class="faq-section" id="faq">
+    <h2>↳ Dúvidas Frequentes</h2>
+    <p class="faq-subtitle">Respostas para as principais dúvidas sobre nossos serviços e forma de trabalho.</p>
+    <div class="faq-container">
+      <div class="faq-item">
+        <button class="faq-question">
+          Como funciona o processo de migração para nuvem?
+          <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>O processo começa com um assessment completo da sua infraestrutura atual. Mapeamos servidores, aplicações, dependências e riscos. Em seguida, definimos uma estratégia de migração personalizada (lift-and-shift, refactoring ou rearchitecting), executamos a migração em fases com janelas de manutenção planejadas e realizamos testes de validação antes do go-live.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          O que é a consultoria de LGPD e conformidade?
+          <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>Nossa consultoria de LGPD inclui diagnóstico de maturidade em proteção de dados, mapeamento de dados pessoais, implementação de políticas de privacidade, treinamento de equipes, adequação de sistemas e monitoramento contínuo. Auxiliamos na nomeação do DPO, criação do RIPD (Relatório de Impacto) e implementação de mecanismos técnicos como criptografia, controle de acesso e gestão de consentimento.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          A IT SCOPE atende fora do Rio e São Paulo?
+          <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>Sim! Embora tenhamos presença física no Rio de Janeiro e em São Paulo, atendemos empresas em todo o território nacional e também no exterior. Grande parte dos nossos projetos de cloud, automação e segurança é executada de forma remota, com acesso seguro à infraestrutura do cliente.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Quais plataformas de nuvem vocês trabalham?
+          <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>Trabalhamos com as principais plataformas de nuvem pública do mercado: AWS (Amazon Web Services), Microsoft Azure, Google Cloud Platform (GCP) e Oracle Cloud. Nossa abordagem é multicloud, combinando os pontos fortes de cada provedor de acordo com a necessidade do seu negócio.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Como funciona o suporte técnico da IT SCOPE?
+          <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>Oferecemos diferentes modalidades de suporte: sob demanda (por chamado), pacotes de horas mensais e contratos de suporte dedicado 24/7. Todos os atendimentos passam por um sistema de tickets com SLA definido, e nossa equipe é liderada por especialistas certificados.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Qual o prazo médio de implementação de um projeto?
+          <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>O prazo varia conforme a complexidade do projeto. Migrações simples para nuvem podem ser concluídas em 2 a 4 semanas. Projetos de automação DevOps levam entre 4 e 8 semanas. Em todos os casos, fornecemos um cronograma detalhado na proposta comercial com marcos de entrega.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BANNER PRE-FOOTER DE CTA ===== -->
+  <section class="prefooter-cta-section">
+    <div class="prefooter-cta-container">
+      <h2>Sua infraestrutura está pronta para o futuro?</h2>
+      <p>Transforme desafios em oportunidades competitivas com soluções inteligentes, seguras e de alta disponibilidade.</p>
+      <div class="prefooter-cta-buttons">
+        <a href="https://wa.me/5521971722582?text=Ol%C3%A1%20V%C3%ADtor%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20IT%20SCOPE." target="_blank" class="btn-hero-primary" style="text-decoration:none;">
+          <i class="fab fa-whatsapp"></i> Fale com um especialista
+        </a>
+        <button class="btn-hero-secondary btn-prefooter-cta" data-open-modal data-interest="Solicitar Diagnóstico">
+          <i class="fas fa-search"></i> Solicitar diagnóstico
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOTÃO FLUTUANTE — WHATSAPP ===== -->
+  <a href="https://wa.me/5521971722582" target="_blank" class="floating-cta" id="floating-cta" style="text-decoration:none; color:#fff;">
+    <i class="fab fa-whatsapp"></i>
+    <span class="floating-cta-text">WhatsApp</span>
+  </a>
+
+  <!-- ===== MODAL GLASSMORPHISM — FORMULÁRIO FORMSPREE ===== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-glass">
+      <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+      <h2>Solicitar Orçamento</h2>
+      <p class="modal-subtitle">Preencha os campos abaixo e Vítor Cypriano entrará em contato em até 24 horas.</p>
+
+      <!-- Feedback Banner para Envio Formspree -->
+      <div id="formspree-feedback" class="formspree-feedback"></div>
+
+      <form class="modal-form" id="contact-form" action="https://formspree.io/f/mvoegpyw" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-name">Nome Completo *</label>
+            <input type="text" id="contact-name" name="name" required placeholder="Seu nome">
+          </div>
+          <div class="form-group">
+            <label for="contact-company">Empresa *</label>
+            <input type="text" id="contact-company" name="company" required placeholder="Nome da sua empresa">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-email">E-mail Corporativo *</label>
+            <input type="email" id="contact-email" name="email" required placeholder="seu@empresa.com.br">
+          </div>
+          <div class="form-group">
+            <label for="contact-phone">Telefone / WhatsApp *</label>
+            <input type="tel" id="contact-phone" name="phone" required placeholder="(21) 99999-9999">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contact-interest">Área de Interesse *</label>
+          <select id="contact-interest" name="interest" required>
+            <option value="" disabled selected>Selecione uma área</option>
+            <option value="Multi-Cloud (AWS / Azure / GCP / Oracle)">Multi-Cloud (AWS / Azure / GCP / Oracle)</option>
+            <option value="Segurança da Informação / LGPD">Segurança da Informação / LGPD</option>
+            <option value="Automação e DevOps">Automação e DevOps</option>
+            <option value="Infraestrutura de TI">Infraestrutura de TI</option>
+            <option value="Consultoria Estratégica">Consultoria Estratégica</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Descreva sua necessidade</label>
+          <textarea id="contact-message" name="message" rows="4" placeholder="Conte-nos brevemente sobre seu projeto ou necessidade de TI..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit-form">Enviar Solicitação →</button>
+      </form>
+    </div>
   </div>
-  <section class="move-section">
-    <div class="move-content">
-      <h2>↳ O que nos move</h2>
-      <p>
-        Somos movidos pela convicção de que a tecnologia vai além da técnica — ela é um instrumento de transformação de
-        vidas, empresas e realidades. Na IT SCOPE, unimos propósito, visão estratégica e profundidade técnica para
-        entregar soluções que geram valor verdadeiro. Nosso trabalho é guiado por ética, excelência e um olhar atento ao
-        detalhe — porque acreditamos que fazer o certo, com consistência e inteligência, sempre geramos impactos
-        positivos. O que nos move é o compromisso com a evolução contínua: nossa, dos nossos clientes e do ecossistema
-        ao nosso redor.
-      </p>
-      <!--<a href="#" class="btn-saiba-mais">Saiba mais</a>-->
-    </div>
-  </section>
-  <section class="follow-section">
-    <div class="follow-left">
-      <h2>↳ Para onde vamos</h2>
-      <p>
-        Vamos em direção a um futuro em que a tecnologia não seja apenas suporte, mas estratégia. Um futuro onde as
-        empresas operem com inteligência, segurança e autonomia, porque alguém teve coragem de transformar o invisível
-        em estrutura, o caos em ordem, o desafio em oportunidade. Para onde vamos, levamos ética, consistência e
-        profundidade. Levamos também a inquietação de quem não aceita o "sempre foi assim". Vamos rumo a ambientes mais
-        integrados, decisões mais ágeis e resultados mais sustentáveis — porque nossa missão vai além da entrega
-        técnica: queremos gerar impacto real. E o melhor de tudo é que essa jornada não é só da IT SCOPE. Ela é feita
-        com cada parceiro, cliente e projeto que acredita no mesmo horizonte: evoluir com propósito.
-      </p>
-    </div>
-    <div class="follow-right">
-      <div class="image-blend-wrapper">
-        <img src="public/img/futuristic_horizon_bg.png?v=1.3" alt="futuro-tecnologia-itscope">
-      </div>
-    </div>
-  </section>
+
+  <!-- FOOTER INSTITUCIONAL & BASE LEGAL -->
   <footer class="itscope-footer">
     <div class="footer-content">
       <div class="footer-logo">
-        <span class="logo-text notranslate" translate="no">IT SCOPE</span>
+        <span class="logo-text notranslate" translate="no">IT SCOPE LTDA</span>
+      </div>
+      <div style="font-size:13px; color:#94a3b8; margin-bottom:15px;">
+        Rio de Janeiro / São Paulo - Brasil | (21) 97172-2582 | vitor.cypriano@itscope.com.br
       </div>
       <div class="footer-social">
-        <a href="https://wa.me/5521971722582" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/itscopeltda/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/itscope/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:vitor.cypriano@itscope.com.br"><i class="fas fa-envelope"></i></a>
-        <!--<a href="https://github.com/projectitscope" aria-label="E-mail"><i class="fab fa-github"></i></a>-->
-        <a href="https://www.youtube.com/channel/UC01yxvKXquP1lg05nHO86gA" aria-label="youtube"><i
-            class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/5521971722582" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/itscopeltda/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/itscope/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:vitor.cypriano@itscope.com.br" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.youtube.com/channel/UC01yxvKXquP1lg05nHO86gA" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
       </div>
       <div class="footer-links">
         <a href="politica-privacidade.html">Política de Privacidade</a>
@@ -207,19 +604,6 @@
       </div>
     </div>
   </footer>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Carregar o vídeo de fundo dinamicamente apenas em desktops para economizar dados no mobile
-      var video = document.getElementById("bg-video");
-      if (video && window.innerWidth >= 768) {
-        var source = video.querySelector("source");
-        source.src = source.getAttribute("data-src");
-        video.load();
-        video.play();
-      }
-    });
-  </script>
-
 </body>
 
 </html>
