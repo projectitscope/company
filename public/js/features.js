@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       var formData = new FormData(contactForm);
-      var formEndpoint = contactForm.getAttribute('action') || 'https://formspree.io/f/mvoegpyw'; // URL padrão Formspree da IT SCOPE
+      var formEndpoint = contactForm.getAttribute('action') || 'https://formspree.io/f/xbdnzkzd'; // URL padrão Formspree da IT SCOPE
 
       fetch(formEndpoint, {
         method: 'POST',
