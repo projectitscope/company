@@ -1857,6 +1857,10 @@ html {
   height: 60px;
 }
 
+.tech-banner-logos img[src*="docker.png"] {
+  height: 55px; /* Aumento de 5% mantendo efeito hover */
+}
+
 /* ---------- SEÇÃO POR QUE ESCOLHER A IT SCOPE ---------- */
 .why-section-v2 {
   background: #ffffff;
@@ -1898,9 +1902,9 @@ html {
   transform-origin: center center;
   transition: transform 0.4s ease, filter 0.4s ease;
   
-  /* Efeito intenso de desvanecimento das bordas (heavy feathering) para que nenhuma borda retangular apareça */
-  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%);
-  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%);
+  /* Efeito reforçado de esbranquiçamento e desvanecimento 100% suave das bordas superior, esquerda e inferior */
+  -webkit-mask-image: radial-gradient(ellipse 55% 55% at 52% 48%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 64%);
+  mask-image: radial-gradient(ellipse 55% 55% at 52% 48%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 64%);
 }
 
 .why-left-v2:hover img {
