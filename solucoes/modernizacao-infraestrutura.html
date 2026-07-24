@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFBFE9NTX1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JFBFE9NTX1');
+  </script>
+
+  <!-- Metadados de SEO Técnico & Indexação -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modernização de Infraestrutura | IT SCOPE</title>
+  <meta name="description" content="Modernize sua infraestrutura de TI com servidores Windows, Linux, Hyper-V e arquiteturas de alta disponibilidade. Consultoria especializada pela IT SCOPE." />
+  <link rel="canonical" href="https://www.itscope.com.br/solucoes/modernizacao-infraestrutura.html" />
+  <link rel="alternate" hreflang="pt-BR" href="https://www.itscope.com.br/solucoes/modernizacao-infraestrutura.html" />
+
+  <!-- Open Graph & Social Cards -->
+  <meta property="og:title" content="Modernização de Infraestrutura | IT SCOPE">
+  <meta property="og:description" content="Transforme a infraestrutura da sua empresa com servidores de alta performance, virtualização Hyper-V/VMware, saneamento de Active Directory e planos de DRP.">
+  <meta property="og:image" content="https://www.itscope.com.br/public/img/visual_template.png">
+  <meta property="og:url" content="https://www.itscope.com.br/solucoes/modernizacao-infraestrutura.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Modernização de Infraestrutura | IT SCOPE">
+  <meta name="twitter:description" content="Soluções avançadas em virtualização, Active Directory, storage e continuidade de negócios.">
+
+  <!-- Favicon e Estilos CDN -->
+  <link rel="icon" href="../favicon5.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../public/css/styles.css?v=3.0" />
+
+  <style>
+    /* Regra estrita de Tipografia */
+    html, body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, p, a, span {
+      font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    }
+
+    body {
+      background-color: #080e1a;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* Estilização da Navbar Específica da Subpágina */
+    #main-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background-color: #080e1a;
+      z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+      border-bottom: 1px solid rgba(63, 192, 96, 0.2);
+    }
+
+    .navbar-logo-link {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-logo-link:hover {
+      color: #3fc060;
+    }
+
+    .nav-link-custom {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link-custom:hover {
+      color: #3fc060;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb-section {
+      margin-top: 90px;
+      padding: 15px 40px 0;
+      max-width: 1300px;
+      margin-left: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .breadcrumb-custom {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #94a3b8;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .breadcrumb-custom a {
+      color: #60efff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb-custom a:hover {
+      color: #3fc060;
+      text-decoration: underline;
+    }
+
+    .breadcrumb-custom .separator {
+      color: #475569;
+    }
+
+    .breadcrumb-custom .active {
+      color: #cbd5e1;
+      font-weight: 600;
+    }
+
+    /* Hero Section Subpágina */
+    .subpage-hero {
+      position: relative;
+      padding: 50px 20px 80px;
+      background: radial-gradient(circle at 50% 20%, #0f172a 0%, #080e1a 100%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: center;
+    }
+
+    .subpage-hero-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .subpage-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(63, 192, 96, 0.12);
+      border: 1px solid #3fc060;
+      color: #3fc060;
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+    }
+
+    .subpage-hero-title {
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .subpage-hero-title .highlight-green {
+      color: #3fc060;
+    }
+
+    .subpage-hero-title .highlight-cyan {
+      color: #60efff;
+    }
+
+    .subpage-hero-subtitle {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #cbd5e1;
+      max-width: 850px;
+      margin: 0 auto 35px;
+    }
+
+    .hero-features-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .hero-pill-item {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(96, 239, 255, 0.25);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #f8fafc;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-pill-item i {
+      color: #60efff;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn-cta-primary {
+      background: linear-gradient(135deg, #3fc060 0%, #28a745 100%);
+      color: #ffffff !important;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 6px 20px rgba(63, 192, 96, 0.35);
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-cta-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(63, 192, 96, 0.5);
+      color: #ffffff !important;
+    }
+
+    .btn-cta-whatsapp {
+      background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+      color: #ffffff !important;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .btn-cta-whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(37, 211, 102, 0.5);
+      color: #ffffff !important;
+    }
+
+    /* Seções Genéricas da Página */
+    .section-padding {
+      padding: 80px 20px;
+    }
+
+    .section-title-wrapper {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 50px;
+    }
+
+    .section-tag {
+      color: #3fc060;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .section-main-title {
+      font-size: 34px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    .section-description {
+      font-size: 16px;
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+
+    /* Cards - O que Fazemos */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      max-width: 1250px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 35px 30px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #3fc060, #60efff);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(63, 192, 96, 0.4);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-icon-box {
+      width: 65px;
+      height: 65px;
+      background: rgba(63, 192, 96, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: #3fc060;
+      margin-bottom: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover .service-icon-box {
+      background: #3fc060;
+      color: #080e1a;
+    }
+
+    .service-card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    .service-card-text {
+      font-size: 14px;
+      color: #cbd5e1;
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .service-card-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .service-card-list li {
+      font-size: 13px;
+      color: #94a3b8;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .service-card-list li i {
+      color: #3fc060;
+      font-size: 11px;
+    }
+
+    /* Seção Tecnologias */
+    .tech-section-bg {
+      background: #0f172a;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      max-width: 1250px;
+      margin: 0 auto;
+    }
+
+    .tech-box {
+      background: rgba(8, 14, 26, 0.7);
+      border: 1px solid rgba(96, 239, 255, 0.15);
+      border-radius: 10px;
+      padding: 25px 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .tech-box:hover {
+      border-color: #60efff;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(96, 239, 255, 0.15);
+    }
+
+    .tech-icon {
+      font-size: 36px;
+      color: #60efff;
+      margin-bottom: 15px;
+    }
+
+    .tech-name {
+      font-size: 17px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .tech-desc {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    /* Seção Benefícios */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1250px;
+      margin: 0 auto;
+    }
+
+    .benefit-card {
+      background: rgba(15, 23, 42, 0.6);
+      border-left: 4px solid #3fc060;
+      padding: 30px 25px;
+      border-radius: 0 10px 10px 0;
+      transition: all 0.3s ease;
+    }
+
+    .benefit-card:hover {
+      background: rgba(15, 23, 42, 0.95);
+      transform: translateX(5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .benefit-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .benefit-icon {
+      font-size: 24px;
+      color: #3fc060;
+    }
+
+    .benefit-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .benefit-text {
+      font-size: 14px;
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Banner CTA Pre-Footer */
+    .cta-banner-section {
+      background: linear-gradient(135deg, #0f172a 0%, #080e1a 100%);
+      border-top: 1px solid rgba(63, 192, 96, 0.2);
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .cta-banner-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(63, 192, 96, 0.3);
+      border-radius: 16px;
+      padding: 50px 40px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .cta-banner-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    .cta-banner-desc {
+      font-size: 16px;
+      color: #cbd5e1;
+      margin-bottom: 35px;
+      line-height: 1.6;
+    }
+
+    /* Modal Form Customization */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(8, 14, 26, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-glass {
+      background: #0f172a;
+      border: 1px solid rgba(63, 192, 96, 0.3);
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 600px;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 22px;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .modal-close:hover {
+      color: #3fc060;
+    }
+
+    .modal-glass h2 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .modal-subtitle {
+      font-size: 14px;
+      color: #94a3b8;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: #080e1a;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
+      padding: 12px 14px;
+      color: #ffffff;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #3fc060;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .btn-submit-form {
+      width: 100%;
+      background: linear-gradient(135deg, #3fc060 0%, #28a745 100%);
+      color: #ffffff;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .btn-submit-form:hover {
+      opacity: 0.95;
+      box-shadow: 0 6px 20px rgba(63, 192, 96, 0.4);
+    }
+
+    /* Icon pulse animation */
+    .service-icon i,
+    .tech-card i,
+    .benefit-icon i,
+    .step-number,
+    [class*="icon"] i {
+      animation: iconPulse 2.5s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    @keyframes iconPulse {
+      0%, 100% { 
+        text-shadow: 0 0 5px rgba(63, 192, 96, 0.3);
+        transform: scale(1);
+      }
+      50% { 
+        text-shadow: 0 0 20px rgba(63, 192, 96, 0.6), 0 0 40px rgba(63, 192, 96, 0.3);
+        transform: scale(1.08);
+      }
+    }
+
+    /* Fix text indentation in cards */
+    [class*="card"] p,
+    [class*="card"] ul,
+    [class*="card"] li,
+    [class*="card"] .description {
+      text-align: left !important;
+    }
+
+    [class*="card"] ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    [class*="card"] li {
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+
+    .feature-bullets,
+    .service-card-list,
+    .solution-bullets,
+    [class*="bullets"],
+    [class*="list"] {
+      text-align: left !important;
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .feature-bullets li,
+    .service-card-list li,
+    [class*="bullets"] li,
+    [class*="list"] li {
+      display: flex !important;
+      align-items: flex-start !important;
+      text-align: left !important;
+      gap: 8px;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+    .feature-bullets li span,
+    .service-card-list li span,
+    [class*="bullets"] li span,
+    [class*="list"] li span {
+      text-align: left !important;
+    }
+
+    /* Ensure Font Awesome is not overridden by global styles */
+    .fa, .fa-solid, .fa-regular, .fa-brands, .fab, .fas, .far, i {
+      font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+    }
+
+    /* Container global */
+    .solution-page-wrapper {
+      padding-top: 60px;
+    }
+
+    /* Breadcrumbs */
+    .solution-breadcrumb-bar {
+      background-color: #0f172a;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 40px;
+      font-size: 13px;
+      text-align: left;
+    }
+
+    .solution-breadcrumb-bar a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .solution-breadcrumb-bar a:hover {
+      color: #3fc060;
+    }
+
+    .solution-breadcrumb-bar span.active {
+      color: #60efff;
+      font-weight: 600;
+    }
+
+    .solution-breadcrumb-bar span.sep {
+      color: #475569;
+      margin: 0 8px;
+    }
+
+    /* Force absolute left alignment in cards */
+    .feature-card,
+    .feature-card *,
+    .service-card,
+    .service-card *,
+    .tech-card,
+    .tech-card *,
+    [class*="card"] {
+      text-align: left !important;
+    }
+
+    [class*="card"] ul,
+    [class*="card"] ol {
+      padding-left: 20px !important;
+    }
+
+    [class*="card"] li {
+      text-align: left !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="google_translate_element" style="display: none;"></div>
+
+  <!-- HEADER DE NAVEGAÇÃO -->
+  <header id="main-header" style="position:fixed;top:0;left:0;right:0;height:60px;background-color:#ffffff;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.08);border-bottom:1px solid #e5e7eb;">
+    <nav style="display:flex;align-items:center;justify-content:space-between;height:100%;padding:0 40px;box-sizing:border-box;">
+      <div class="notranslate" translate="no" style="margin:0;font-size:22px;font-weight:800;font-family:Verdana,Geneva,Tahoma,sans-serif;color:#1e293b;">
+        <a href="../index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:10px;">
+          <img src="../public/img/logo_globe.png" alt="IT SCOPE Logo" style="height:52px;border-radius:0;">
+          <span>IT SCOPE</span>
+        </a>
+      </div>
+      <div style="display:flex;gap:20px;font-size:13px;font-weight:600;">
+        <a href="../index.html#solucoes" style="color:#334155;text-decoration:none;">Soluções</a>
+        <a href="../index.html#tecnologias" style="color:#334155;text-decoration:none;">Tecnologias</a>
+        <a href="../index.html#por-que-itscope" style="color:#334155;text-decoration:none;">Sobre</a>
+        <a href="../index.html#cases" style="color:#334155;text-decoration:none;">Cases</a>
+        <a href="../index.html#calculadora" style="color:#334155;text-decoration:none;">Calculadora ROI</a>
+        <a href="../index.html#faq" style="color:#334155;text-decoration:none;">FAQ</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <img src="../public/img/flag-en.png" alt="English" style="width:22px;height:22px;cursor:pointer;border-radius:3px;">
+        <img src="../public/img/flag-pt.png" alt="Português" style="width:22px;height:22px;cursor:pointer;border-radius:3px;">
+        <img src="../public/img/flag-es.png" alt="Español" style="width:22px;height:22px;cursor:pointer;border-radius:3px;">
+      </div>
+    </nav>
+  </header>
+
+  <div class="solution-page-wrapper">
+    <!-- BARRA DE BREADCRUMBS -->
+    <div class="solution-breadcrumb-bar">
+      <a href="../index.html"><i class="fa-solid fa-home"></i> Home</a>
+      <span class="sep">/</span>
+      <a href="../index.html#solucoes">Soluções</a>
+      <span class="sep">/</span>
+      <span class="active">Modernização de Infraestrutura</span>
+    </div>
+
+  <!-- ===== HERO BANNER ===== -->
+  <section class="subpage-hero">
+    <div class="subpage-hero-container">
+      <div class="subpage-badge">
+        <i class="fa-solid fa-server"></i> Infraestrutura Corporativa &amp; Virtualização
+      </div>
+      <h1 class="subpage-hero-title">
+        Modernização de <span class="highlight-green">Infraestrutura de TI</span>
+      </h1>
+      <p class="subpage-hero-subtitle">
+        Renove e potencialize seu ambiente computacional corporativo. Eliminamos gargalos legados, elevamos a segurança de Active Directory, otimizamos servidores físicos/virtuais e garantimos alta disponibilidade com estratégias completas de DRP e virtualização.
+      </p>
+
+      <div class="hero-features-pills">
+        <div class="hero-pill-item"><i class="fa-solid fa-check-circle"></i> Alta Disponibilidade 99.99%</div>
+        <div class="hero-pill-item"><i class="fa-solid fa-layer-group"></i> Virtualização VMware &amp; Hyper-V</div>
+        <div class="hero-pill-item"><i class="fa-solid fa-shield-alt"></i> Hardening de Active Directory</div>
+        <div class="hero-pill-item"><i class="fa-solid fa-database"></i> Storage SAN/NAS Resiliente</div>
+      </div>
+
+      <div class="hero-cta-group">
+        <button class="btn-cta-primary" id="open-modal-hero">
+          <i class="fa-solid fa-clipboard-check"></i> Solicitar diagnóstico
+        </button>
+        <a href="https://wa.me/5521971722582?text=Ol%C3%A1%20V%C3%ADtor%2C%20gostaria%20de%20conversar%20sobre%20Moderniza%C3%A7%C3%A3o%20de%20Infraestrutura." target="_blank" class="btn-cta-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Conversar via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== O QUE FAZEMOS ===== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-tag">Nossas Soluções</span>
+        <h2 class="section-main-title">O Que Fazemos pela Sua Infraestrutura</h2>
+        <p class="section-description">
+          Oferecemos engenharia especializada para revitalizar, consolidar e proteger todo o parque tecnológico da sua empresa, garantindo continuidade e máxima performance.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Card 1 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <h3 class="service-card-title">Modernização de Servidores Físicos e Virtuais</h3>
+          <p class="service-card-text">
+            Dimensionamento correto (rightsizing), atualização de sistemas operacionais corporativos (Windows Server e distribuições Linux) e substituição de hardware legado.
+          </p>
+          <ul class="service-card-list">
+            <li><i class="fa-solid fa-check"></i> <span>Migração sem interrupção de serviços</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>Windows Server 2019/2022 &amp; Linux Hardening</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>Otimização de uso de CPU e Memória</span></li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-cubes"></i>
+          </div>
+          <h3 class="service-card-title">Virtualização com Hyper-V &amp; VMware</h3>
+          <p class="service-card-text">
+            Consolidação de servidores em clusters virtuais resilientes, aproveitando o máximo do seu investimento em hardware com failover automático e computação elástica.
+          </p>
+          <ul class="service-card-list">
+            <li><i class="fa-solid fa-check"></i> <span>VMware vSphere / ESXi &amp; Microsoft Hyper-V</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>Live Migration e Failover Clustering</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>Redução de footprint de data center</span></li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-users-cog"></i>
+          </div>
+          <h3 class="service-card-title">Reestruturação de Active Directory (AD)</h3>
+          <p class="service-card-text">
+            Saneamento de contas, implementação de políticas de grupo (GPOs) eficientes, controle de acessos baseados em função (RBAC) e integração híbrida com Microsoft Entra ID.
+          </p>
+          <ul class="service-card-list">
+            <li><i class="fa-solid fa-check"></i> <span>Limpeza de GPOs e permissões órfãs</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>Proteção contra ataques de Kerberoasting/Pass-the-Hash</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>Sincronização segura AD Connect / Cloud ID</span></li>
+          </ul>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-hdd"></i>
+          </div>
+          <h3 class="service-card-title">Otimização e Consolidação de Storage (SAN/NAS)</h3>
+          <p class="service-card-text">
+            Arquitetura de armazenamento de altíssima performance IOPS, com deduplicação, tiering inteligente de dados e redundância total de controladoras.
+          </p>
+          <ul class="service-card-list">
+            <li><i class="fa-solid fa-check"></i> <span>Ambientes SAN (Fiber Channel / iSCSI) e NAS</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>Provisionamento fino (Thin Provisioning)</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>Resolução de gargalos de I/O em bancos de dados</span></li>
+          </ul>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-shield-virus"></i>
+          </div>
+          <h3 class="service-card-title">Backup &amp; Disaster Recovery (DRP / BCP)</h3>
+          <p class="service-card-text">
+            Elaboração e execução de Planos de Recuperação de Desastres (DRP) e Continuidade de Negócios (BCP) com cópias de segurança imutáveis e testes periódicos de restauração.
+          </p>
+          <ul class="service-card-list">
+            <li><i class="fa-solid fa-check"></i> <span>Regra de Backup 3-2-1-1-0 com Imutabilidade</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>RPO e RTO reduzidos a minutos</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>Proteção contra Ransomware e falhas graves</span></li>
+          </ul>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-tachometer-alt"></i>
+          </div>
+          <h3 class="service-card-title">Monitoramento &amp; Sustentação Proativa</h3>
+          <p class="service-card-text">
+            Implementação de métricas em tempo real para prevenção de falhas em disco, memória, serviços de rede e cargas de trabalho antes que impactem a operação.
+          </p>
+          <ul class="service-card-list">
+            <li><i class="fa-solid fa-check"></i> <span>Dashboards executivos e alertas em tempo real</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>Análise preditiva de capacidade (Capacity Planning)</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>Suporte especializado L3 de alta complexidade</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TECNOLOGIAS ENVOLVIDAS ===== -->
+  <section class="section-padding tech-section-bg">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-tag">Stack Tecnológico</span>
+        <h2 class="section-main-title">Tecnologias de Classe Mundial</h2>
+        <p class="section-description">
+          Trabalhamos com os principais fabricantes e plataformas líderes do mercado global de infraestrutura corporativa.
+        </p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-box">
+          <div class="tech-icon"><i class="fa-brands fa-windows"></i></div>
+          <h3 class="tech-name">Windows Server 2019 / 2022</h3>
+          <p class="tech-desc">Active Directory, Hyper-V, Storage Spaces Direct e Failover Cluster altamente resilientes.</p>
+        </div>
+
+        <div class="tech-box">
+          <div class="tech-icon"><i class="fa-brands fa-linux"></i></div>
+          <h3 class="tech-name">Linux Enterprise</h3>
+          <p class="tech-desc">Red Hat Enterprise Linux (RHEL), Ubuntu Server e CentOS para workloads de missão crítica.</p>
+        </div>
+
+        <div class="tech-box">
+          <div class="tech-icon"><i class="fa-solid fa-microchip"></i></div>
+          <h3 class="tech-name">Microsoft Hyper-V</h3>
+          <p class="tech-desc">Virtualização nativa integrada com replicação em tempo real e alta disponibilidade.</p>
+        </div>
+
+        <div class="tech-box">
+          <div class="tech-icon"><i class="fa-solid fa-network-wired"></i></div>
+          <h3 class="tech-name">VMware vSphere / ESXi</h3>
+          <p class="tech-desc">Plataforma corporativa de virtualização com vCenter, vMotion e DRS automatizado.</p>
+        </div>
+
+        <div class="tech-box">
+          <div class="tech-icon"><i class="fa-solid fa-undo-alt"></i></div>
+          <h3 class="tech-name">Veeam Backup &amp; Replication</h3>
+          <p class="tech-desc">Proteção imutável contra Ransomware, backup de máquinas virtuais e restauração instantânea.</p>
+        </div>
+
+        <div class="tech-box">
+          <div class="tech-icon"><i class="fa-solid fa-database"></i></div>
+          <h3 class="tech-name">NetApp Storage</h3>
+          <p class="tech-desc">Armazenamento corporativo SAN/NAS com tecnologia ONTAP, Snapshots e deduplicação.</p>
+        </div>
+
+        <div class="tech-box">
+          <div class="tech-icon"><i class="fa-solid fa-server"></i></div>
+          <h3 class="tech-name">Dell EMC PowerEdge &amp; Storage</h3>
+          <p class="tech-desc">Servidores corporativos PowerEdge e storages PowerStore/Unity para máxima densidade e IOPS.</p>
+        </div>
+
+        <div class="tech-box">
+          <div class="tech-icon"><i class="fa-solid fa-project-diagram"></i></div>
+          <h3 class="tech-name">Cisco UCS / HyperFlex</h3>
+          <p class="tech-desc">Infraestrutura hiperconvergente (HCI) e servidores blade para arquiteturas computacionais exigentes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFÍCIOS ESTRATÉGICOS ===== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-tag">Resultados para seu Negócio</span>
+        <h2 class="section-main-title">Benefícios Estratégicos da Modernização</h2>
+        <p class="section-description">
+          A transformação da infraestrutura de TI impacta diretamente a produtividade, a eficiência operacional e os resultados financeiros da empresa.
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-header">
+            <i class="fa-solid fa-arrow-down benefit-icon"></i>
+            <h3 class="benefit-title">Redução Drástica de Downtime</h3>
+          </div>
+          <p class="benefit-text">
+            Elimine paradas não programadas através de arquiteturas redundantes sem ponto único de falha (Single Point of Failure), garantindo operação ininterrupta.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-header">
+            <i class="fa-solid fa-bolt benefit-icon"></i>
+            <h3 class="benefit-title">Maior Disponibilidade &amp; Desempenho</h3>
+          </div>
+          <p class="benefit-text">
+            Aumente a velocidade de resposta de sistemas e aplicações corporativas com storages otimizados de alto IOPS e processamento de última geração.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-header">
+            <i class="fa-solid fa-chart-line benefit-icon"></i>
+            <h3 class="benefit-title">Custos Operacionais Otimizados</h3>
+          </div>
+          <p class="benefit-text">
+            Reduza custos com consumo de energia, refrigeração, licenças ociosas e manutenção de servidores obsoletos por meio do consolidamento virtual.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-header">
+            <i class="fa-solid fa-sliders-h benefit-icon"></i>
+            <h3 class="benefit-title">Gestão Centralizada &amp; Simplificada</h3>
+          </div>
+          <p class="benefit-text">
+            Painéis modernos de controle unificado para administração de identidades (Active Directory), máquinas virtuais, backups e dispositivos de armazenamento.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-header">
+            <i class="fa-solid fa-expand-arrows-alt benefit-icon"></i>
+            <h3 class="benefit-title">Arquitetura Escalável &amp; Híbrida</h3>
+          </div>
+          <p class="benefit-text">
+            Infraestrutura preparada para crescer de forma ágil e modular conforme a demanda da empresa, pronta para integração com ambientes MultiCloud (AWS/Azure).
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-header">
+            <i class="fa-solid fa-user-shield benefit-icon"></i>
+            <h3 class="benefit-title">Conformidade &amp; Segurança Robusta</h3>
+          </div>
+          <p class="benefit-text">
+            Políticas rigorosas de controle de acesso, criptografia em repouso e backups imutáveis protegidos contra ataques de ransomware.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BANNER CTA PRE-FOOTER ===== -->
+  <section class="cta-banner-section">
+    <div class="cta-banner-container">
+      <h2 class="cta-banner-title">Sua infraestrutura de TI está pronta para o futuro?</h2>
+      <p class="cta-banner-desc">
+        Entre em contato com os especialistas da IT SCOPE. Realizamos um diagnóstico completo do seu ambiente e apresentamos um plano de modernização sob medida para o seu negócio.
+      </p>
+      <div class="hero-cta-group">
+        <button class="btn-cta-primary" id="open-modal-cta">
+          <i class="fa-solid fa-search"></i> Solicitar diagnóstico
+        </button>
+        <a href="https://wa.me/5521971722582?text=Ol%C3%A1%20V%C3%ADtor%2C%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20de%20infraestrutura." target="_blank" class="btn-cta-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOTÃO FLUTUANTE — WHATSAPP ===== -->
+  <a href="https://wa.me/5521971722582" target="_blank" class="floating-cta" id="floating-cta" style="text-decoration:none; color:#fff;" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="floating-cta-text">WhatsApp</span>
+  </a>
+
+  <!-- ===== MODAL DIAGNÓSTICO ===== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-glass">
+      <button class="modal-close" id="modal-close" aria-label="Fechar"><i class="fa-solid fa-times"></i></button>
+      <h2>Solicitar Diagnóstico</h2>
+      <p class="modal-subtitle">Preencha o formulário e um engenheiro sênior da IT SCOPE entrará em contato em até 24 horas.</p>
+
+      <form class="modal-form" id="contact-form" action="https://formspree.io/f/mvoegpyw" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-name">Nome Completo *</label>
+            <input type="text" id="contact-name" name="name" required placeholder="Seu nome">
+          </div>
+          <div class="form-group">
+            <label for="contact-company">Empresa *</label>
+            <input type="text" id="contact-company" name="company" required placeholder="Sua empresa">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-email">E-mail Corporativo *</label>
+            <input type="email" id="contact-email" name="email" required placeholder="seu@empresa.com.br">
+          </div>
+          <div class="form-group">
+            <label for="contact-phone">Telefone / WhatsApp *</label>
+            <input type="tel" id="contact-phone" name="phone" required placeholder="(21) 99999-9999">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contact-interest">Área de Interesse *</label>
+          <select id="contact-interest" name="interest" required>
+            <option value="Infraestrutura de TI / Modernização" selected>Modernização de Infraestrutura de TI</option>
+            <option value="Multi-Cloud (AWS / Azure / GCP / Oracle)">Multi-Cloud (AWS / Azure / GCP / Oracle)</option>
+            <option value="Segurança da Informação / LGPD">Segurança da Informação / LGPD</option>
+            <option value="Automação e DevOps">Automação e DevOps</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Descreva sua necessidade</label>
+          <textarea id="contact-message" name="message" rows="4" placeholder="Conte-nos brevemente sobre o seu ambiente atual de servidores, virtualização ou desafios de infraestrutura..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit-form">Enviar Solicitação →</button>
+      </form>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- FOOTER INSTITUCIONAL -->
+  <footer class="itscope-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-text notranslate" translate="no">IT SCOPE LTDA</span>
+      </div>
+      <div style="font-size:13px; color:#94a3b8; margin-bottom:15px;">
+        Rio de Janeiro / São Paulo - Brasil | (21) 97172-2582 | vitor.cypriano@itscope.com.br
+      </div>
+      <div class="footer-social">
+        <a href="https://wa.me/5521971722582" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/itscopeltda/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/itscope/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:vitor.cypriano@itscope.com.br" aria-label="E-mail"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.youtube.com/channel/UC01yxvKXquP1lg05nHO86gA" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="footer-links">
+        <a href="../politica-privacidade.html">Política de Privacidade</a>
+        <a href="../consumo-responsavel.html">Consumo Responsável</a>
+        <a href="../termos-uso.html">Termos de Uso</a>
+        <a href="../acessibilidade.html">Acessibilidade</a>
+      </div>
+      <div class="footer-copy">
+        © 2025 IT SCOPE LTDA. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts JS -->
+  <script src="../public/js/translate.js"></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script>
+    // Lógica do Modal de Diagnóstico
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalClose = document.getElementById('modal-close');
+    const btnHero = document.getElementById('open-modal-hero');
+    const btnCta = document.getElementById('open-modal-cta');
+
+    function openModal() {
+      if (modalOverlay) modalOverlay.style.display = 'flex';
+    }
+
+    function closeModal() {
+      if (modalOverlay) modalOverlay.style.display = 'none';
+    }
+
+    if (btnHero) btnHero.addEventListener('click', openModal);
+    if (btnCta) btnCta.addEventListener('click', openModal);
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+
+    if (modalOverlay) {
+      modalOverlay.addEventListener('click', function(e) {
+        if (e.target === modalOverlay) closeModal();
+      });
+    }
+  </script>
+</body>
+
+</html>

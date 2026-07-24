@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFBFE9NTX1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JFBFE9NTX1');
+  </script>
+
+  <!-- Metadados de SEO Técnico & Indexação -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevOps &amp; Automação | IT SCOPE</title>
+  <meta name="description" content="Automatize sua infraestrutura com IaC (Terraform), CI/CD, containers Docker/Kubernetes e práticas DevOps. Entregue mais rápido com a IT SCOPE." />
+  <link rel="canonical" href="https://www.itscope.com.br/solucoes/devops-automacao.html" />
+  <link rel="alternate" hreflang="pt-BR" href="https://www.itscope.com.br/solucoes/devops-automacao.html" />
+
+  <!-- Open Graph & Social Cards -->
+  <meta property="og:title" content="DevOps &amp; Automação | IT SCOPE">
+  <meta property="og:description" content="Automatize sua infraestrutura com IaC (Terraform), CI/CD, containers Docker/Kubernetes e práticas DevOps. Entregue mais rápido com a IT SCOPE.">
+  <meta property="og:image" content="https://www.itscope.com.br/public/img/visual_template.png">
+  <meta property="og:url" content="https://www.itscope.com.br/solucoes/devops-automacao.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DevOps &amp; Automação | IT SCOPE">
+  <meta name="twitter:description" content="Automatize sua infraestrutura com IaC, CI/CD, Docker/Kubernetes e práticas DevOps. Entregue mais rápido.">
+
+  <!-- Dados Estruturados Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "DevOps & Automação de Infraestrutura",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "IT SCOPE LTDA",
+      "telephone": "+5521971722582",
+      "url": "https://www.itscope.com.br"
+    },
+    "serviceType": "DevOps Consulting & Infrastructure Automation",
+    "areaServed": "BR",
+    "description": "Consultoria em Automação de Infraestrutura (IaC), Pipelines CI/CD, Orquestração de Containers Docker/Kubernetes e GitOps."
+  }
+  </script>
+
+  <!-- Favicon e Estilos -->
+  <link rel="icon" href="../favicon5.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../public/css/styles.css?v=3.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Scripts -->
+  <script src="../public/js/translate.js"></script>
+  <script src="../public/js/features.js" defer></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <style>
+    /* Estilos Específicos da Subpágina DevOps & Automação */
+    body, html {
+      font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+      background-color: #080e1a !important;
+      color: #ffffff;
+    }
+
+    .solucao-hero {
+      position: relative;
+      padding: 130px 20px 80px;
+      background: radial-gradient(circle at top right, rgba(0, 180, 216, 0.15), transparent 50%),
+                  radial-gradient(circle at bottom left, rgba(63, 192, 96, 0.12), transparent 50%),
+                  #080e1a;
+      border-bottom: 1px solid rgba(96, 239, 255, 0.15);
+      text-align: center;
+    }
+
+    .breadcrumb-custom {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #94a3b8;
+      margin-bottom: 25px;
+    }
+
+    .breadcrumb-custom a {
+      color: #60efff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb-custom a:hover {
+      color: #3fc060;
+    }
+
+    .badge-devops {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(63, 192, 96, 0.12);
+      border: 1px solid rgba(63, 192, 96, 0.4);
+      color: #3fc060;
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-size: 42px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #60efff, #3fc060);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      max-width: 780px;
+      margin: 0 auto 35px;
+      font-size: 17px;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-main-cta {
+      background: linear-gradient(135deg, #00b4d8, #3fc060);
+      color: #080e1a;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 180, 216, 0.3);
+      cursor: pointer;
+    }
+
+    .btn-main-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(63, 192, 96, 0.4);
+      color: #080e1a;
+    }
+
+    .btn-wsp-cta {
+      background: rgba(37, 211, 102, 0.15);
+      border: 1px solid rgba(37, 211, 102, 0.5);
+      color: #25d366;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-wsp-cta:hover {
+      background: #25d366;
+      color: #080e1a;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    /* Seções Genéricas */
+    .section-padding {
+      padding: 80px 20px;
+    }
+
+    .bg-dark-navy {
+      background-color: #080e1a;
+    }
+
+    .bg-navy-card {
+      background-color: #0f172a;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-header h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    .section-header p {
+      font-size: 16px;
+      color: #94a3b8;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* O Que Fazemos - Cards */
+    .service-card {
+      background: #0f172a;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 32px 25px;
+      height: 100%;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #60efff, #3fc060);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(96, 239, 255, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      background: rgba(0, 180, 216, 0.12);
+      border: 1px solid rgba(0, 180, 216, 0.3);
+      color: #60efff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-bottom: 22px;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* Grid de Tecnologias */
+    .tech-card {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: 22px 18px;
+      text-align: center;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .tech-card:hover {
+      background: #0f172a;
+      border-color: rgba(63, 192, 96, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(63, 192, 96, 0.15);
+    }
+
+    .tech-card i {
+      font-size: 38px;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #60efff, #3fc060);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tech-card h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .tech-card span {
+      font-size: 12px;
+      color: #94a3b8;
+      display: block;
+    }
+
+    /* Seção de Benefícios */
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      background: #0f172a;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 24px;
+      border-radius: 10px;
+      height: 100%;
+      transition: border-color 0.3s ease;
+    }
+
+    .benefit-item:hover {
+      border-color: rgba(96, 239, 255, 0.3);
+    }
+
+    .benefit-icon-box {
+      min-width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(63, 192, 96, 0.15);
+      border: 1px solid rgba(63, 192, 96, 0.4);
+      color: #3fc060;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .benefit-content h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .benefit-content p {
+      font-size: 14px;
+      color: #cbd5e1;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .highlight-stat-box {
+      background: linear-gradient(135deg, rgba(0, 180, 216, 0.15), rgba(63, 192, 96, 0.15));
+      border: 1px solid rgba(96, 239, 255, 0.3);
+      border-radius: 12px;
+      padding: 35px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 54px;
+      font-weight: 800;
+      color: #3fc060;
+      line-height: 1;
+      margin-bottom: 10px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    }
+
+    .stat-label {
+      font-size: 16px;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    /* CTA Bottom Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, #0f172a, #080e1a);
+      border: 1px solid rgba(96, 239, 255, 0.25);
+      border-radius: 16px;
+      padding: 50px 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .cta-banner::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(63, 192, 96, 0.15), transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-banner h2 {
+      font-size: 30px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    .cta-banner p {
+      font-size: 16px;
+      color: #cbd5e1;
+      max-width: 680px;
+      margin: 0 auto 30px;
+    }
+
+    /* Icon pulse animation */
+    .service-icon i,
+    .tech-card i,
+    .benefit-icon i,
+    .step-number,
+    [class*="icon"] i {
+      animation: iconPulse 2.5s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    @keyframes iconPulse {
+      0%, 100% { 
+        text-shadow: 0 0 5px rgba(63, 192, 96, 0.3);
+        transform: scale(1);
+      }
+      50% { 
+        text-shadow: 0 0 20px rgba(63, 192, 96, 0.6), 0 0 40px rgba(63, 192, 96, 0.3);
+        transform: scale(1.08);
+      }
+    }
+
+    /* Fix text indentation in cards */
+    [class*="card"] p,
+    [class*="card"] ul,
+    [class*="card"] li,
+    [class*="card"] .description {
+      text-align: left !important;
+    }
+
+    [class*="card"] ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    [class*="card"] li {
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+
+    .feature-bullets,
+    .service-card-list,
+    .solution-bullets,
+    [class*="bullets"],
+    [class*="list"] {
+      text-align: left !important;
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .feature-bullets li,
+    .service-card-list li,
+    [class*="bullets"] li,
+    [class*="list"] li {
+      display: flex !important;
+      align-items: flex-start !important;
+      text-align: left !important;
+      gap: 8px;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+.feature-bullets li span,
+.service-card-list li span,
+[class*="bullets"] li span,
+[class*="list"] li span {
+  text-align: left !important;
+}
+
+/* Container global */
+.solution-page-wrapper {
+  padding-top: 60px;
+}
+
+/* Breadcrumbs */
+.solution-breadcrumb-bar {
+  background-color: #0f172a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 40px;
+  font-size: 13px;
+  text-align: left;
+}
+
+.solution-breadcrumb-bar a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.solution-breadcrumb-bar a:hover {
+  color: #3fc060;
+}
+
+.solution-breadcrumb-bar span.active {
+  color: #60efff;
+  font-weight: 600;
+}
+
+.solution-breadcrumb-bar span.sep {
+  color: #475569;
+  margin: 0 8px;
+}
+
+/* Force absolute left alignment in cards */
+.feature-card,
+.feature-card *,
+.service-card,
+.service-card *,
+.tech-card,
+.tech-card *,
+[class*="card"] {
+  text-align: left !important;
+}
+
+[class*="card"] ul,
+[class*="card"] ol {
+  padding-left: 20px !important;
+}
+
+[class*="card"] li {
+  text-align: left !important;
+}
+
+/* Ensure Font Awesome is not overridden by global styles */
+.fa, .fa-solid, .fa-regular, .fa-brands, .fab, .fas, .far, i {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+}
+</style>
+</head>
+
+<body>
+  <div id="google_translate_element" style="display: none;"></div>
+
+  <!-- HEADER DE NAVEGAÇÃO CONSISTENTE -->
+  <div class="wrapper">
+    <header id="main-header" style="position:fixed;top:0;left:0;right:0;height:60px;background-color:#ffffff;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.08);border-bottom:1px solid #e5e7eb;">
+      <nav style="display:flex;align-items:center;justify-content:space-between;height:100%;padding:0 40px;box-sizing:border-box;">
+        <div class="notranslate" translate="no" style="margin:0;font-size:22px;font-weight:800;font-family:Verdana,Geneva,Tahoma,sans-serif;color:#1e293b;">
+          <a href="../index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:10px;">
+            <img src="../public/img/logo_globe.png" alt="IT SCOPE Logo" style="height:52px;border-radius:0;">
+            <span>IT SCOPE</span>
+          </a>
+        </div>
+        <div style="display:flex;gap:20px;font-size:13px;font-weight:600;">
+          <a href="../index.html#solucoes" style="color:#334155;text-decoration:none;">Soluções</a>
+          <a href="../index.html#tecnologias" style="color:#334155;text-decoration:none;">Tecnologias</a>
+          <a href="../index.html#por-que-itscope" style="color:#334155;text-decoration:none;">Sobre</a>
+          <a href="../index.html#cases" style="color:#334155;text-decoration:none;">Cases</a>
+          <a href="../index.html#calculadora" style="color:#334155;text-decoration:none;">Calculadora ROI</a>
+          <a href="../index.html#faq" style="color:#334155;text-decoration:none;">FAQ</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <img src="../public/img/flag-en.png" alt="English" style="width:22px;height:22px;cursor:pointer;border-radius:3px;">
+          <img src="../public/img/flag-pt.png" alt="Português" style="width:22px;height:22px;cursor:pointer;border-radius:3px;">
+          <img src="../public/img/flag-es.png" alt="Español" style="width:22px;height:22px;cursor:pointer;border-radius:3px;">
+        </div>
+      </nav>
+    </header>
+  </div>
+
+  <div class="solution-page-wrapper">
+    <!-- BARRA DE BREADCRUMBS -->
+    <div class="solution-breadcrumb-bar">
+      <a href="../index.html"><i class="fa-solid fa-home"></i> Home</a>
+      <span class="sep">/</span>
+      <a href="../index.html#solucoes">Soluções</a>
+      <span class="sep">/</span>
+      <span class="active">DevOps & Automação</span>
+    </div>
+
+  <!-- HERO BANNER -->
+  <section class="solucao-hero">
+    <div class="container">
+
+      <div class="badge-devops">
+        <i class="fa-solid fa-terminal"></i> ENGENHARIA DE AUTOMAÇÃO &amp; DEVOPS
+      </div>
+
+      <h1 class="hero-title">DevOps &amp; <span>Automação</span></h1>
+
+      <p class="hero-subtitle">
+        Acelere a entrega de software, elimine tarefas manuais repetitivas e construa uma infraestrutura previsível, ágil e autorrecuperável com práticas modernas de IaC e CI/CD.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn-main-cta" data-open-modal data-interest="Automação e DevOps">
+          <i class="fa-solid fa-rocket"></i> Solicitar Diagnóstico DevOps
+        </button>
+        <a href="https://wa.me/5521971722582?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20de%20DevOps%20e%20Automa%C3%A7%C3%A3o%20da%20IT%20SCOPE." class="btn-wsp-cta" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> Falar via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- O QUE FAZEMOS / SOLUÇÕES DEVOPS -->
+  <section class="section-padding bg-dark-navy">
+    <div class="container">
+      <div class="section-header">
+        <h2>O Que Fazemos em DevOps &amp; Automação</h2>
+        <p>Transformamos infraestruturas legadas em ambientes modernos baseados em código, automação contínua e observabilidade.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- IaC -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-code-branch"></i>
+            </div>
+            <h3>Infrastructure as Code (IaC)</h3>
+            <p>
+              Provisionamento declarativo, automatizado e padronizado utilizando <strong>Terraform</strong>, <strong>Ansible</strong> e <strong>CloudFormation</strong>. Elimine erros de configuração manual e elimine o "drift" entre ambientes.
+            </p>
+          </div>
+        </div>
+
+        <!-- CI/CD -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-cogs"></i>
+            </div>
+            <h3>Pipelines CI/CD Automatizadas</h3>
+            <p>
+              Construção de esteiras contínuas de integração e entrega com <strong>GitHub Actions</strong>, <strong>Azure DevOps</strong> e <strong>Jenkins</strong>. Testes automatizados e compilações velozes do código à produção.
+            </p>
+          </div>
+        </div>
+
+        <!-- Containers & K8s -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-brands fa-docker"></i>
+            </div>
+            <h3>Orquestração de Containers</h3>
+            <p>
+              Padronização de microsserviços com <strong>Docker</strong> e gerenciamento em escala via <strong>Kubernetes (EKS / AKS / GKE)</strong>. Auto-scaling, alta disponibilidade e isolamento seguro de workloads.
+            </p>
+          </div>
+        </div>
+
+        <!-- GitOps & Helm -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-sync-alt"></i>
+            </div>
+            <h3>Workflows GitOps</h3>
+            <p>
+              Sincronização contínua do estado da infraestrutura declarada em repositórios Git com <strong>ArgoCD</strong> e empacotamento simplificado de aplicações Kubernetes via <strong>Helm</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Configuration Management -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-sliders-h"></i>
+            </div>
+            <h3>Configuration Management</h3>
+            <p>
+              Gerenciamento centralizado de configurações com <strong>Ansible</strong>. Automação de correções de segurança, parametrização de servidores e conformidade contínua sem intervenção humana.
+            </p>
+          </div>
+        </div>
+
+        <!-- Culture & Observability -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3>Cultura &amp; Observabilidade</h3>
+            <p>
+              Implementação de cultura DevOps com visibilidade total do ecossistema. Monitoramento de métricas, logs e traces para diagnosticar gargalos antes que afetem os usuários.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECNOLOGIAS & FERRAMENTAS -->
+  <section class="section-padding bg-navy-card">
+    <div class="container">
+      <div class="section-header">
+        <h2>Tecnologias &amp; Ferramentas Especializadas</h2>
+        <p>Utilizamos as ferramentas líderes de mercado para garantir alta velocidade, confiabilidade e interoperabilidade MultiCloud.</p>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="tech-card">
+            <i class="fa-solid fa-cubes"></i>
+            <h4>Terraform</h4>
+            <span>IaC MultiCloud</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="tech-card">
+            <i class="fa-solid fa-network-wired"></i>
+            <h4>Ansible</h4>
+            <span>Automação &amp; Config</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="tech-card">
+            <i class="fa-brands fa-docker"></i>
+            <h4>Docker</h4>
+            <span>Conteinerização</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="tech-card">
+            <i class="fa-solid fa-dharmachakra"></i>
+            <h4>Kubernetes</h4>
+            <span>Orquestração (K8s)</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="tech-card">
+            <i class="fa-brands fa-github"></i>
+            <h4>GitHub Actions</h4>
+            <span>CI/CD &amp; Workflows</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="tech-card">
+            <i class="fa-brands fa-microsoft"></i>
+            <h4>Azure DevOps</h4>
+            <span>Esteira Enterprise</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="tech-card">
+            <i class="fa-brands fa-jenkins"></i>
+            <h4>Jenkins</h4>
+            <span>Automação de Build</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="tech-card">
+            <i class="fa-solid fa-infinity"></i>
+            <h4>ArgoCD &amp; Helm</h4>
+            <span>GitOps &amp; Package Manager</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="section-padding bg-dark-navy">
+    <div class="container">
+      <div class="section-header">
+        <h2>Benefícios para a sua Empresa</h2>
+        <p>Resultados mensuráveis de eficiência operacional, segurança e agilidade para o desenvolvimento de negócios.</p>
+      </div>
+
+      <div class="row g-4 align-items-center mb-4">
+        <div class="col-lg-7">
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="benefit-item">
+                <div class="benefit-icon-box">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div class="benefit-content">
+                  <h4>70% de Redução no Tempo de Provisionamento</h4>
+                  <p>Criação e atualização de ambientes completos em minutos com scripts IaC, eliminando gargalos de infraestrutura.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="benefit-item">
+                <div class="benefit-icon-box">
+                  <i class="fa-solid fa-shield-alt"></i>
+                </div>
+                <div class="benefit-content">
+                  <h4>Deployments Repetíveis e Auditáveis</h4>
+                  <p>Histórico completo de alterações via Git (GitOps). Todo deploy é rastreável, testado e com rollback instantâneo.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="benefit-item">
+                <div class="benefit-icon-box">
+                  <i class="fa-solid fa-tachometer-alt"></i>
+                </div>
+                <div class="benefit-content">
+                  <h4>Faster Time-to-Market</h4>
+                  <p>Libere novas funcionalidades e correções para seus clientes com frequência e segurança incomparavelmente maiores.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="benefit-item">
+                <div class="benefit-icon-box">
+                  <i class="fa-solid fa-heartbeat"></i>
+                </div>
+                <div class="benefit-content">
+                  <h4>Infraestrutura Autorrecuperável (Self-Healing)</h4>
+                  <p>Orquestração com Kubernetes e monitoramento contínuo garantem recriação automática de pods ou instâncias com falha.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="benefit-item">
+                <div class="benefit-icon-box">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="benefit-content">
+                  <h4>Ambientes Versionados em Código</h4>
+                  <p>Padronização rigorosa entre desenvolvimento, homologação e produção, evitando o famoso "na minha máquina funciona".</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="highlight-stat-box">
+            <div class="stat-number">70%</div>
+            <div class="stat-label">Redução média no tempo de provisionamento e liberação de releases</div>
+            <hr style="border-color: rgba(255,255,255,0.1); margin: 25px 0;">
+            <p style="font-size: 14px; color: #cbd5e1; text-align: center; margin: 0;">
+              "Com DevOps e automação IaC, sua equipe foca em inovar e criar valor para o negócio, enquanto a infraestrutura responde com agilidade e estabilidade absoluta."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section-padding bg-navy-card">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Pronto para Automatizar e Acelerar sua Entrega?</h2>
+        <p>
+          Solicite um diagnóstico técnico gratuito da sua infraestrutura e descubra como a IT SCOPE pode implementar práticas de DevOps, CI/CD e Containers na sua empresa.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-main-cta" data-open-modal data-interest="Automação e DevOps">
+            <i class="fa-solid fa-clipboard-check"></i> Solicitar Diagnóstico
+          </button>
+          <a href="https://wa.me/5521971722582?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20de%20DevOps%20e%20Automa%C3%A7%C3%A3o." class="btn-wsp-cta" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Falar via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/5521971722582?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20DevOps%20e%20Automa%C3%A7%C3%A3o." class="floating-cta" target="_blank" aria-label="Falar no WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="floating-cta-text">WhatsApp</span>
+  </a>
+
+  <!-- MODAL GLASSMORPHISM — FORMULÁRIO FORMSPREE -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-glass">
+      <button class="modal-close" id="modal-close"><i class="fa-solid fa-times"></i></button>
+      <h2>Solicitar Diagnóstico DevOps</h2>
+      <p class="modal-subtitle">Preencha os campos abaixo e Vítor Cypriano entrará em contato em até 24 horas.</p>
+
+      <div id="formspree-feedback" class="formspree-feedback"></div>
+
+      <form class="modal-form" id="contact-form" action="https://formspree.io/f/mvoegpyw" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-name">Nome Completo *</label>
+            <input type="text" id="contact-name" name="name" required placeholder="Seu nome">
+          </div>
+          <div class="form-group">
+            <label for="contact-company">Empresa *</label>
+            <input type="text" id="contact-company" name="company" required placeholder="Nome da sua empresa">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-email">E-mail Corporativo *</label>
+            <input type="email" id="contact-email" name="email" required placeholder="seu@empresa.com.br">
+          </div>
+          <div class="form-group">
+            <label for="contact-phone">Telefone / WhatsApp *</label>
+            <input type="tel" id="contact-phone" name="phone" required placeholder="(21) 99999-9999">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contact-interest">Área de Interesse *</label>
+          <select id="contact-interest" name="interest" required>
+            <option value="Automação e DevOps" selected>Automação e DevOps</option>
+            <option value="Multi-Cloud (AWS / Azure / GCP / Oracle)">Multi-Cloud (AWS / Azure / GCP / Oracle)</option>
+            <option value="Segurança da Informação / LGPD">Segurança da Informação / LGPD</option>
+            <option value="Infraestrutura de TI">Infraestrutura de TI</option>
+            <option value="Consultoria Estratégica">Consultoria Estratégica</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Descreva sua necessidade</label>
+          <textarea id="contact-message" name="message" rows="4" placeholder="Conte-nos sobre seus desafios de automação, CI/CD ou infraestrutura..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit-form">Enviar Solicitação →</button>
+      </form>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- FOOTER INSTITUCIONAL & BASE LEGAL -->
+  <footer class="itscope-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-text notranslate" translate="no">IT SCOPE LTDA</span>
+      </div>
+      <div style="font-size:13px; color:#94a3b8; margin-bottom:15px;">
+        Rio de Janeiro / São Paulo - Brasil | (21) 97172-2582 | vitor.cypriano@itscope.com.br
+      </div>
+      <div class="footer-social">
+        <a href="https://wa.me/5521971722582" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/itscopeltda/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/itscope/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:vitor.cypriano@itscope.com.br" aria-label="E-mail"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.youtube.com/channel/UC01yxvKXquP1lg05nHO86gA" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="footer-links">
+        <a href="../politica-privacidade.html">Política de Privacidade</a>
+        <a href="../consumo-responsavel.html">Consumo Responsável</a>
+        <a href="../termos-uso.html">Termos de Uso</a>
+        <a href="../acessibilidade.html">Acessibilidade</a>
+      </div>
+      <div class="footer-copy">
+        © 2025 IT SCOPE LTDA. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
