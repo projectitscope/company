@@ -31,28 +31,97 @@
   <meta name="twitter:title" content="IT SCOPE | Consultoria em Tecnologia &amp; MultiCloud">
   <meta name="twitter:description" content="Infraestrutura inteligente. Ambientes seguros. Negócios preparados para o futuro.">
 
-  <!-- Dados Estruturados Schema.org (LocalBusiness & Organization) -->
+  <!-- Dados Estruturados Schema.org (WebSite, LocalBusiness/Organization & FAQPage) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "IT SCOPE LTDA",
-    "image": "https://www.itscope.com.br/public/img/logo_itscope.jpg",
-    "telephone": "+5521971722582",
-    "email": "vitor.cypriano@itscope.com.br",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Rio de Janeiro / São Paulo",
-      "addressCountry": "BR"
-    },
-    "url": "https://www.itscope.com.br",
-    "founder": {
-      "@type": "Person",
-      "name": "Vítor Cypriano",
-      "jobTitle": "Fundador & Especialista em TI",
-      "sameAs": "https://www.linkedin.com/in/vitorcypriano"
-    },
-    "description": "Consultoria especializada em infraestrutura de TI, MultiCloud, segurança da informação e automação DevOps."
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itscope.com.br/#website",
+        "url": "https://www.itscope.com.br/",
+        "name": "IT SCOPE | Consultoria em Infraestrutura, MultiCloud & Segurança",
+        "publisher": {
+          "@id": "https://www.itscope.com.br/#organization"
+        },
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.itscope.com.br/#organization",
+        "name": "IT SCOPE LTDA",
+        "image": "https://www.itscope.com.br/public/img/logo_itscope.jpg",
+        "telephone": "+5521971722582",
+        "email": "vitor.cypriano@itscope.com.br",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Rio de Janeiro / São Paulo",
+          "addressCountry": "BR"
+        },
+        "url": "https://www.itscope.com.br",
+        "founder": {
+          "@type": "Person",
+          "name": "Vítor Cypriano",
+          "jobTitle": "Fundador & Especialista em TI",
+          "sameAs": "https://www.linkedin.com/in/vitorcypriano"
+        },
+        "description": "Consultoria especializada em infraestrutura de TI, MultiCloud, segurança da informação e automação DevOps."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itscope.com.br/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Como funciona o processo de migração para nuvem?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O processo começa com um assessment completo da sua infraestrutura atual. Mapeamos servidores, aplicações, dependências e riscos. Em seguida, definimos uma estratégia de migração personalizada (lift-and-shift, refactoring ou rearchitecting), executamos a migração em fases com janelas de manutenção planejadas e realizamos testes de validação antes do go-live."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O que é a consultoria de LGPD e conformidade?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nossa consultoria de LGPD inclui diagnóstico de maturidade em proteção de dados, mapeamento de dados pessoais, implementação de políticas de privacidade, treinamento de equipes, adequação de sistemas e monitoramento contínuo. Auxiliamos na nomeação do DPO, criação do RIPD (Relatório de Impacto) e implementação de mecanismos técnicos como criptografia, controle de acesso e gestão de consentimento."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "A IT SCOPE atende fora do Rio e São Paulo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim! Embora tenhamos presença física no Rio de Janeiro e em São Paulo, atendemos empresas em todo o território nacional e também no exterior. Grande parte dos nossos projetos de cloud, automação e segurança é executada de forma remota, com acesso seguro à infraestrutura do cliente."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quais plataformas de nuvem vocês trabalham?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Trabalhamos com as principais plataformas de nuvem pública do mercado: AWS (Amazon Web Services), Microsoft Azure, Google Cloud Platform (GCP) e Oracle Cloud. Nossa abordagem é multicloud, combinando os pontos fortes de cada provedor de acordo com a necessidade do seu negócio."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como funciona o suporte técnico da IT SCOPE?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oferecemos diferentes modalidades de suporte: sob demanda (por chamado), pacotes de horas mensais e contratos de suporte dedicado 24/7. Todos os atendimentos passam por um sistema de tickets com SLA definido, e nossa equipe é liderada por especialistas certificados."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Qual o prazo médio de implementação de um projeto?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O prazo varia conforme a complexidade do projeto. Migrações simples para nuvem podem ser concluídas em 2 a 4 semanas. Projetos de automação DevOps levam entre 4 e 8 semanas. Em todos os casos, fornecemos um cronograma detalhado na proposta comercial com marcos de entrega."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 

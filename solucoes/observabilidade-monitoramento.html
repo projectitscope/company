@@ -34,17 +34,45 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Observabilidade & Monitoramento de TI",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "IT SCOPE LTDA",
-      "telephone": "+5521971722582",
-      "email": "vitor.cypriano@itscope.com.br",
-      "url": "https://www.itscope.com.br"
-    },
-    "areaServed": "Brasil",
-    "description": "Serviços especializados em implantação de Zabbix, Grafana, Prometheus, NOC 24/7 e auditorias de rede para total visibilidade de infraestrutura."
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Observabilidade & Monitoramento",
+        "serviceType": "Observabilidade & Monitoramento de TI",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "IT SCOPE LTDA",
+          "telephone": "+5521971722582",
+          "email": "vitor.cypriano@itscope.com.br",
+          "url": "https://www.itscope.com.br"
+        },
+        "areaServed": "Brasil",
+        "description": "Serviços especializados em implantação de Zabbix, Grafana, Prometheus, NOC 24/7 e auditorias de rede para total visibilidade de infraestrutura."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itscope.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Soluções",
+            "item": "https://www.itscope.com.br/#solucoes"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Observabilidade & Monitoramento",
+            "item": "https://www.itscope.com.br/solucoes/observabilidade-monitoramento.html"
+          }
+        ]
+      }
+    ]
   }
   </script>
 

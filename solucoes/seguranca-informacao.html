@@ -34,17 +34,44 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Segurança da Informação & LGPD",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "IT SCOPE LTDA",
-      "telephone": "+5521971722582",
-      "email": "vitor.cypriano@itscope.com.br",
-      "url": "https://www.itscope.com.br"
-    },
-    "description": "Consultoria especializada em segurança cibernética, conformidade LGPD, gestão de firewalls Sophos/Fortinet, PAM e varreduras de vulnerabilidades.",
-    "areaServed": "BR"
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Segurança da Informação & LGPD",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "IT SCOPE LTDA",
+          "telephone": "+5521971722582",
+          "email": "vitor.cypriano@itscope.com.br",
+          "url": "https://www.itscope.com.br"
+        },
+        "description": "Consultoria especializada em segurança cibernética, conformidade LGPD, gestão de firewalls Sophos/Fortinet, PAM e varreduras de vulnerabilidades.",
+        "areaServed": "BR"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itscope.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Soluções",
+            "item": "https://www.itscope.com.br/#solucoes"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Segurança da Informação",
+            "item": "https://www.itscope.com.br/solucoes/seguranca-informacao.html"
+          }
+        ]
+      }
+    ]
   }
   </script>
 
