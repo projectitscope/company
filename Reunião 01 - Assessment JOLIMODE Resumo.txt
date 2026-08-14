@@ -1,0 +1,45 @@
+Assessment JOLIMODE
+qua., 29 de jul. de 2026
+
+Resumo:
+
+Revisão de opções para recuperação ou migração do ADFS afetado.
+• Dois orçamentos: rebuild VM ou migrar para PTA
+• Ambiente: 4 VMs AWS, 1 ADFS comprometido
+• Usuários: ~240 com integração somente Office 365
+• Certificado disponível; documentação desatualizada
+• Mudanças sujeitas a janelas de freeze longas
+• Nenhuma decisão final tomada
+
+
+Tarefas:
+
+* Rafael Santos: Enviar posteriormente o nome exato do serviço PTA e informações sobre quantidade de licenças, se necessário, por e-mail ou mensagem
+* Vítor Cypriano: Revisar a conversa, avaliar tecnicamente os requisitos e entrar em contato com Rafael com as ações necessárias e janelas de intervenção propostas
+* Yago Macedo: Preparar e enviar proposta/orçamento cobrindo os dois cenários (restauração da VM comprometida e migração para PTA)
+
+
+Principais Pontos de Discussão:
+
+Abertura e apresentações
+A sessão iniciou com saudações e identificação dos participantes: Yago Macedo representando a marca, Laércio ausente, Rafael Santos como cliente e Vítor Cypriano como especialista em nuvem. Yago explicou que faria um overview e que Laércio já havia passado um briefing prévio.
+
+Objetivo da reunião e escopo inicial
+Rafael expôs o objetivo principal: avaliar dois cenários após um incidente de ransomware em uma VM da AWS, detalhando a necessidade de orçamento para restauração da VM afetada e para estudo de migração a um modelo de autenticação alternativo com Office 365.
+
+Detalhes técnicos do incidente e topologia
+Os participantes mapearam a topologia atual (quatro VMs na AWS: dois ADs e dois ADFS), confirmaram que um ADFS foi criptografado e que resta um ADFS funcional, e discutiram a presença de backups de certificado e ausência de documentação atualizada.
+
+Avaliação de alternativas (PTA) e requisitos
+Foi discutida a alternativa PTA (Pass Through Authentication) como possível substituição ao ADFS, com Vítor confirmando conhecimento da tecnologia e questionando dependências como a presença do Active Directory e necessidade de certificados. Rafael e Vítor concordaram que PTA exige AD e que o certificado deve ser guardado.
+
+Restrições operacionais e janelas de manutenção
+Vítor levantou a necessidade de planejar janelas fora do horário comercial para intervenções e perguntou sobre políticas de freeze do cliente; Yago complementou sobre clientes que não permitem mudanças em períodos críticos, destacando que isso impacta cronograma e execução.
+
+Conclusões, próximos passos e encerramento
+Ficou alinhado que a equipe preparará uma proposta para os dois cenários e que Vítor revisará o conteúdo da conversa e entrará em contato para detalhar ações; Rafael informou que pode enviar posteriormente informações sobre o serviço PTA e confirmou a referência de cerca de 240 usuários para orçamentação.
+
+
+Bloco de Notas:
+
+* Sem anotações
