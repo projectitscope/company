@@ -2359,3 +2359,39 @@ html {
     height: 32px !important;
   }
 }
+
+/* ===================================================================
+   SXO & ACESSIBILIDADE AVANÇADA (Search Experience Optimization)
+   =================================================================== */
+
+/* Foco visível acessível para navegação por teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #3fc060 !important;
+  outline-offset: 3px !important;
+}
+
+/* Otimização de toque e leitura para dispositivos móveis */
+@media (max-width: 768px) {
+  .floating-cta,
+  .btn-hero-primary,
+  .btn-hero-secondary,
+  .btn-roi-cta,
+  .solution-card-link {
+    min-height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-v2-left p,
+  .section-subtitle,
+  .why-lead-text,
+  .solution-card-desc {
+    line-height: 1.65;
+    letter-spacing: 0.01em;
+  }
+}

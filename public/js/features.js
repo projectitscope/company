@@ -342,4 +342,49 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+
+  // ===================================================================
+  // 5. SXO & ENGAJAMENTO: Profundidade de Scroll & Tempo de Leitura (GA4)
+  // ===================================================================
+  var scrollCheckpoints = [25, 50, 75, 90];
+  var scrollTriggered = {};
+
+  window.addEventListener('scroll', function() {
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight <= 0) return;
+    var scrollPercent = Math.round((window.scrollY / docHeight) * 100);
+
+    scrollCheckpoints.forEach(function(cp) {
+      if (scrollPercent >= cp && !scrollTriggered[cp]) {
+        scrollTriggered[cp] = true;
+        if (typeof gtag === 'function') {
+          gtag('event', 'scroll_depth', {
+            'event_category': 'SXO_Engagement',
+            'event_label': 'Scroll_' + cp + '%',
+            'value': cp
+          });
+        }
+      }
+    });
+  }, { passive: true });
+
+  // Registro de Leitura Ativa (30s e 60s)
+  setTimeout(function() {
+    if (typeof gtag === 'function' && !document.hidden) {
+      gtag('event', 'active_reading_30s', {
+        'event_category': 'SXO_Engagement',
+        'event_label': document.title
+      });
+    }
+  }, 30000);
+
+  setTimeout(function() {
+    if (typeof gtag === 'function' && !document.hidden) {
+      gtag('event', 'active_reading_60s', {
+        'event_category': 'SXO_Engagement',
+        'event_label': document.title
+      });
+    }
+  }, 60000);
+
 });
