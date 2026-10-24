@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -166,7 +166,7 @@
       <nav class="navbar">
         <div class="navbar-left notranslate" translate="no">
           <a href="/" style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:10px;">
-            <img src="public/img/logo_globe.png" alt="IT SCOPE Logo" style="height:52px; border-radius:0;">
+            <img src="public/img/logo_globe.png" alt="IT SCOPE Logo" width="52" height="52" decoding="async" style="height:52px; width:52px; border-radius:0;">
             <span>IT SCOPE</span>
           </a>
         </div>
@@ -180,9 +180,15 @@
         </div>
         <div class="navbar-right">
           <div id="language-switcher">
-            <img src="public/img/flag-en.png" alt="English" onclick="translateLanguage('en')">
-            <img src="public/img/flag-pt.png" alt="Português" onclick="translateLanguage('pt')">
-            <img src="public/img/flag-es.png" alt="Español" onclick="translateLanguage('es')">
+            <button type="button" class="lang-btn" onclick="translateLanguage('en')" aria-label="Traduzir para Inglês">
+              <img src="public/img/flag-en.png" alt="" width="22" height="22" decoding="async">
+            </button>
+            <button type="button" class="lang-btn" onclick="translateLanguage('pt')" aria-label="Traduzir para Português">
+              <img src="public/img/flag-pt.png" alt="" width="22" height="22" decoding="async">
+            </button>
+            <button type="button" class="lang-btn" onclick="translateLanguage('es')" aria-label="Traduzir para Espanhol">
+              <img src="public/img/flag-es.png" alt="" width="22" height="22" decoding="async">
+            </button>
           </div>
         </div>
       </nav>
@@ -345,31 +351,31 @@
       </div>
       <div class="tech-banner-logos">
         <!-- Linha 1 -->
-        <img src="public/img/aws.png" alt="AWS">
-        <img src="public/img/az.png" alt="Microsoft Azure">
-        <img src="public/img/gcp.png" alt="Google Cloud">
-        <img src="public/img/oracle.png" alt="Oracle Cloud">
-        <img src="public/img/kube.png" alt="Kubernetes">
-        <img src="public/img/ter.png" alt="Terraform">
-        <img src="public/img/github.png" alt="GitHub">
+        <img src="public/img/aws.png" alt="AWS" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/az.png" alt="Microsoft Azure" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/gcp.png" alt="Google Cloud" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/oracle.png" alt="Oracle Cloud" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/kube.png" alt="Kubernetes" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/ter.png" alt="Terraform" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/github.png" alt="GitHub" loading="lazy" decoding="async" width="48" height="48">
         
         <!-- Linha 2 -->
-        <img src="public/img/ans2.png" alt="Ansible">
-        <img src="public/img/devops.png" alt="DevOps">
-        <img src="public/img/win.png" alt="Windows Server">
-        <img src="public/img/linux2.png" alt="Linux">
-        <img src="public/img/vm.png" alt="VMware">
-        <img src="public/img/fort.png" alt="Fortinet">
-        <img src="public/img/cis.png" alt="Cisco">
+        <img src="public/img/ans2.png" alt="Ansible" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/devops.png" alt="DevOps" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/win.png" alt="Windows Server" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/linux2.png" alt="Linux" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/vm.png" alt="VMware" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/fort.png" alt="Fortinet" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/cis.png" alt="Cisco" loading="lazy" decoding="async" width="48" height="48">
         
         <!-- Linha 3 -->
-        <img src="public/img/docker.png" alt="Docker">
-        <img src="public/img/js2.png" alt="JavaScript">
-        <img src="public/img/py.png" alt="Python">
-        <img src="public/img/shell.png" alt="Shell Script">
-        <img src="public/img/mysql.png" alt="MySQL">
-        <img src="public/img/postgre.png" alt="PostgreSQL">
-        <img src="public/img/redis.png" alt="Redis">
+        <img src="public/img/docker.png" alt="Docker" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/js2.png" alt="JavaScript" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/py.png" alt="Python" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/shell.png" alt="Shell Script" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/mysql.png" alt="MySQL" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/postgre.png" alt="PostgreSQL" loading="lazy" decoding="async" width="48" height="48">
+        <img src="public/img/redis.png" alt="Redis" loading="lazy" decoding="async" width="48" height="48">
       </div>
     </div>
   </section>
@@ -379,7 +385,7 @@
     <div class="why-container-v2">
       <!-- Coluna 1: Foto -->
       <div class="why-left-v2">
-        <img src="public/img/why_section_founder.jpg" alt="Vítor Cypriano — Atendimento especializado com café em escritório moderno">
+        <img src="public/img/why_section_founder.jpg" alt="Vítor Cypriano — Atendimento especializado com café em escritório moderno" width="1376" height="768" loading="lazy" decoding="async">
       </div>
       <!-- Coluna 2: Texto + Checklist -->
       <div class="why-right-v2">
@@ -609,7 +615,7 @@
   </section>
 
   <!-- ===== BOTÃO FLUTUANTE — WHATSAPP ===== -->
-  <a href="https://wa.me/5521971722582" target="_blank" class="floating-cta" id="floating-cta" style="text-decoration:none; color:#fff;">
+  <a href="https://wa.me/5521971722582" target="_blank" class="floating-cta" id="floating-cta" aria-label="Fale conosco no WhatsApp" style="text-decoration:none; color:#fff;">
     <i class="fab fa-whatsapp"></i>
     <span class="floating-cta-text">WhatsApp</span>
   </a>
@@ -617,7 +623,7 @@
   <!-- ===== MODAL GLASSMORPHISM — FORMULÁRIO FORMSPREE ===== -->
   <div class="modal-overlay" id="modal-overlay">
     <div class="modal-glass">
-      <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+      <button class="modal-close" id="modal-close" aria-label="Fechar modal"><i class="fas fa-times"></i></button>
       <h2>Solicitar Orçamento</h2>
       <p class="modal-subtitle">Preencha os campos abaixo e Vítor Cypriano entrará em contato em até 24 horas.</p>
 

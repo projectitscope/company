@@ -1,4 +1,4 @@
-// IT SCOPE — Interactive Features Engine
+﻿// IT SCOPE — Interactive Features Engine
 // Calculadora de ROI, Carrossel de Depoimentos, FAQ Accordion, Modal de Contato
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -272,6 +272,13 @@ document.addEventListener('DOMContentLoaded', function() {
           contactForm.reset();
 
           if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+              'event_category': 'Lead',
+              'event_label': document.getElementById('contact-interest')?.value || 'Formspree Form',
+              'method': 'formspree',
+              'value': 1.0,
+              'currency': 'BRL'
+            });
             gtag('event', 'form_submit_orcamento', {
               'event_category': 'Lead',
               'event_label': document.getElementById('contact-interest')?.value || 'Sucesso'
@@ -318,5 +325,21 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+
+
+  // Rastreamento GA4 de Leads via WhatsApp
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', {
+          'event_category': 'Lead',
+          'event_label': 'WhatsApp ' + (btn.id || btn.className || 'Link'),
+          'method': 'whatsapp',
+          'value': 1.0,
+          'currency': 'BRL'
+        });
+      }
+    });
+  });
 
 });

@@ -1,4 +1,4 @@
-body,
+﻿body,
 html {
   margin: 0;
   padding: 0;
@@ -106,6 +106,17 @@ h1.navbar-left, .navbar-left {
   gap: 10px;
 }
 
+
+#language-switcher .lang-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 #language-switcher img {
   width: 22px;
   height: 22px;
