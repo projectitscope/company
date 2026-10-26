@@ -83,7 +83,7 @@
   }
   </script>
 
-  <!-- Schema.org FAQPage (Rich Snippets para Soluções Multicloud) -->
+  <!-- Schema.org FAQPage (Rich Snippets para Soluções Multicloud & Migração) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -91,26 +91,42 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "O que são soluções multicloud e quais as vantagens?",
+        "name": "Quais são as principais estratégias e os 4 tipos de migração para nuvem?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Soluções multicloud utilizam dois ou mais provedores de computação em nuvem (como AWS, Microsoft Azure e Google Cloud), permitindo selecionar os melhores serviços de cada plataforma, eliminar o aprisionamento tecnológico (lock-in), maximizar a disponibilidade operacional e otimizar custos."
+          "text": "Os 4 principais tipos de migração corporativa executados pela IT SCOPE são: Rehost (Lift-and-Shift para migração ágil com mínima alteração), Replatform (modernização de bancos de dados para serviços gerenciados como RDS ou Cloud SQL), Refactor/Rearchitect (redesenho de aplicações em Microsserviços, Containers e Serverless) e Retire/Retain (descomissionamento planejado). A IT SCOPE realiza assessment prévio para definir a rota mais segura e econômica."
         }
       },
       {
         "@type": "Question",
-        "name": "Como a IT SCOPE atua na estratégia e migração multicloud?",
+        "name": "Quais fatores impulsionam as empresas a migrarem servidores para a nuvem?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A IT SCOPE conduz o assessment técnico das aplicações, define a arquitetura de conectividade híbrida e segura, automatiza o provisionamento com Infraestrutura como Código (Terraform) e executa migrações estruturadas com planos de rollback e janelas planejadas."
+          "text": "A migração corporativa para nuvem é impulsionada pela substituição de altos custos com hardware físico (CapEx) por despesas operacionais sob demanda (OpEx), segurança avançada e proteção nativa contra ransomware, planos automatizados de Disaster Recovery com redundância geográfica e capacidade elástica de escalar recursos em minutos sem gargalos operacionais."
         }
       },
       {
         "@type": "Question",
-        "name": "Como funciona o FinOps e a redução de custos na nuvem?",
+        "name": "Como a IT SCOPE garante que a migração não paralisará as operações (zero downtime)?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O FinOps estabelece visibilidade financeira contínua sobre o consumo de nuvem, eliminando recursos ociosos, aplicando rightsizing de instâncias, configurando políticas de desligamento automático e negociando compromissos de reserva com os provedores."
+          "text": "Nossa metodologia de migração em 4 etapas anula o risco de paradas não programadas através de Prova de Conceito (PoC) prévia em ambiente espelho, replicação assíncrona contínua de dados em segundo plano, janelas planejadas de corte (cutover) fora do horário comercial e procedimentos rigorosos e automatizados de rollback caso ocorra qualquer anomalia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que é arquitetura Multicloud e por que evitar o aprisionamento (vendor lock-in)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multicloud é o modelo arquitetural que integra estrategicamente dois ou mais provedores de nuvem pública (AWS, Microsoft Azure, Google Cloud e Oracle Cloud). Essa abordagem elimina a dependência exclusiva de um único fornecedor, fortalece o poder de negociação comercial, permite selecionar o melhor serviço para cada carga de trabalho e proporciona resiliência operacional geográfica máxima."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como o FinOps da IT SCOPE impede que os custos de nuvem saiam do controle?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O FinOps da IT SCOPE estabelece governança financeira contínua de nuvem através de auditoria e eliminação de recursos ociosos, rightsizing de instâncias (CPU e RAM adequadas ao uso real), políticas automatizadas de desligamento para ambientes de teste e assessoria na contratação de instâncias reservadas e Savings Plans com economias de até 40% nas faturas mensais."
         }
       }
     ]
@@ -588,6 +604,108 @@
     [class*="card"] li {
       text-align: left !important;
     }
+
+    /* FAQ Section — Dark Theme Customization */
+    .solution-page-wrapper .faq-section {
+      background-color: #0b1322 !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 90px 20px;
+    }
+
+    .solution-page-wrapper .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .solution-page-wrapper .faq-item {
+      border-bottom: none !important;
+      background: rgba(15, 23, 42, 0.6) !important;
+      margin-bottom: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(96, 239, 255, 0.12) !important;
+      padding: 0 24px;
+      transition: all 0.25s ease;
+    }
+
+    .solution-page-wrapper .faq-item:hover,
+    .solution-page-wrapper .faq-item.active {
+      border-color: rgba(96, 239, 255, 0.35) !important;
+      background: rgba(15, 23, 42, 0.85) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .solution-page-wrapper .faq-question {
+      color: #ffffff !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      padding: 22px 0 !important;
+      text-align: left !important;
+      background: none !important;
+      border: none !important;
+      width: 100%;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .solution-page-wrapper .faq-question:hover {
+      color: #60efff !important;
+    }
+
+    .solution-page-wrapper .faq-chevron {
+      color: #3fc060 !important;
+      font-size: 14px !important;
+      transition: transform 0.3s ease, color 0.3s ease;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .solution-page-wrapper .faq-item.active .faq-chevron {
+      transform: rotate(180deg);
+      color: #60efff !important;
+    }
+
+    .solution-page-wrapper .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      padding: 0;
+    }
+
+    .solution-page-wrapper .faq-item.active .faq-answer {
+      max-height: 800px !important;
+      padding: 5px 0 24px 0 !important;
+    }
+
+    .solution-page-wrapper .faq-answer p {
+      color: #cbd5e1 !important;
+      font-size: 14.5px !important;
+      line-height: 1.7 !important;
+      margin-bottom: 12px;
+      text-align: left !important;
+    }
+
+    .solution-page-wrapper .faq-answer ul {
+      margin: 10px 0 14px 0 !important;
+      padding-left: 20px !important;
+      list-style-type: disc !important;
+    }
+
+    .solution-page-wrapper .faq-answer li {
+      color: #cbd5e1 !important;
+      font-size: 14px !important;
+      line-height: 1.6 !important;
+      margin-bottom: 8px !important;
+      text-align: left !important;
+    }
+
+    .solution-page-wrapper .faq-answer strong {
+      color: #60efff !important;
+      font-weight: 700;
+    }
   </style>
 
   <!-- Scripts -->
@@ -615,7 +733,7 @@
           <a href="../index.html#por-que-itscope" style="color:#334155;text-decoration:none;">Sobre</a>
           <a href="../index.html#cases" style="color:#334155;text-decoration:none;">Cases</a>
           <a href="../index.html#calculadora" style="color:#334155;text-decoration:none;">Calculadora ROI</a>
-          <a href="../index.html#faq" style="color:#334155;text-decoration:none;">FAQ</a>
+          <a href="#faq" style="color:#334155;text-decoration:none;">FAQ</a>
         </div>
         <div style="display:flex;align-items:center;gap:10px;">
           <img src="../public/img/flag-en.png" alt="English" style="width:22px;height:22px;cursor:pointer;border-radius:3px;">
@@ -1029,6 +1147,107 @@
             <span class="step-number">Etapa 04</span>
             <h4>Sustentação &amp; FinOps Contínuos</h4>
             <p>Monitoramento proativo 24/7, revisão constante do faturamento cloud e evolução técnica contínua da infraestrutura.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ — DÚVIDAS FREQUENTES SOBRE MIGRAÇÃO & MULTICLOUD ===== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-tag">Tire Suas Dúvidas</span>
+        <h2 class="section-heading">Perguntas Frequentes sobre Migração &amp; Gestão Multicloud</h2>
+        <p class="section-subtitle" style="margin: 15px auto 0 auto; max-width: 750px; text-align: center;">
+          Respostas diretas e técnicas para as principais decisões de líderes de tecnologia ao migrar, modernizar e governar ambientes de nuvem corporativos.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quais são as principais estratégias e os 4 tipos de migração para nuvem?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>A estratégia ideal depende da maturidade das suas aplicações, prazos operacionais e metas de negócios. Os 4 principais tipos de migração executados pela IT SCOPE são:</p>
+            <ul>
+              <li><strong>Rehost (Lift-and-Shift):</strong> Migração direta das máquinas virtuais e servidores para a nuvem com pouca ou nenhuma alteração de código. É a rota mais rápida para descomissionar data centers locais ou servidores físicos obsoletos.</li>
+              <li><strong>Replatform (Lift-and-Reshape):</strong> Modernização de componentes essenciais sem alterar o núcleo do sistema — como substituir bancos de dados autogerenciados por serviços de nuvem nativos (Amazon RDS, Azure SQL Database ou Cloud SQL).</li>
+              <li><strong>Refactor / Rearchitect:</strong> Redesenho e reprogramação de aplicações legadas para arquiteturas modernas nativas da nuvem, utilizando Microsserviços, Containers (Docker / Kubernetes) e Serverless para ganho máximo de escalabilidade.</li>
+              <li><strong>Retire / Retain:</strong> Desativação de sistemas que não agregam mais valor ou manutenção temporária de cargas específicas em infraestrutura híbrida.</li>
+            </ul>
+            <p>A IT SCOPE realiza um assessment completo do ambiente antes da execução para orientar a rota de menor risco e maior retorno sobre o investimento.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quais fatores impulsionam as empresas a migrarem servidores para a nuvem?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>A migração corporativa para nuvem é orientada por fatores econômicos, estratégicos e de segurança:</p>
+            <ul>
+              <li><strong>Transição de CapEx para OpEx:</strong> Eliminação da necessidade de aportes maciços periódicos na compra e renovação de hardware físico, passando a pagar apenas pelos recursos consumidos sob demanda.</li>
+              <li><strong>Segurança Avançada e Resiliência contra Ransomware:</strong> Provedores líderes (AWS, Azure, GCP, Oracle) contam com proteções contra ameaças cibernéticas, firewalls gerenciados e isolamento de redes que ultrapassam a capacidade de data centers locais.</li>
+              <li><strong>Continuidade de Negócios e Disaster Recovery:</strong> Backups imutáveis com redundância geográfica e replicação contínua para restabelecer operações em minutos em caso de sinistro.</li>
+              <li><strong>Escalabilidade Elástica:</strong> Capacidade de responder a picos de tráfego instantaneamente sem sobrecarregar a infraestrutura e sem deixar hardware ocioso no restante do ano.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como a IT SCOPE garante que a migração não paralisará as operações (zero downtime)?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Nossa metodologia em 4 etapas foi projetada especificamente para anular o risco de paradas não programadas:</p>
+            <ul>
+              <li><strong>Prova de Conceito (PoC) &amp; Ambiente Espelho:</strong> Validamos a performance e as dependências em uma réplica antes de tocar no ambiente de produção.</li>
+              <li><strong>Sincronização Contínua em Segundo Plano:</strong> Os dados e bancos de produção são replicados em tempo real de forma assíncrona, mantendo o sistema em operação contínua.</li>
+              <li><strong>Janelas de Cutover Planejadas:</strong> A virada de tráfego é realizada em janelas noturnas ou finais de semana, com testes de homologação pré-aprovados pela sua equipe.</li>
+              <li><strong>Plano Rigoroso de Rollback:</strong> Todos os projetos contam com rotinas de reversão instantânea prontas para serem acionadas caso qualquer métrica desvie do padrão esperado.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>O que é arquitetura Multicloud e por que evitar o aprisionamento (vendor lock-in)?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Multicloud é o modelo arquitetural que integra estrategicamente dois ou mais provedores de nuvem pública (como AWS, Microsoft Azure, Google Cloud e Oracle Cloud Infrastructure), em vez de concentrar todos os ativos em uma única empresa fornecedora.</p>
+            <p>As vantagens práticas para sua operação incluem:</p>
+            <ul>
+              <li><strong>Eliminação do Lock-in:</strong> Liberdade e poder de negociação contratual e tarifária com provedores.</li>
+              <li><strong>Melhor de Cada Plataforma:</strong> Capacidade de usar serviços de ponta de provedores distintos (por exemplo, infraestrutura Oracle para bases ERP de missão crítica, AWS para microsserviços e GCP para Big Data e Machine Learning).</li>
+              <li><strong>Resiliência Geográfica Extrema:</strong> Sobrevivência operacional mesmo diante de indisponibilidades massivas de uma região de provedor específico.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como o FinOps da IT SCOPE impede que os custos de nuvem saiam do controle?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>A falta de governança financeira em nuvem é a causa de despesas desnecessárias. A disciplina de <strong>FinOps</strong> da IT SCOPE assegura eficiência financeira permanente:</p>
+            <ul>
+              <li><strong>Auditoria e Eliminação de Desperdícios:</strong> Detecção e exclusão de volumes de armazenamento desconectados, snapshots esquecidos e IPs elásticos sem uso.</li>
+              <li><strong>Rightsizing Preciso:</strong> Ajuste milimétrico do dimensionamento de CPU, RAM e disco às necessidades reais de cada carga, evitando o superdimensionamento.</li>
+              <li><strong>Automação de Desligamento:</strong> Desligamento programado de ambientes de homologação, testes e desenvolvimento durante noites e fins de semana.</li>
+              <li><strong>Otimização Tarifária (Savings Plans e Reservas):</strong> Assessoria na contratação de planos plurianuais com até 40% a 60% de desconto sobre o valor sob demanda padrão.</li>
+            </ul>
           </div>
         </div>
       </div>
