@@ -1,4 +1,4 @@
-// Google Translate Integration & Language Persistence Engine for IT SCOPE
+﻿// Google Translate Integration & Language Persistence Engine for IT SCOPE
 
 // 1. Initialize Google Translate Element
 function googleTranslateElementInit() {
@@ -126,6 +126,13 @@ document.addEventListener('DOMContentLoaded', function() {
         gtag('event', 'click_whatsapp', {
           'event_category': 'Contact',
           'event_label': href
+        });
+        gtag('event', 'generate_lead', {
+          'event_category': 'Lead',
+          'event_label': 'WhatsApp Click',
+          'method': 'whatsapp',
+          'value': 1.0,
+          'currency': 'BRL'
         });
       }
     } else if (href.indexOf('mailto:') !== -1) {

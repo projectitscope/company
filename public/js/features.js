@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Ouvintes para todos os botões de CTA da página
-  document.querySelectorAll('[data-open-modal], .floating-cta, .btn-hero-primary, .btn-hero-secondary, .btn-roi-cta, .btn-nav-cta, .btn-why-cta, .btn-prefooter-cta').forEach(function(btn) {
+  document.querySelectorAll('[data-open-modal], .btn-hero-primary, .btn-hero-secondary, .btn-roi-cta, .btn-nav-cta, .btn-why-cta, .btn-prefooter-cta').forEach(function(btn) {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
 
