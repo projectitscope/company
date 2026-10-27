@@ -84,7 +84,7 @@
   }
   </script>
 
-    <!-- Schema.org FAQPage (Rich Snippets para Modernização de Infraestrutura) -->
+    <!-- Schema.org FAQPage (Rich Snippets para Modernização de Infraestrutura Legada) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -92,26 +92,42 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "O que contempla a modernização de infraestrutura de TI?",
+        "name": "O que caracteriza uma infraestrutura de TI legada e quais são os riscos de mantê-la?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A modernização de infraestrutura contempla a substituição de servidores legados, consolidação com virtualização de alta performance (VMware/Hyper-V), saneamento e replicação de Active Directory, storage centralizado e planos de contingência (Disaster Recovery)."
+          "text": "Uma infraestrutura legada é composta por servidores físicos defasados, sistemas operacionais sem suporte, equipamentos sem garantia ou peças de reposição e arquitetura de rede saturada. Os maiores riscos incluem paradas operacionais não planejadas (downtime severo), vulnerabilidade crítica a ataques de ransomware, lentidão nos sistemas de gestão corporativos (ERPs) e altos custos de manutenção emergencial."
         }
       },
       {
         "@type": "Question",
-        "name": "Como a IT SCOPE assegura a continuidade operacional durante a migração?",
+        "name": "Como a virtualização e consolidação de servidores (VMware / Hyper-V) reduzem custos operacionais?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Executamos projetos com janelas de manutenção planejadas, sincronização prévia de cargas de trabalho e plano de rollback validado em ambiente de homologação, garantindo impacto nulo nas operações do cliente."
+          "text": "A virtualização consolida dezenas de servidores físicos antigos em poucos equipamentos modernos de alta densidade e performance. Isso reduz em até 70% o consumo de energia e refrigeração, otimiza o espaço físico e licenças de hardware, simplifica rotinas de backup com snapshots instantâneos e implementa alta disponibilidade (HA), garantindo continuidade mesmo se um host físico falhar."
         }
       },
       {
         "@type": "Question",
-        "name": "Qual a diferença entre modernizar o ambiente local ou migrar para nuvem?",
+        "name": "Como a IT SCOPE realiza a modernização de servidores sem causar paralisação (zero downtime)?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ambientes locais modernizados garantem controle absoluto de latência e compliance interno, enquanto a nuvem oferece escalabilidade ágil. A IT SCOPE projeta arquiteturas híbridas que integram o melhor de ambos os modelos."
+          "text": "Adotamos migrações planejadas P2V (Physical-to-Virtual) e V2V (Virtual-to-Virtual) com replicação assíncrona dos dados em segundo plano enquanto a empresa opera normalmente. A virada final (cutover) é agendada em janelas de manutenção noturnas ou em finais de semana, com testes rigorosos prévios em ambiente espelho e planos estruturados de contingência e rollback."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual a diferença entre modernizar a infraestrutura local (on-premise) ou migrar direto para a nuvem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A modernização local garante latência ultrabaixa para sistemas fabris ou locais, controle total de custos fixos e conformidade estrita de dados internos. A IT SCOPE projeta Arquiteturas Híbridas, integrando a infraestrutura local modernizada a nuvens públicas (AWS, Azure ou GCP) para expansão elástica, backups imutáveis externos e recuperação de desastres (Disaster Recovery)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como a modernização da infraestrutura protege a empresa contra ataques de Ransomware?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A modernização implementa segurança em camadas com segmentação lógica de rede (VLANs) para barrar propagação lateral, saneamento e endurecimento (hardening) do Active Directory com privilégio mínimo (RBAC), aplicação contínua de patches de segurança e, principalmente, backups imutáveis protegidos contra criptografia não autorizada, viabilizando restauração rápida sem pagamento de resgate."
         }
       }
     ]
@@ -852,6 +868,128 @@
     [class*="card"] li {
       text-align: left !important;
     }
+
+    /* FAQ Section — Dark Theme Customization */
+    .solution-page-wrapper .faq-section {
+      background-color: #0b1322 !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 90px 20px;
+      color: #ffffff !important;
+    }
+
+    .solution-page-wrapper .faq-section h2,
+    .solution-page-wrapper .faq-section .section-main-title {
+      color: #ffffff !important;
+      font-size: 32px !important;
+      font-weight: 700 !important;
+      margin-bottom: 12px !important;
+      text-align: center;
+    }
+
+    .solution-page-wrapper .faq-section .section-description,
+    .solution-page-wrapper .faq-section .section-subtitle {
+      color: #cbd5e1 !important;
+      font-size: 16px !important;
+      line-height: 1.6 !important;
+      margin: 15px auto 0 auto !important;
+      max-width: 750px !important;
+      text-align: center !important;
+    }
+
+    .solution-page-wrapper .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .solution-page-wrapper .faq-item {
+      border-bottom: none !important;
+      background: rgba(15, 23, 42, 0.6) !important;
+      margin-bottom: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(96, 239, 255, 0.12) !important;
+      padding: 0 24px;
+      transition: all 0.25s ease;
+    }
+
+    .solution-page-wrapper .faq-item:hover,
+    .solution-page-wrapper .faq-item.active {
+      border-color: rgba(96, 239, 255, 0.35) !important;
+      background: rgba(15, 23, 42, 0.85) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .solution-page-wrapper .faq-question {
+      color: #ffffff !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      padding: 22px 0 !important;
+      text-align: left !important;
+      background: none !important;
+      border: none !important;
+      width: 100%;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .solution-page-wrapper .faq-question:hover {
+      color: #60efff !important;
+    }
+
+    .solution-page-wrapper .faq-chevron {
+      color: #3fc060 !important;
+      font-size: 14px !important;
+      transition: transform 0.3s ease, color 0.3s ease;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .solution-page-wrapper .faq-item.active .faq-chevron {
+      transform: rotate(180deg);
+      color: #60efff !important;
+    }
+
+    .solution-page-wrapper .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      padding: 0;
+    }
+
+    .solution-page-wrapper .faq-item.active .faq-answer {
+      max-height: 800px !important;
+      padding: 5px 0 24px 0 !important;
+    }
+
+    .solution-page-wrapper .faq-answer p {
+      color: #cbd5e1 !important;
+      font-size: 14.5px !important;
+      line-height: 1.7 !important;
+      margin-bottom: 12px;
+      text-align: left !important;
+    }
+
+    .solution-page-wrapper .faq-answer ul {
+      margin: 10px 0 14px 0 !important;
+      padding-left: 20px !important;
+      list-style-type: disc !important;
+    }
+
+    .solution-page-wrapper .faq-answer li {
+      color: #cbd5e1 !important;
+      font-size: 14px !important;
+      line-height: 1.6 !important;
+      margin-bottom: 8px !important;
+      text-align: left !important;
+    }
+
+    .solution-page-wrapper .faq-answer strong {
+      color: #60efff !important;
+      font-weight: 700;
+    }
   </style>
 </head>
 
@@ -873,7 +1011,7 @@
         <a href="../index.html#por-que-itscope" style="color:#334155;text-decoration:none;">Sobre</a>
         <a href="../index.html#cases" style="color:#334155;text-decoration:none;">Cases</a>
         <a href="../index.html#calculadora" style="color:#334155;text-decoration:none;">Calculadora ROI</a>
-        <a href="../index.html#faq" style="color:#334155;text-decoration:none;">FAQ</a>
+        <a href="#faq" style="color:#334155;text-decoration:none;">FAQ</a>
       </div>
       <div style="display:flex;align-items:center;gap:10px;">
         <img src="../public/img/flag-en.png" alt="English" style="width:22px;height:22px;cursor:pointer;border-radius:3px;">
@@ -1173,6 +1311,102 @@
     </div>
   </section>
 
+  <!-- ===== FAQ — DÚVIDAS FREQUENTES SOBRE MODERNIZAÇÃO DE INFRAESTRUTURA ===== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-tag">Tire Suas Dúvidas</span>
+        <h2 class="section-main-title" style="color: #ffffff !important;">Perguntas Frequentes sobre Modernização de Infraestrutura</h2>
+        <p class="section-description" style="margin: 15px auto 0 auto; max-width: 750px; text-align: center; color: #cbd5e1 !important;">
+          Respostas diretas e técnicas sobre consolidação de servidores legados, virtualização, migração sem downtime e ambientes híbridos.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>O que caracteriza uma infraestrutura de TI legada e quais são os riscos de mantê-la?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Infraestrutura legada é composta por servidores físicos antigos, sistemas operacionais e bancos de dados sem suporte dos fabricantes, equipamentos sem garantia ou peças de reposição e cabeamento estruturado saturado.</p>
+            <p>Os principais riscos empresariais incluem:</p>
+            <ul>
+              <li><strong>Paradas Operacionais Críticas (Downtime):</strong> Falhas imprevisíveis de hardware que podem paralisar faturamento, expedição e operações por horas ou dias.</li>
+              <li><strong>Vulnerabilidade a Ransomware e Invasões:</strong> Sistemas operacionais descontinuados não recebem mais patches de segurança, sendo alvos fáceis para criminosos.</li>
+              <li><strong>Lentidão e Perda de Produtividade:</strong> Aplicações corporativas essenciais (ERPs, CRMs, sistemas contábeis) tornam-se lentas e instáveis.</li>
+              <li><strong>Custos Ocultos Elevados:</strong> Manutenção emergencial cara, peças raras e alto consumo de energia e refrigeração.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como a virtualização e consolidação de servidores (VMware / Hyper-V) reduzem custos operacionais?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>A consolidação virtual substitui dezenas de servidores físicos antigos e dispersos por poucos servidores modernos de alta densidade computacional, trazendo ganhos imediatos:</p>
+            <ul>
+              <li><strong>Redução de até 70% em Energia e Climatização:</strong> Menos equipamentos físicos ligados consomem muito menos energia elétrica e ar condicionado no data center.</li>
+              <li><strong>Alta Disponibilidade Nativa (HA):</strong> Se um servidor físico falhar, as máquinas virtuais sobem instantaneamente em outro host do cluster, sem interrupção de serviço.</li>
+              <li><strong>Backups e Snapshots em Minutos:</strong> Rotinas de cópia e restauração de ambientes inteiros com agilidade incomparável em relação a servidores físicos legados.</li>
+              <li><strong>Provisionamento Instantâneo:</strong> Criação de novos servidores e ambientes de teste em minutos, sem necessidade de compras demoradas de novo hardware.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como a IT SCOPE realiza a modernização de servidores sem causar paralisação (zero downtime)?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Nossa metodologia foi desenhada para garantir a continuidade ininterrupta do seu negócio durante todo o processo de transição:</p>
+            <ul>
+              <li><strong>Migrações Planejadas P2V e V2V:</strong> Realizamos a clonagem e sincronização assíncrona dos dados em segundo plano, sem interromper as atividades dos seus colaboradores.</li>
+              <li><strong>Homologação Prévia em Ambiente Espelho:</strong> Testamos o funcionamento de bancos de dados, aplicações e licenças em ambiente isolado antes de qualquer virada.</li>
+              <li><strong>Janelas de Cutover Fora do Horário Comercial:</strong> A alteração definitiva do tráfego é agendada para finais de semana ou madrugadas com acompanhamento em tempo real.</li>
+              <li><strong>Procedimento Rigoroso de Rollback:</strong> Todo projeto possui um plano de contingência para reversão imediata caso ocorra qualquer imprevisto.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Qual a diferença entre modernizar a infraestrutura local (on-premise) ou migrar direto para a nuvem?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Nem todas as empresas devem ou necessitam migrar 100% das suas aplicações para a nuvem pública. A modernização local do data center garante latência ultrabaixa para automação industrial/linhas de produção, conformidade estrita com políticas de proteção de dados e previsibilidade absoluta de custos fixos.</p>
+            <p>A IT SCOPE projeta <strong>Arquiteturas Híbridas</strong>: seu ambiente local é modernizado com alta performance, conectando-se de forma segura e transparente a provedores como AWS e Microsoft Azure para Disaster Recovery automatizado, cópias imutáveis em nuvem e elasticidade para picos sazonais.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como a modernização da infraestrutura protege a empresa contra ataques de Ransomware?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>A modernização estruturada da IT SCOPE estabelece uma defesa em múltiplas camadas:</p>
+            <ul>
+              <li><strong>Segmentação Lógica de Redes (VLANs):</strong> Impede que uma contaminação em uma estação de trabalho se espalhe lateralmente para servidores críticos e bases de dados.</li>
+              <li><strong>Endurecimento (Hardening) de Active Directory:</strong> Saneamento de permissões excessivas, implementação de controles baseados em privilégio mínimo (RBAC) e proteção de credenciais privilegiadas.</li>
+              <li><strong>Backups Imutáveis:</strong> Cópias de segurança protegidas por WORM (Write Once, Read Many) que não podem ser alteradas, criptografadas ou deletadas por hackers.</li>
+              <li><strong>Plano de Disaster Recovery (DR) Testado:</strong> Rotinas automatizadas de recuperação para restabelecer os serviços vitais da sua empresa em questão de horas, sem necessidade de negociar ou pagar resgate.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== BANNER CTA PRE-FOOTER ===== -->
   <section class="cta-banner-section">
     <div class="cta-banner-container">
@@ -1276,6 +1510,7 @@
 
   <!-- Scripts JS -->
   <script src="../public/js/translate.js"></script>
+  <script src="../public/js/features.js" defer></script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <script>
