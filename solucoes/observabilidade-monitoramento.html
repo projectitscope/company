@@ -92,26 +92,42 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Qual a diferença entre monitoramento tradicional e observabilidade?",
+        "name": "Qual é a diferença entre monitoramento tradicional de TI e observabilidade moderna?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O monitoramento tradicional apenas notifica quando um recurso para de funcionar. A observabilidade correlaciona métricas, logs e traces em tempo real, permitindo diagnosticar a causa raiz da lentidão e prever falhas antes que os usuários sejam afetados."
+          "text": "O monitoramento tradicional apenas notifica de forma reativa quando um recurso para de funcionar (servidor offline ou CPU em 90%). A observabilidade moderna responde ao porquê do problema ao correlacionar métricas, logs e rastreamento distribuído (traces) em tempo real, diagnosticando causas raízes de lentidão e antecipando falhas antes do impacto ao negócio."
         }
       },
       {
         "@type": "Question",
-        "name": "Quais ferramentas a IT SCOPE implanta para monitoramento 24/7?",
+        "name": "Quais são os 3 pilares fundamentais da Observabilidade (Métricas, Logs e Traces)?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Implantamos e customizamos stacks líderes de mercado como Zabbix, Grafana, Prometheus e Graylog, com dashboards executivos e notificações instantâneas via Telegram, WhatsApp e e-mail."
+          "text": "Os 3 pilares são: Métricas (indicadores numéricos de telemetria de CPU, memória, latência e consumo para alertas ágeis), Logs (registros cronológicos de eventos e erros em servidores e aplicações para investigações detalhadas) e Traces (rastreamento do ciclo de vida completo de cada requisição por microsserviços e bancos de dados para identificar gargalos)."
         }
       },
       {
         "@type": "Question",
-        "name": "Como funciona o suporte com NOC da IT SCOPE?",
+        "name": "Quais ferramentas a IT SCOPE implanta para monitoramento contínuo?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Nossa equipe atua em regime de acompanhamento contínuo dos alertas, realizando triagem imediata de incidentes, resolução remota preventiva e relatórios mensais de SLA e capacidade."
+          "text": "Implantamos e customizamos stacks globais como Zabbix e Prometheus (coleta de infraestrutura e redes), Grafana (dashboards visuais executivos e técnicos em tempo real), Graylog e ELK Stack (centralização de logs para compliance e segurança) e integradores de alertas para WhatsApp, Telegram e e-mail."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona o suporte proativo com NOC (Network Operations Center) da IT SCOPE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O NOC da IT SCOPE opera como a central de vigilância de TI com acompanhamento contínuo dos alertas, triagem por criticidade de SLA, intervenção técnica remota imediata segundo Runbooks padronizados e relatórios mensais de capacidade e disponibilidade do ambiente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como a observabilidade ajuda a reduzir paradas operacionais e o tempo de resolução (MTTR)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A observabilidade reduz o MTTR (Mean Time to Resolution) em até 80%, pois correlaciona dados instantaneamente e aponta a causa raiz exata da anomalia (uma query lenta, disco saturado ou API indisponível), eliminando horas de investigação cega e assegurando continuidade operacional contínua."
         }
       }
     ]
@@ -127,6 +143,7 @@
 
   <!-- Scripts de Tradução -->
   <script src="../public/js/translate.js"></script>
+  <script src="../public/js/features.js" defer></script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <style>
@@ -782,7 +799,7 @@
         <a href="../index.html#por-que-itscope" style="color:#334155;text-decoration:none;">Sobre</a>
         <a href="../index.html#cases" style="color:#334155;text-decoration:none;">Cases</a>
         <a href="../index.html#calculadora" style="color:#334155;text-decoration:none;">Calculadora ROI</a>
-        <a href="../index.html#faq" style="color:#334155;text-decoration:none;">FAQ</a>
+        <a href="#faq" style="color:#334155;text-decoration:none;">FAQ</a>
       </div>
       <div style="display:flex;align-items:center;gap:10px;">
         <img src="../public/img/flag-en.png" alt="English" style="width:22px;height:22px;cursor:pointer;border-radius:3px;">
@@ -1096,6 +1113,102 @@
     </section>
 
     <!-- CTA SECTION -->
+  <!-- ===== FAQ — DÚVIDAS FREQUENTES SOBRE OBSERVABILIDADE & MONITORAMENTO ===== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-title-wrapper" style="text-align:center;margin-bottom:50px;">
+        <span style="color:#3fc060;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;display:block;">Tire Suas Dúvidas</span>
+        <h2 class="section-heading" style="color: #ffffff !important;">Perguntas Frequentes sobre Observabilidade &amp; Monitoramento</h2>
+        <p class="section-subtitle" style="margin: 15px auto 0 auto; max-width: 750px; text-align: center; color: #cbd5e1 !important;">
+          Respostas diretas e técnicas sobre telemetria em tempo real, os 3 pilares da observabilidade, suporte com NOC e redução de MTTR.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Qual é a diferença entre monitoramento tradicional de TI e observabilidade moderna?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>A principal diferença reside na proatividade e na capacidade analítica de diagnosticar anomalias complexas:</p>
+            <ul>
+              <li><strong>Monitoramento Tradicional:</strong> Atua de forma reativa, avisando apenas quando um recurso já caiu ou ultrapassou um limite predefinido (como servidor offline ou disco em 95%).</li>
+              <li><strong>Observabilidade Moderna:</strong> Responde ao <em>"por que"</em> a lentidão está ocorrendo. Ao cruzar métricas, logs e rastreamentos em tempo real, permite isolar a causa raiz de comportamentos anômalos e antecipar falhas antes que colaboradores ou clientes sejam impactados.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quais são os 3 pilares fundamentais da Observabilidade (Métricas, Logs e Traces)?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Uma estratégia completa de observabilidade corporativa é estruturada sobre 3 pilares complementares:</p>
+            <ul>
+              <li><strong>Métricas:</strong> Dados numéricos agregados de consumo em tempo real (CPU, memória, latência de rede e volume de requisições por segundo), ideais para alertas imediatos de tendências e sobrecarga.</li>
+              <li><strong>Logs:</strong> Registros carimbados no tempo de cada evento, falha ou transação em sistemas e servidores, indispensáveis para auditorias de segurança e depuração aprofundada de incidentes.</li>
+              <li><strong>Traces (Rastreamento Distribuído):</strong> Mapeamento do ciclo de vida completo de cada requisição enquanto viaja por microsserviços, bancos de dados e APIs externas, revelando o ponto exato de gargalo.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quais ferramentas a IT SCOPE implanta e customiza para monitoramento contínuo?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Trabalhamos com as tecnologias líderes globais de monitoramento e telemetria:</p>
+            <ul>
+              <li><strong>Zabbix &amp; Prometheus:</strong> Monitoramento granular de ativos físicos, servidores locais, clusters de nuvem, switches, firewalls e bancos de dados.</li>
+              <li><strong>Grafana:</strong> Criação de painéis visuais intuitivos e dinâmicos, tanto técnicos para a equipe de engenharia quanto executivos para acompanhamento da diretoria de TI.</li>
+              <li><strong>Graylog &amp; ELK Stack:</strong> Centralização segura de terabytes de logs para análise de causa raiz, conformidade LGPD e detecção de incidentes de segurança.</li>
+              <li><strong>Alertas em Tempo Real:</strong> Notificações inteligentes e sem ruídos configuradas para WhatsApp, Telegram, Slack e e-mail.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como funciona a operação proativa de suporte com NOC (Network Operations Center)?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>O serviço de NOC da IT SCOPE atua como a central de inteligência e segurança operacional do seu negócio:</p>
+            <ul>
+              <li><strong>Vigilância 24/7/365:</strong> Acompanhamento contínuo dos alertas com filtros para eliminação de falsos-positivos.</li>
+              <li><strong>Atendimento Estruturado por SLAs:</strong> Classificação rigorosa de incidentes por criticidade e impacto nas operações da empresa.</li>
+              <li><strong>Intervenção Rápida com Runbooks:</strong> Nossos engenheiros sêniores intervêm prontamente de forma remota para restabelecer serviços antes que afetem o faturamento.</li>
+              <li><strong>Relatórios Mensais de Capacidade:</strong> Recomendações técnicas preventivas para upgrades e otimizações de recursos.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como a observabilidade ajuda a reduzir paradas operacionais e o tempo de resolução (MTTR)?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>O maior gargalo de paradas operacionais não é corrigir o erro, mas descobrir <em>onde</em> ele está acontecendo. Com a observabilidade moderna da IT SCOPE:</p>
+            <ul>
+              <li>O <strong>MTTR (Mean Time to Resolution)</strong> cai em até 80%, pois os painéis integrados apontam com exatidão qual servidor, consulta de banco de dados ou serviço travou.</li>
+              <li>Elimina a perda de tempo entre equipes de infraestrutura e desenvolvimento investigando às cegas.</li>
+              <li>Permite identificar tendências de saturação com semanas de antecedência, transformando a gestão de TI em um pilar previsível e estável para a empresa.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
     <section class="cta-section">
       <div class="container">
         <div class="cta-box">

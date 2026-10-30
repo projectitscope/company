@@ -91,26 +91,42 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "O que é Infraestrutura como Código (IaC) e por que adotar Terraform?",
+        "name": "O que é DevOps afinal e quais são os pilares da sua implementação?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Infraestrutura como Código permite provisionar servidores, redes e políticas de segurança por meio de arquivos versionados no Git. Com Terraform, garantimos ambientes idênticos e reproduzíveis, eliminando falhas manuais e reduzindo tempo de entrega de dias para minutos."
+          "text": "DevOps é a união estratégica entre Desenvolvimento (Dev) e Operações (Ops) para acelerar a entrega de valor com alta confiabilidade. Seus 5 pilares (CALMS) são: Cultura colaborativa, Automação de processos repetitivos, Lean (eliminação de desperdícios), Medição por métricas de performance e Compartilhamento de conhecimento. A IT SCOPE projeta essa transição eliminando atritos e gargalos operacionais."
         }
       },
       {
         "@type": "Question",
-        "name": "Como funcionam as esteiras de CI/CD implementadas pela IT SCOPE?",
+        "name": "Qual é a diferença entre o modelo tradicional de TI e a cultura DevOps?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Automatizamos as etapas de compilação de código, testes de segurança estática e deploy contínuo em contêineres Docker e clusters Kubernetes, permitindo que novas versões cheguem à produção com total estabilidade."
+          "text": "No modelo tradicional, desenvolvedores e administradores de infraestrutura trabalham isolados, gerando erros manuais, retrabalho e lançamentos lentos. Na cultura DevOps implementada pela IT SCOPE, as equipes compartilham responsabilidade por todo o ciclo de vida do sistema com esteiras automatizadas, deploys seguros e rollback imediato sem paradas operacionais."
         }
       },
       {
         "@type": "Question",
-        "name": "Minha empresa precisa ter desenvolvedores internos para aplicar DevOps?",
+        "name": "O que são ferramentas de automação e quais as principais utilizadas pela IT SCOPE?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Não. A consultoria da IT SCOPE projeta e implementa toda a automação de infraestrutura, treina o seu time operacional e atua na sustentação contínua das rotinas e esteiras."
+          "text": "Ferramentas de automação eliminam intervenções manuais na infraestrutura. A IT SCOPE utiliza as líderes globais: HashiCorp Terraform (Infraestrutura como Código), Ansible (gerenciamento de configurações e patches), Docker e Kubernetes (contêineres e orquestração resiliente) e GitHub Actions/GitLab CI (esteiras automatizadas de CI/CD com testes de segurança estática)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funcionam na prática as esteiras de CI/CD e a Infraestrutura como Código (IaC)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Infraestrutura como Código (IaC) define servidores e redes em arquivos versionados no Git. Ao commitar código, a esteira de CI/CD dispara compilação, testes automatizados e deploy em produção em minutos. Isso garante ambientes de teste e produção rigorosamente idênticos, eliminando o erro humano e reduzindo tempo de entrega de dias para minutos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Minha empresa precisa ter uma equipe interna de desenvolvedores para adotar DevOps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. A consultoria da IT SCOPE apoia tanto equipes de software quanto operações tradicionais de infraestrutura corporativa. Implementamos automações com Ansible, Terraform e scripts inteligentes que eliminam rotinas manuais repetitivas do time de TI, transferindo o conhecimento através de documentação detalhada e treinamento prático."
         }
       }
     ]
@@ -636,7 +652,7 @@
           <a href="../index.html#por-que-itscope" style="color:#334155;text-decoration:none;">Sobre</a>
           <a href="../index.html#cases" style="color:#334155;text-decoration:none;">Cases</a>
           <a href="../index.html#calculadora" style="color:#334155;text-decoration:none;">Calculadora ROI</a>
-          <a href="../index.html#faq" style="color:#334155;text-decoration:none;">FAQ</a>
+          <a href="#faq" style="color:#334155;text-decoration:none;">FAQ</a>
         </div>
         <div style="display:flex;align-items:center;gap:10px;">
           <img src="../public/img/flag-en.png" alt="English" style="width:22px;height:22px;cursor:pointer;border-radius:3px;">
@@ -929,6 +945,103 @@
             <p style="font-size: 14px; color: #cbd5e1; text-align: center; margin: 0;">
               "Com DevOps e automação IaC, sua equipe foca em inovar e criar valor para o negócio, enquanto a infraestrutura responde com agilidade e estabilidade absoluta."
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ — DÚVIDAS FREQUENTES SOBRE DEVOPS & AUTOMAÇÃO ===== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-title-wrapper" style="text-align:center;margin-bottom:50px;">
+        <span style="color:#3fc060;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;display:block;">Tire Suas Dúvidas</span>
+        <h2 class="section-heading" style="color: #ffffff !important;">Perguntas Frequentes sobre DevOps &amp; Automação</h2>
+        <p class="section-subtitle" style="margin: 15px auto 0 auto; max-width: 750px; text-align: center; color: #cbd5e1 !important;">
+          Respostas diretas e técnicas sobre o que é DevOps, seus pilares essenciais, ferramentas de automação (Terraform, Ansible, Docker, Kubernetes) e esteiras de CI/CD.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>O que é DevOps afinal e quais são os pilares da sua implementação?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>DevOps</strong> é a união estratégica, cultural e técnica entre Desenvolvimento de Software (Dev) e Operações de Infraestrutura (Ops), substituindo silos isolados por um fluxo contínuo de entrega de valor com alta qualidade e estabilidade.</p>
+            <p>Sua implementação de sucesso baseia-se nos 5 pilares consagrados do modelo <strong>CALMS</strong>:</p>
+            <ul>
+              <li><strong>Cultura (Culture):</strong> Responsabilidade compartilhada entre desenvolvedores e administradores de sistemas pelo sucesso da aplicação em produção.</li>
+              <li><strong>Automação (Automation):</strong> Substituição de processos manuais lentos por esteiras automatizadas de compilação, testes e provisionamento.</li>
+              <li><strong>Lean:</strong> Redução de desperdícios, eliminação de gargalos e entregas em lotes menores e mais frequentes.</li>
+              <li><strong>Medição (Measurement):</strong> Tomada de decisão orientada a métricas reais (frequência de deploy, taxa de falha e tempo de recuperação).</li>
+              <li><strong>Compartilhamento (Sharing):</strong> Disseminação aberta de conhecimento, documentação viva e aprendizado contínuo entre equipes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Qual é a diferença entre o modelo tradicional de TI e a cultura DevOps?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>No modelo tradicional de TI, desenvolvedores escrevem o código e o "jogam por cima do muro" para a equipe de infraestrutura implantar e sustentar. Isso gera acusações mútuas quando algo quebra, processos burocráticos de homologação e janelas de deploy estressantes de madrugada.</p>
+            <p>Com a <strong>cultura DevOps implementada pela IT SCOPE</strong>, essa barreira é eliminada:</p>
+            <ul>
+              <li>A infraestrutura é tratada como código (IaC), permitindo que desenvolvedores e operadores falem a mesma linguagem.</li>
+              <li>Testes de segurança e performance são realizados automaticamente a cada alteração.</li>
+              <li>Deploys tornam-se rotineiros e seguros, com planos de rollback automatizados que revertem qualquer erro em segundos, sem impacto para os usuários.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>O que são ferramentas de automação e quais as principais utilizadas pela IT SCOPE?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Ferramentas de automação são softwares projetados para executar tarefas técnicas de TI de forma programada, consistente e sem necessidade de intervenção humana.</p>
+            <p>A IT SCOPE implanta as tecnologias padrão do mercado global:</p>
+            <ul>
+              <li><strong>HashiCorp Terraform:</strong> Orquestração de Infraestrutura como Código (IaC) para criar servidores, redes, bancos de dados e firewalls em AWS, Azure e GCP via código versionado.</li>
+              <li><strong>Ansible:</strong> Automação de configurações, padronização de servidores e aplicação de patches de segurança em larga escala de forma centralizada e sem agentes.</li>
+              <li><strong>Docker &amp; Kubernetes (K8s):</strong> Empacotamento de aplicações em contêineres portáteis e orquestração de alta disponibilidade com auto-recuperação (self-healing) e escalabilidade automática.</li>
+              <li><strong>GitHub Actions &amp; GitLab CI:</strong> Motores de esteira de integração e entrega contínuas (CI/CD) com pipelines inteligentes de automação.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como funcionam na prática as esteiras de CI/CD e a Infraestrutura como Código (IaC)?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>A união entre CI/CD e IaC estabelece um padrão de fábrica de software de alta performance:</p>
+            <ul>
+              <li><strong>Versionamento Total no Git:</strong> Todo o ambiente de servidores e o código da aplicação residem em repositórios com histórico auditável de quem alterou o quê e quando.</li>
+              <li><strong>Pipeline Automatizado:</strong> Ao aprovar um Pull Request, a esteira executa testes de código, varredura de vulnerabilidades estáticas (SAST) e provisiona o ambiente de testes de forma idêntica à produção.</li>
+              <li><strong>Publicação sem Fricção:</strong> O deploy em produção é executado sem paradas operacionais (*zero downtime deployment*), reduzindo o tempo de lançamento de semanas para minutos.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Minha empresa precisa ter uma equipe interna de desenvolvedores para adotar DevOps?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Não. Um dos maiores mitos do mercado é achar que DevOps só serve para empresas de desenvolvimento de software puro. A automação DevOps gera ganhos imediatos para <strong>operações de infraestrutura corporativa tradicional</strong>.</p>
+            <p>A IT SCOPE implementa automações que eliminam tarefas repetitivas do seu time de TI (como provisionamento de novas máquinas virtuais, renovação de certificados SSL, cópias de segurança e regras de firewall), permitindo que sua equipe interna foque em projetos estratégicos de inovação enquanto a infraestrutura opera com total estabilidade.</p>
           </div>
         </div>
       </div>
