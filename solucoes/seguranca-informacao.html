@@ -83,7 +83,7 @@
   }
   </script>
 
-    <!-- Schema.org FAQPage (Rich Snippets para Segurança da Informação & LGPD) -->
+    <!-- Schema.org FAQPage (Rich Snippets para Segurança da Informação, Cibersegurança & LGPD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -91,26 +91,42 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Como adequar a infraestrutura de TI às exigências da LGPD?",
+        "name": "Qual é a diferença entre Segurança da Informação e Segurança Cibernética (Cybersecurity)?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A adequação exige mapeamento do ciclo de vida dos dados pessoais, implementação de controle de privilégio mínimo (PAM), criptografia de dados em repouso e trânsito, proteção perimetral com firewalls gerenciados e relatórios de conformidade técnica para auditoria."
+          "text": "A Segurança da Informação é a disciplina estratégica que protege todos os ativos de dados corporativos (sejam digitais, físicos, em trânsito ou em repouso), abrangendo políticas, governança e conformidade legal (como LGPD e ISO 27001). A Segurança Cibernética (Cybersecurity) é a vertente técnica focada na proteção de redes, servidores, nuvem e sistemas contra ataques digitais, invasões e malwares. A IT SCOPE integra ambas as áreas."
         }
       },
       {
         "@type": "Question",
-        "name": "O que é gerenciamento de acessos privilegiados (PAM) e por que é vital?",
+        "name": "Quais são os pilares essenciais da Segurança da Informação (Tríade CID)?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O PAM protege e rastreia o uso de contas administrativas de alto privilégio, eliminando senhas compartilhadas, gravando sessões e bloqueando tentativas de invasão e movimentação lateral de ransomware."
+          "text": "Os 3 pilares fundamentais são: Confidencialidade (garantia de que dados estratégicos e pessoais só sejam acessados por pessoas autorizadas via criptografia e PAM), Integridade (certeza de que as informações não foram alteradas, corrompidas ou violadas) e Disponibilidade (garantia de que sistemas e dados críticos permaneçam acessíveis quando o negócio necessitar, através de redundância e Disaster Recovery)."
         }
       },
       {
         "@type": "Question",
-        "name": "Como a IT SCOPE conduz auditorias de segurança e varreduras de vulnerabilidades?",
+        "name": "Quais ferramentas e camadas de segurança são indispensáveis para proteger uma empresa?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Executamos varreduras automatizadas e testes técnicos manuais para identificar portas expostas, falhas de patch e brechas de configuração, entregando um relatório executivo com plano de ação corretiva priorizado."
+          "text": "Uma postura defensiva robusta exige o modelo de Defesa em Profundidade: Proteção de Endpoint avançada (EDR/XDR) contra malwares modernos, Firewalls de Próxima Geração (Sophos XG, Fortinet) para controle de perímetro e inspeção de tráfego, Gestão de Identidades e Acessos Privilegiados (PAM/IAM), Backups Imutáveis protegidos contra ransomware e monitoramento contínuo de vulnerabilidades com OpenVAS e Nessus."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como a IT SCOPE atua na adequação prática à LGPD e normas de proteção de dados?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Conduzimos diagnósticos estruturados de maturidade técnica e jurídica: realizamos o mapeamento do ciclo de vida dos dados pessoais (Data Mapping), implementamos políticas de controle de privilégio mínimo (PAM), configuramos criptografia de dados em trânsito e repouso, elaboramos Relatórios de Impacto (RIPD) e entregamos evidências técnicas auditáveis para comprovação de conformidade perante a ANPD."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como proteger a empresa contra sequestro de dados (Ransomware) e vazamentos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A prevenção contra ransomware combina camadas técnicas e humanas: segmentação lógica de rede (VLANs) para barrar movimentações laterais, implementação de Autenticação Multifator (MFA) em todas as contas, gerenciamento rígido de credenciais privilegiadas, rotinas de conscientização contra engenharia social e phishing, e backups imutáveis protegidos por política WORM que impedem a criptografia dos arquivos."
         }
       }
     ]
@@ -567,6 +583,127 @@
     [class*="list"] li span {
       text-align: left !important;
     }
+
+    /* FAQ Section — Dark Theme Customization */
+    .solution-page-wrapper .faq-section {
+      background-color: #0b1322 !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 90px 20px;
+      color: #ffffff !important;
+    }
+
+    .solution-page-wrapper .faq-section h2,
+    .solution-page-wrapper .faq-section .section-heading {
+      color: #ffffff !important;
+      font-size: 32px !important;
+      font-weight: 700 !important;
+      margin-bottom: 12px !important;
+      text-align: center;
+    }
+
+    .solution-page-wrapper .faq-section .section-subtitle {
+      color: #cbd5e1 !important;
+      font-size: 16px !important;
+      line-height: 1.6 !important;
+      margin: 15px auto 0 auto !important;
+      max-width: 750px !important;
+      text-align: center !important;
+    }
+
+    .solution-page-wrapper .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .solution-page-wrapper .faq-item {
+      border-bottom: none !important;
+      background: rgba(15, 23, 42, 0.6) !important;
+      margin-bottom: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(96, 239, 255, 0.12) !important;
+      padding: 0 24px;
+      transition: all 0.25s ease;
+    }
+
+    .solution-page-wrapper .faq-item:hover,
+    .solution-page-wrapper .faq-item.active {
+      border-color: rgba(96, 239, 255, 0.35) !important;
+      background: rgba(15, 23, 42, 0.85) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .solution-page-wrapper .faq-question {
+      color: #ffffff !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      padding: 22px 0 !important;
+      text-align: left !important;
+      background: none !important;
+      border: none !important;
+      width: 100%;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .solution-page-wrapper .faq-question:hover {
+      color: #60efff !important;
+    }
+
+    .solution-page-wrapper .faq-chevron {
+      color: #3fc060 !important;
+      font-size: 14px !important;
+      transition: transform 0.3s ease, color 0.3s ease;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .solution-page-wrapper .faq-item.active .faq-chevron {
+      transform: rotate(180deg);
+      color: #60efff !important;
+    }
+
+    .solution-page-wrapper .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      padding: 0;
+    }
+
+    .solution-page-wrapper .faq-item.active .faq-answer {
+      max-height: 800px !important;
+      padding: 5px 0 24px 0 !important;
+    }
+
+    .solution-page-wrapper .faq-answer p {
+      color: #cbd5e1 !important;
+      font-size: 14.5px !important;
+      line-height: 1.7 !important;
+      margin-bottom: 12px;
+      text-align: left !important;
+    }
+
+    .solution-page-wrapper .faq-answer ul {
+      margin: 10px 0 14px 0 !important;
+      padding-left: 20px !important;
+      list-style-type: disc !important;
+    }
+
+    .solution-page-wrapper .faq-answer li {
+      color: #cbd5e1 !important;
+      font-size: 14px !important;
+      line-height: 1.6 !important;
+      margin-bottom: 8px !important;
+      text-align: left !important;
+    }
+
+    .solution-page-wrapper .faq-answer strong {
+      color: #60efff !important;
+      font-weight: 700;
+    }
   </style>
 </head>
 
@@ -589,7 +726,7 @@
           <a href="../index.html#por-que-itscope" style="color:#334155;text-decoration:none;">Sobre</a>
           <a href="../index.html#cases" style="color:#334155;text-decoration:none;">Cases</a>
           <a href="../index.html#calculadora" style="color:#334155;text-decoration:none;">Calculadora ROI</a>
-          <a href="../index.html#faq" style="color:#334155;text-decoration:none;">FAQ</a>
+          <a href="#faq" style="color:#334155;text-decoration:none;">FAQ</a>
         </div>
         <div style="display:flex;align-items:center;gap:10px;">
           <img src="../public/img/flag-en.png" alt="English" style="width:22px;height:22px;cursor:pointer;border-radius:3px;">
@@ -892,6 +1029,107 @@
               <h4>Privacy &amp; Security by Design</h4>
               <p>Incorpore práticas de segurança e privacidade no DNA de todos os projetos tecnológicos, sistemas e fluxos de trabalho da organização desde o início.</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ — DÚVIDAS FREQUENTES SOBRE SEGURANÇA DA INFORMAÇÃO & LGPD ===== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span style="color:#3fc060;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;display:block;">Tire Suas Dúvidas</span>
+        <h2 class="section-heading" style="color: #ffffff !important;">Perguntas Frequentes sobre Segurança da Informação &amp; LGPD</h2>
+        <p class="section-subtitle" style="margin: 15px auto 0 auto; max-width: 750px; text-align: center; color: #cbd5e1 !important;">
+          Respostas diretas e técnicas sobre cibersegurança corporativa, proteção de dados, mitigação de ransomware e conformidade regulatória.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Qual é a diferença entre Segurança da Informação e Segurança Cibernética (Cybersecurity)?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Embora frequentemente utilizados como sinônimos, os conceitos possuem âmbitos complementares e distintos:</p>
+            <ul>
+              <li><strong>Segurança da Informação (InfoSec):</strong> É a disciplina estratégica e holística que protege todos os ativos e dados de uma organização (sejam eles digitais em nuvem, físicos em papel, conversas confidenciais ou sistemas locais). Engloba governança corporativa, políticas de acesso, processos internos e conformidade legal com marcos como a LGPD e a ISO 27001.</li>
+              <li><strong>Segurança Cibernética (Cybersecurity):</strong> É o conjunto técnico e prático de barreiras desenhado para proteger os ativos digitais conectados (redes, servidores físicos, instâncias cloud, aplicações web e endpoints) contra invasões de hackers, malwares, ataques DDoS e sequestro de dados.</li>
+            </ul>
+            <p>A IT SCOPE atua exatamente na integração entre ambas as frentes, garantindo defesas técnicas impenetráveis aliadas a políticas sólidas de governança.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quais são os pilares essenciais da Segurança da Informação (Tríade CID)?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>A segurança corporativa é sustentada pela consagrada <strong>Tríade CID</strong>, complementada por requisitos modernos de privacidade:</p>
+            <ul>
+              <li><strong>Confidencialidade:</strong> Assegura que apenas usuários devidamente autenticados e autorizados tenham acesso a dados confidenciais ou dados pessoais protegidos por lei, através de criptografia de ponta a ponta e gestão de privilégios.</li>
+              <li><strong>Integridade:</strong> Garante que as informações, transações financeiras e códigos de sistemas não sejam adulterados, fraudados ou corrompidos de forma acidental ou maliciosa.</li>
+              <li><strong>Disponibilidade:</strong> Certeza de que as redes, servidores e aplicações críticas de negócio estejam disponíveis e operacionais 24/7 para seus colaboradores e clientes, respaldadas por redundância e planos de Disaster Recovery.</li>
+              <li><strong>Autenticidade &amp; Não-Repúdio:</strong> Confirmação irrefutável da identidade dos autores de cada transação ou comando executado no ambiente de TI.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quais ferramentas e camadas de segurança são indispensáveis para proteger a empresa?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Uma postura cibernética eficaz adota a abordagem de <strong>Defesa em Profundidade (Defense-in-Depth)</strong> com ferramentas líderes de mercado:</p>
+            <ul>
+              <li><strong>Proteção de Endpoint (EDR / XDR):</strong> Defesa comportamental e análise de inteligência artificial em computadores e servidores corporativos para barrar ameaças de dia zero.</li>
+              <li><strong>Firewalls de Próxima Geração (NGFW):</strong> Soluções líderes como Sophos XG e Fortinet com inspeção profunda de pacotes (DPI), controle de aplicações e VPNs seguras para colaboradores remotos.</li>
+              <li><strong>Gestão de Acessos Privilegiados (PAM / IAM):</strong> Blindagem e gravação de sessões para credenciais administrativas de servidores, eliminando senhas compartilhadas.</li>
+              <li><strong>Backups Imutáveis:</strong> Cópias de segurança com tecnologia WORM que impedem a exclusão ou encriptação indevida por invasores.</li>
+              <li><strong>Varredura Contínua de Vulnerabilidades:</strong> Escaneamento automatizado e periódico (com ferramentas como OpenVAS e Nessus) para detecção de brechas antes que cibercriminosos as explorem.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como a IT SCOPE atua na adequação prática à LGPD e normas de proteção de dados?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Nossa consultoria vai além da teoria jurídica, implementando as salvaguardas técnicas exigidas pela Lei Geral de Proteção de Dados (Lei nº 13.709/2018):</p>
+            <ul>
+              <li><strong>Data Mapping &amp; Inventário de Dados:</strong> Mapeamento integral de como os dados pessoais de clientes e colaboradores entram, onde são armazenados e como são descartados na empresa.</li>
+              <li><strong>Privacy by Design &amp; Default:</strong> Estruturação de arquiteturas de sistemas pensadas desde a concepção para proteger a privacidade dos titulares.</li>
+              <li><strong>Relatório de Impacto à Proteção de Dados (RIPD):</strong> Análise de riscos e elaboração de documentação formal para atendimento às diretrizes da ANPD.</li>
+              <li><strong>Controles Técnicos de Acesso:</strong> Implementação de anonimização, criptografia em repouso e políticas rigorosas de privilégio mínimo.</li>
+              <li><strong>Plano de Resposta a Incidentes:</strong> Protocolos ágeis para contenção e notificação formal em caso de vazamento de informações.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como proteger a empresa contra sequestro de dados (Ransomware) e vazamentos?</span>
+            <span class="faq-chevron"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>O ransomware não entra apenas por falhas de sistema, mas também por engenharia social e credenciais vazadas. A estratégia da IT SCOPE protege o negócio com ações integradas:</p>
+            <ul>
+              <li><strong>Autenticação Multifator (MFA / 2FA) Obrigatória:</strong> Bloqueia mais de 99% das tentativas de invasão originadas por roubo de credenciais em e-mails e acessos corporativos.</li>
+              <li><strong>Isolamento e Segmentação de Rede (VLANs):</strong> Caso um dispositivo individual seja infectado, a segmentação impede a proliferação lateral da ameaça para servidores vitais e bancos de dados.</li>
+              <li><strong>Backups com Regra 3-2-1 e Imutabilidade:</strong> Mantemos três cópias dos dados, em duas mídias distintas, com uma cópia externa imutável que não pode ser criptografada, viabilizando recuperação em horas sem negociação de resgate.</li>
+              <li><strong>Treinamento e Conscientização de Equipes:</strong> Campanhas simuladas de phishing educativo para capacitar os colaboradores a reconhecer anexos e links maliciosos.</li>
+            </ul>
           </div>
         </div>
       </div>
