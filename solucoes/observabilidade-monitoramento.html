@@ -778,7 +778,128 @@
 .fa, .fa-solid, .fa-regular, .fa-brands, .fab, .fas, .far, i {
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
 }
-</style>
+
+    /* FAQ Section — Dark Theme Customization */
+    .solution-page-wrapper .faq-section {
+      background-color: #0b1322 !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 90px 20px;
+      color: #ffffff !important;
+    }
+
+    .solution-page-wrapper .faq-section h2,
+    .solution-page-wrapper .faq-section .section-heading {
+      color: #ffffff !important;
+      font-size: 32px !important;
+      font-weight: 700 !important;
+      margin-bottom: 12px !important;
+      text-align: center;
+    }
+
+    .solution-page-wrapper .faq-section .section-subtitle {
+      color: #cbd5e1 !important;
+      font-size: 16px !important;
+      line-height: 1.6 !important;
+      margin: 15px auto 0 auto !important;
+      max-width: 750px !important;
+      text-align: center !important;
+    }
+
+    .solution-page-wrapper .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .solution-page-wrapper .faq-item {
+      border-bottom: none !important;
+      background: rgba(15, 23, 42, 0.6) !important;
+      margin-bottom: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(96, 239, 255, 0.12) !important;
+      padding: 0 24px;
+      transition: all 0.25s ease;
+    }
+
+    .solution-page-wrapper .faq-item:hover,
+    .solution-page-wrapper .faq-item.active {
+      border-color: rgba(96, 239, 255, 0.35) !important;
+      background: rgba(15, 23, 42, 0.85) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .solution-page-wrapper .faq-question {
+      color: #ffffff !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      padding: 22px 0 !important;
+      text-align: left !important;
+      background: none !important;
+      border: none !important;
+      width: 100%;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .solution-page-wrapper .faq-question:hover {
+      color: #60efff !important;
+    }
+
+    .solution-page-wrapper .faq-chevron {
+      color: #3fc060 !important;
+      font-size: 14px !important;
+      transition: transform 0.3s ease, color 0.3s ease;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .solution-page-wrapper .faq-item.active .faq-chevron {
+      transform: rotate(180deg);
+      color: #60efff !important;
+    }
+
+    .solution-page-wrapper .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      padding: 0;
+    }
+
+    .solution-page-wrapper .faq-item.active .faq-answer {
+      max-height: 800px !important;
+      padding: 5px 0 24px 0 !important;
+    }
+
+    .solution-page-wrapper .faq-answer p {
+      color: #cbd5e1 !important;
+      font-size: 14.5px !important;
+      line-height: 1.7 !important;
+      margin-bottom: 12px;
+      text-align: left !important;
+    }
+
+    .solution-page-wrapper .faq-answer ul {
+      margin: 10px 0 14px 0 !important;
+      padding-left: 20px !important;
+      list-style-type: disc !important;
+    }
+
+    .solution-page-wrapper .faq-answer li {
+      color: #cbd5e1 !important;
+      font-size: 14px !important;
+      line-height: 1.6 !important;
+      margin-bottom: 8px !important;
+      text-align: left !important;
+    }
+
+    .solution-page-wrapper .faq-answer strong {
+      color: #60efff !important;
+      font-weight: 700;
+    }
+  </style>
 </head>
 
 <body>
